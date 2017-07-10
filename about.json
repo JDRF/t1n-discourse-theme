@@ -1,0 +1,23 @@
+{
+	"name": "JDRF TypeOneNation Discourse Theme",
+	"about_url": "",
+	"license_url": "",
+	"assets": {
+		"font": "assets/fonts/gotham/medium/gotham-medium-webfont.woff2"
+	},
+	"color_schemes": {
+		"JDRF Colors": {
+			"primary": "222222",
+			"secondary": "ffffff",
+			"tertiary": "0073cf",
+			"quaternary": "9933CC",
+			"header_background": "0073cf",
+			"header_primary": "FAFAFA",
+			"highlight": "f5f5f5",
+			"danger": "E11279",
+			"success": "00A862",
+			"love": "A75CCC"
+		}
+
+	}
+}
