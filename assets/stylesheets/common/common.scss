@@ -46,3 +46,31 @@ body {
 		}
 	}
 }
+
+
+.composer-popup {
+	background-color: $jdrf-blue;
+	color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	a.close {
+		float: none;
+		position: absolute;
+		bottom: 30px;
+		font-weight: 500;
+		&:after {
+			content: "GOT IT";
+		}
+		i {
+			display: none;
+		}
+	}
+	a {
+		color: #fff;
+		text-decoration: underline;
+		&:hover {
+			color: $jdrf-dark-blue;
+		}
+	}
+}
