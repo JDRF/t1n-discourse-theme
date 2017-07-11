@@ -1164,3 +1164,22 @@ body {
 .topic-list th {
   font-weight: 500;
 }
+
+.modal-footer .btn-danger {
+  float: right;
+}
+.modal-footer .btn.null, .modal-footer #topic-footer-buttons .null.btn, #topic-footer-buttons .modal-footer .null.btn,
+.modal-footer .nav-pills > li > a.null {
+  float: right;
+  margin-right: 10px;
+  background: transparent;
+}
+.modal-footer .btn.null:active, .modal-footer #topic-footer-buttons .null.btn:active, #topic-footer-buttons .modal-footer .null.btn:active,
+.modal-footer .nav-pills > li > a.null:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal-footer .btn.null:hover, .modal-footer #topic-footer-buttons .null.btn:hover, #topic-footer-buttons .modal-footer .null.btn:hover,
+.modal-footer .nav-pills > li > a.null:hover {
+  color: #0073cf;
+}

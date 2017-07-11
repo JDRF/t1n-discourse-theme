@@ -17,3 +17,21 @@ body {
 .topic-list th {
 	font-weight: 500;
 }
+
+.modal-footer {
+	.btn-danger {
+		float: right;
+	}
+
+	.btn.null {
+		float: right;
+		margin-right: 10px;
+		background: transparent;
+		&:active {
+			box-shadow: none;
+		}
+		&:hover {
+			color: $jdrf-blue;
+		}
+	}
+}
