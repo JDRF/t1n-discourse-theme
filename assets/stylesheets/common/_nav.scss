@@ -1,4 +1,5 @@
 .nav-pills>li>a {
+	@extend .btn;
 	@extend .btn-primary-outline;
 }
 

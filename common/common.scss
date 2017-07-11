@@ -68,7 +68,7 @@
 /* Bootstrap @import "scss/mixins/border-radius.scss */
 /* Bootstrap @import "scss/mixins/buttons.scss */
 /* Bootstrap overwrites: buttons.scss */
-.btn {
+.btn, .nav-pills > li > a {
   display: inline-block;
   vertical-align: middle;
   height: 40px;
@@ -87,37 +87,38 @@
   line-height: 0.875rem;
   border-radius: 2px;
 }
-.btn:active, .btn.active {
+.btn:active, .nav-pills > li > a:active, .btn.active, .nav-pills > li > a.active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+.btn:active:focus, .nav-pills > li > a:active:focus, .btn:active.focus, .nav-pills > li > a:active.focus, .btn.active:focus, .nav-pills > li > a.active:focus, .btn.active.focus, .nav-pills > li > a.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
   outline: 0;
 }
-.btn:focus, .btn:hover {
+.btn:focus, .nav-pills > li > a:focus, .btn:hover, .nav-pills > li > a:hover {
   text-decoration: none;
   outline: 0;
 }
-.btn.focus {
+.btn.focus, .nav-pills > li > a.focus {
   text-decoration: none;
   outline: 0;
 }
-.btn.disabled, .btn:disabled {
+.btn.disabled, .nav-pills > li > a.disabled, .btn:disabled, .nav-pills > li > a:disabled {
   cursor: not-allowed;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn.material-icons {
+.btn.material-icons, .nav-pills > li > a.material-icons {
   font-family: 'Material Icons';
 }
 
-a.btn.disabled,
-fieldset[disabled] a.btn {
+a.btn.disabled, .nav-pills > li > a.disabled,
+fieldset[disabled] a.btn,
+fieldset[disabled] .nav-pills > li > a {
   pointer-events: none;
 }
 
@@ -828,7 +829,7 @@ input[type="button"].btn-block {
   display: inline-block;
   vertical-align: middle;
 }
-.btn-icon.btn {
+.btn-icon.btn, .nav-pills > li > a.btn-icon {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
 }
