@@ -1,1 +1,8 @@
-/* Common SCSS file */
+@import 'variables';
+
+// Core variables and mixins overwrites
+@import 'mixins/border-radius';
+@import 'mixins/buttons';
+@import 'mixins/elevations';
+
+@import 'buttons';

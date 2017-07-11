@@ -1,0 +1,106 @@
+/* Bootstrap @import "scss/mixins/buttons.scss */
+
+@mixin button-variant($color, $background, $border) {
+	font-family: $btn-font;
+	color: $color;
+	text-transform: $btn-font-transform;
+	background-color: $background;
+	border-color: $border;
+	@include elevation-1;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+
+	@include hover {
+		color: $color;
+		@include elevation-3;
+	}
+
+	&:focus,
+	&.focus {
+		color: $color;
+		@include elevation-3;
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		color: $color;
+		// Remove the gradient for the pressed/active state
+		background-image: none;
+		@include elevation-3;
+
+		&:hover,
+		&:focus,
+		&.focus {
+		  color: $color;
+		}
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $grey-6;
+		background-color: $grey-4;
+		border-color: $grey-4;
+		@include no-elevation;
+
+		&:focus,
+		&.focus {
+			color: $grey-6;
+			background-color: $grey-4;
+			border-color: $grey-4;
+		}
+
+		@include hover {
+			color: $grey-6;
+			background-color: $grey-4;
+			border-color: $grey-4;
+		}
+	}
+}
+
+@mixin button-outline-variant($color) {
+	font-family: $btn-font;
+	text-transform: $btn-font-transform;
+	color: darken($color, 3%);
+	background-image: none;
+	background-color: transparent;
+	border-color: darken($color, 3%);
+	@include elevation-1;
+
+
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		color: $jdrf-white;
+		background-color: $color;
+		@include elevation-3;
+	}
+
+	@include hover {
+		color: $jdrf-white;
+		background-color: $color;
+		@include elevation-3;
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $grey-6;
+		border-color: $grey-6;
+		background-color: transparent;
+		@include no-elevation;
+
+		&:focus,
+		&.focus {
+			color: $grey-6;
+			border-color: $grey-6;
+			background-color: transparent;
+		}
+
+		@include hover {
+			color: $grey-6;
+			border-color: $grey-6;
+			background-color: transparent;
+		}
+	}
+}
