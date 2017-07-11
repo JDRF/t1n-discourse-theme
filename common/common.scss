@@ -72,7 +72,8 @@
 /* Bootstrap @import "scss/mixins/border-radius.scss */
 /* Bootstrap @import "scss/mixins/buttons.scss */
 /* Bootstrap overwrites: buttons.scss */
-.btn, .nav-pills > li > a {
+.btn, #topic-footer-buttons .btn,
+.nav-pills > li > a {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
@@ -90,37 +91,52 @@
   line-height: 0.875rem;
   border-radius: 2px;
 }
-.btn:active, .nav-pills > li > a:active, .btn.active, .nav-pills > li > a.active {
+.btn:active, #topic-footer-buttons .btn:active,
+.nav-pills > li > a:active, .btn.active, #topic-footer-buttons .active.btn,
+.nav-pills > li > a.active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn:active:focus, .nav-pills > li > a:active:focus, .btn:active.focus, .nav-pills > li > a:active.focus, .btn.active:focus, .nav-pills > li > a.active:focus, .btn.active.focus, .nav-pills > li > a.active.focus {
+.btn:active:focus, #topic-footer-buttons .btn:active:focus,
+.nav-pills > li > a:active:focus, .btn:active.focus, #topic-footer-buttons .btn:active.focus,
+.nav-pills > li > a:active.focus, .btn.active:focus, #topic-footer-buttons .active.btn:focus,
+.nav-pills > li > a.active:focus, .btn.active.focus, #topic-footer-buttons .active.focus.btn,
+.nav-pills > li > a.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
   outline: 0;
 }
-.btn:focus, .nav-pills > li > a:focus, .btn:hover, .nav-pills > li > a:hover {
+.btn:focus, #topic-footer-buttons .btn:focus,
+.nav-pills > li > a:focus, .btn:hover, #topic-footer-buttons .btn:hover,
+.nav-pills > li > a:hover {
   text-decoration: none;
   outline: 0;
 }
-.btn.focus, .nav-pills > li > a.focus {
+.btn.focus, #topic-footer-buttons .focus.btn,
+.nav-pills > li > a.focus {
   text-decoration: none;
   outline: 0;
 }
-.btn.disabled, .nav-pills > li > a.disabled, .btn:disabled, .nav-pills > li > a:disabled {
+.btn.disabled, #topic-footer-buttons .disabled.btn,
+.nav-pills > li > a.disabled, .btn:disabled, #topic-footer-buttons .btn:disabled,
+.nav-pills > li > a:disabled {
   cursor: not-allowed;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn.material-icons, .nav-pills > li > a.material-icons {
+.btn.material-icons, #topic-footer-buttons .material-icons.btn,
+.nav-pills > li > a.material-icons {
   font-family: 'Material Icons';
 }
 
-a.btn.disabled, .nav-pills > li > a.disabled,
+a.btn.disabled, #topic-footer-buttons a.disabled.btn,
+.nav-pills > li > a.disabled,
 fieldset[disabled] a.btn,
+fieldset[disabled] #topic-footer-buttons a.btn,
+#topic-footer-buttons fieldset[disabled] a.btn,
 fieldset[disabled] .nav-pills > li > a {
   pointer-events: none;
 }
@@ -425,7 +441,9 @@ fieldset[disabled] .nav-pills > li > a {
   border-color: #e0e0e0;
 }
 
-.btn-primary-outline, .nav-pills > li > a {
+.btn-primary-outline, #topic-footer-buttons .btn,
+#topic-footer-buttons .nav-pills > li > a,
+.nav-pills > li > a {
   font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   color: #006bc0;
@@ -437,44 +455,82 @@ fieldset[disabled] .nav-pills > li > a {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-primary-outline:focus, .nav-pills > li > a:focus, .btn-primary-outline.focus, .nav-pills > li > a.focus, .btn-primary-outline:active, .nav-pills > li > a:active, .btn-primary-outline.active, .nav-pills > li > a.active, .nav-pills > li.active > a, .open > .btn-primary-outline.dropdown-toggle, .nav-pills > li.open > a.dropdown-toggle {
+.btn-primary-outline:focus, #topic-footer-buttons .btn:focus,
+#topic-footer-buttons .nav-pills > li > a:focus,
+.nav-pills > li > a:focus, .btn-primary-outline.focus, #topic-footer-buttons .focus.btn,
+#topic-footer-buttons .nav-pills > li > a.focus,
+.nav-pills > li > a.focus, .btn-primary-outline:active, #topic-footer-buttons .btn:active,
+#topic-footer-buttons .nav-pills > li > a:active,
+.nav-pills > li > a:active, .btn-primary-outline.active, #topic-footer-buttons .active.btn,
+#topic-footer-buttons .nav-pills > li > a.active,
+.nav-pills > li > a.active, .nav-pills > li.active > a, .open > .btn-primary-outline.dropdown-toggle, #topic-footer-buttons .open > .dropdown-toggle.btn,
+#topic-footer-buttons .nav-pills > li.open > a.dropdown-toggle,
+.nav-pills > li.open > a.dropdown-toggle {
   color: #ffffff;
   background-color: #0073cf;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn-primary-outline:hover, .nav-pills > li > a:hover {
+.btn-primary-outline:hover, #topic-footer-buttons .btn:hover,
+#topic-footer-buttons .nav-pills > li > a:hover,
+.nav-pills > li > a:hover {
   color: #ffffff;
   background-color: #0073cf;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn-primary-outline.disabled, .nav-pills > li > a.disabled, .btn-primary-outline:disabled, .nav-pills > li > a:disabled {
+.btn-primary-outline.disabled, #topic-footer-buttons .disabled.btn,
+#topic-footer-buttons .nav-pills > li > a.disabled,
+.nav-pills > li > a.disabled, .btn-primary-outline:disabled, #topic-footer-buttons .btn:disabled,
+#topic-footer-buttons .nav-pills > li > a:disabled,
+.nav-pills > li > a:disabled {
   color: #9e9e9e;
   border-color: #9e9e9e;
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-primary-outline.disabled:focus, .nav-pills > li > a.disabled:focus, .btn-primary-outline.disabled.focus, .nav-pills > li > a.disabled.focus, .btn-primary-outline:disabled:focus, .nav-pills > li > a:disabled:focus, .btn-primary-outline:disabled.focus, .nav-pills > li > a:disabled.focus {
+.btn-primary-outline.disabled:focus, #topic-footer-buttons .disabled.btn:focus,
+#topic-footer-buttons .nav-pills > li > a.disabled:focus,
+.nav-pills > li > a.disabled:focus, .btn-primary-outline.disabled.focus, #topic-footer-buttons .disabled.focus.btn,
+#topic-footer-buttons .nav-pills > li > a.disabled.focus,
+.nav-pills > li > a.disabled.focus, .btn-primary-outline:disabled:focus, #topic-footer-buttons .btn:disabled:focus,
+#topic-footer-buttons .nav-pills > li > a:disabled:focus,
+.nav-pills > li > a:disabled:focus, .btn-primary-outline:disabled.focus, #topic-footer-buttons .btn:disabled.focus,
+#topic-footer-buttons .nav-pills > li > a:disabled.focus,
+.nav-pills > li > a:disabled.focus {
   color: #9e9e9e;
   border-color: #9e9e9e;
   background-color: transparent;
 }
-.btn-primary-outline.disabled:hover, .nav-pills > li > a.disabled:hover, .btn-primary-outline:disabled:hover, .nav-pills > li > a:disabled:hover {
+.btn-primary-outline.disabled:hover, #topic-footer-buttons .disabled.btn:hover,
+#topic-footer-buttons .nav-pills > li > a.disabled:hover,
+.nav-pills > li > a.disabled:hover, .btn-primary-outline:disabled:hover, #topic-footer-buttons .btn:disabled:hover,
+#topic-footer-buttons .nav-pills > li > a:disabled:hover,
+.nav-pills > li > a:disabled:hover {
   color: #9e9e9e;
   border-color: #9e9e9e;
   background-color: transparent;
 }
-.btn-primary-outline:active, .nav-pills > li > a:active, .btn-primary-outline.active, .nav-pills > li > a.active, .nav-pills > li.active > a {
+.btn-primary-outline:active, #topic-footer-buttons .btn:active,
+#topic-footer-buttons .nav-pills > li > a:active,
+.nav-pills > li > a:active, .btn-primary-outline.active, #topic-footer-buttons .active.btn,
+#topic-footer-buttons .nav-pills > li > a.active,
+.nav-pills > li > a.active, .nav-pills > li.active > a {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-primary-outline:focus, .nav-pills > li > a:focus, .btn-primary-outline:hover, .nav-pills > li > a:hover {
+.btn-primary-outline:focus, #topic-footer-buttons .btn:focus,
+#topic-footer-buttons .nav-pills > li > a:focus,
+.nav-pills > li > a:focus, .btn-primary-outline:hover, #topic-footer-buttons .btn:hover,
+#topic-footer-buttons .nav-pills > li > a:hover,
+.nav-pills > li > a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn-primary-outline.focus, .nav-pills > li > a.focus {
+.btn-primary-outline.focus, #topic-footer-buttons .focus.btn,
+#topic-footer-buttons .nav-pills > li > a.focus,
+.nav-pills > li > a.focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -782,7 +838,9 @@ fieldset[disabled] .nav-pills > li > a {
   border-radius: 2px;
   height: 48px;
 }
-.btn-lg.btn-primary-outline, .nav-pills > li > a.btn-lg {
+.btn-lg.btn-primary-outline, #topic-footer-buttons .btn-lg.btn,
+#topic-footer-buttons .nav-pills > li > a.btn-lg,
+.nav-pills > li > a.btn-lg {
   border-width: 2px;
 }
 
@@ -832,7 +890,8 @@ input[type="button"].btn-block {
   display: inline-block;
   vertical-align: middle;
 }
-.btn-icon.btn, .nav-pills > li > a.btn-icon {
+.btn-icon.btn, #topic-footer-buttons .btn-icon.btn,
+.nav-pills > li > a.btn-icon {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
 }
@@ -975,7 +1034,9 @@ input[type="button"].btn-block {
     stroke-dashoffset: -124px;
   }
 }
-#create-topic.btn, .nav-pills > li > a#create-topic {
+#topic-footer-buttons .btn-primary.create,
+#create-topic.btn,
+.nav-pills > li > a#create-topic {
   font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
@@ -988,38 +1049,84 @@ input[type="button"].btn-block {
   line-height: 0.875rem;
   border-radius: 2px;
 }
-#create-topic.btn:hover, .nav-pills > li > a#create-topic:hover {
+#topic-footer-buttons .btn-primary.create:hover,
+#create-topic.btn:hover,
+.nav-pills > li > a#create-topic:hover {
   color: #fff;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-#create-topic.btn:focus, .nav-pills > li > a#create-topic:focus, #create-topic.btn.focus, .nav-pills > li > a#create-topic.focus {
+#topic-footer-buttons .btn-primary.create:focus, #topic-footer-buttons .btn-primary.create.focus,
+#create-topic.btn:focus,
+.nav-pills > li > a#create-topic:focus,
+#create-topic.btn.focus,
+.nav-pills > li > a#create-topic.focus {
   color: #fff;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-#create-topic.btn:active, .nav-pills > li > a#create-topic:active, #create-topic.btn.active, .nav-pills > li > a#create-topic.active, .open > #create-topic.btn.dropdown-toggle, .nav-pills > li.open > a#create-topic.dropdown-toggle {
+#topic-footer-buttons .btn-primary.create:active, #topic-footer-buttons .btn-primary.create.active, .open > #topic-footer-buttons .btn-primary.create.dropdown-toggle,
+#create-topic.btn:active,
+.nav-pills > li > a#create-topic:active,
+#create-topic.btn.active,
+.nav-pills > li > a#create-topic.active, .open >
+#create-topic.btn.dropdown-toggle, #topic-footer-buttons .open > #create-topic.dropdown-toggle.btn,
+.nav-pills > li.open > a#create-topic.dropdown-toggle {
   color: #fff;
   background-image: none;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-#create-topic.btn:active:hover, .nav-pills > li > a#create-topic:active:hover, #create-topic.btn:active:focus, .nav-pills > li > a#create-topic:active:focus, #create-topic.btn:active.focus, .nav-pills > li > a#create-topic:active.focus, #create-topic.btn.active:hover, .nav-pills > li > a#create-topic.active:hover, #create-topic.btn.active:focus, .nav-pills > li > a#create-topic.active:focus, #create-topic.btn.active.focus, .nav-pills > li > a#create-topic.active.focus, .open > #create-topic.btn.dropdown-toggle:hover, .nav-pills > li.open > a#create-topic.dropdown-toggle:hover, .open > #create-topic.btn.dropdown-toggle:focus, .nav-pills > li.open > a#create-topic.dropdown-toggle:focus, .open > #create-topic.btn.dropdown-toggle.focus, .nav-pills > li.open > a#create-topic.dropdown-toggle.focus {
+#topic-footer-buttons .btn-primary.create:active:hover, #topic-footer-buttons .btn-primary.create:active:focus, #topic-footer-buttons .btn-primary.create:active.focus, #topic-footer-buttons .btn-primary.create.active:hover, #topic-footer-buttons .btn-primary.create.active:focus, #topic-footer-buttons .btn-primary.create.active.focus, .open > #topic-footer-buttons .btn-primary.create.dropdown-toggle:hover, .open > #topic-footer-buttons .btn-primary.create.dropdown-toggle:focus, .open > #topic-footer-buttons .btn-primary.create.dropdown-toggle.focus,
+#create-topic.btn:active:hover,
+.nav-pills > li > a#create-topic:active:hover,
+#create-topic.btn:active:focus,
+.nav-pills > li > a#create-topic:active:focus,
+#create-topic.btn:active.focus,
+.nav-pills > li > a#create-topic:active.focus,
+#create-topic.btn.active:hover,
+.nav-pills > li > a#create-topic.active:hover,
+#create-topic.btn.active:focus,
+.nav-pills > li > a#create-topic.active:focus,
+#create-topic.btn.active.focus,
+.nav-pills > li > a#create-topic.active.focus, .open >
+#create-topic.btn.dropdown-toggle:hover, #topic-footer-buttons .open > #create-topic.dropdown-toggle.btn:hover,
+.nav-pills > li.open > a#create-topic.dropdown-toggle:hover, .open >
+#create-topic.btn.dropdown-toggle:focus, #topic-footer-buttons .open > #create-topic.dropdown-toggle.btn:focus,
+.nav-pills > li.open > a#create-topic.dropdown-toggle:focus, .open >
+#create-topic.btn.dropdown-toggle.focus, #topic-footer-buttons .open > #create-topic.dropdown-toggle.focus.btn,
+.nav-pills > li.open > a#create-topic.dropdown-toggle.focus {
   color: #fff;
 }
-#create-topic.btn.disabled, .nav-pills > li > a#create-topic.disabled, #create-topic.btn:disabled, .nav-pills > li > a#create-topic:disabled {
+#topic-footer-buttons .btn-primary.create.disabled, #topic-footer-buttons .btn-primary.create:disabled,
+#create-topic.btn.disabled,
+.nav-pills > li > a#create-topic.disabled,
+#create-topic.btn:disabled,
+.nav-pills > li > a#create-topic:disabled {
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-#create-topic.btn.disabled:focus, .nav-pills > li > a#create-topic.disabled:focus, #create-topic.btn.disabled.focus, .nav-pills > li > a#create-topic.disabled.focus, #create-topic.btn:disabled:focus, .nav-pills > li > a#create-topic:disabled:focus, #create-topic.btn:disabled.focus, .nav-pills > li > a#create-topic:disabled.focus {
+#topic-footer-buttons .btn-primary.create.disabled:focus, #topic-footer-buttons .btn-primary.create.disabled.focus, #topic-footer-buttons .btn-primary.create:disabled:focus, #topic-footer-buttons .btn-primary.create:disabled.focus,
+#create-topic.btn.disabled:focus,
+.nav-pills > li > a#create-topic.disabled:focus,
+#create-topic.btn.disabled.focus,
+.nav-pills > li > a#create-topic.disabled.focus,
+#create-topic.btn:disabled:focus,
+.nav-pills > li > a#create-topic:disabled:focus,
+#create-topic.btn:disabled.focus,
+.nav-pills > li > a#create-topic:disabled.focus {
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
 }
-#create-topic.btn.disabled:hover, .nav-pills > li > a#create-topic.disabled:hover, #create-topic.btn:disabled:hover, .nav-pills > li > a#create-topic:disabled:hover {
+#topic-footer-buttons .btn-primary.create.disabled:hover, #topic-footer-buttons .btn-primary.create:disabled:hover,
+#create-topic.btn.disabled:hover,
+.nav-pills > li > a#create-topic.disabled:hover,
+#create-topic.btn:disabled:hover,
+.nav-pills > li > a#create-topic:disabled:hover {
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;

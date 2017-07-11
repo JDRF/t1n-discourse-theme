@@ -1,3 +1,4 @@
+#topic-footer-buttons .btn,
 .nav-pills>li>a {
 	@extend .btn;
 	@extend .btn-primary-outline;
@@ -8,6 +9,7 @@
 	@extend .btn-primary-outline.active;
 }
 
+#topic-footer-buttons .btn-primary.create,
 #create-topic.btn {
 	@include button-variant($btn-primary-color, $jdrf-purple, $jdrf-purple);
 }
