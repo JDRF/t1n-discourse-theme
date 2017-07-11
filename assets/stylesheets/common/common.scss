@@ -59,6 +59,9 @@ body {
 		position: absolute;
 		bottom: 30px;
 		font-weight: 500;
+		color: #fff;
+		opacity: 1;
+		text-decoration: none;
 		&:after {
 			content: "GOT IT";
 		}
@@ -73,4 +76,15 @@ body {
 			color: $jdrf-dark-blue;
 		}
 	}
+
+	.submit-panel .cancel {
+		text-transform: uppercase;
+		vertical-align: middle;
+		color: $grey-7;
+	}
+}
+
+
+.deleted .topic-body {
+	background-color: $grey-3;
 }

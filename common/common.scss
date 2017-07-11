@@ -1254,6 +1254,9 @@ body {
   position: absolute;
   bottom: 30px;
   font-weight: 500;
+  color: #fff;
+  opacity: 1;
+  text-decoration: none;
 }
 .composer-popup a.close:after {
   content: "GOT IT";
@@ -1267,4 +1270,13 @@ body {
 }
 .composer-popup a:hover {
   color: #002855;
+}
+.composer-popup .submit-panel .cancel {
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #757575;
+}
+
+.deleted .topic-body {
+  background-color: #eeeeee;
 }
