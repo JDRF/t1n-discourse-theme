@@ -971,6 +971,80 @@ input[type="button"].btn-block {
     stroke-dashoffset: -124px;
   }
 }
+.nav-pills > li.active > a,
+.nav-pills > li > a.active {
+  font-family: "Gotham Medium", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #0073cf;
+  border-color: #0073cf;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  border-radius: 2px;
+}
+.nav-pills > li.active > a:hover,
+.nav-pills > li > a.active:hover {
+  color: #fff;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.nav-pills > li.active > a:focus, .nav-pills > li.active > a.focus,
+.nav-pills > li > a.active:focus,
+.nav-pills > li > a.active.focus {
+  color: #fff;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.nav-pills > li.active > a:active, .nav-pills > li.active > a.active, .open > .nav-pills > li.active > a.dropdown-toggle,
+.nav-pills > li > a.active:active,
+.nav-pills > li > a.active.active, .open >
+.nav-pills > li > a.active.dropdown-toggle {
+  color: #fff;
+  background-image: none;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.nav-pills > li.active > a:active:hover, .nav-pills > li.active > a:active:focus, .nav-pills > li.active > a:active.focus, .nav-pills > li.active > a.active:hover, .nav-pills > li.active > a.active:focus, .nav-pills > li.active > a.active.focus, .open > .nav-pills > li.active > a.dropdown-toggle:hover, .open > .nav-pills > li.active > a.dropdown-toggle:focus, .open > .nav-pills > li.active > a.dropdown-toggle.focus,
+.nav-pills > li > a.active:active:hover,
+.nav-pills > li > a.active:active:focus,
+.nav-pills > li > a.active:active.focus,
+.nav-pills > li > a.active.active:hover,
+.nav-pills > li > a.active.active:focus,
+.nav-pills > li > a.active.active.focus, .open >
+.nav-pills > li > a.active.dropdown-toggle:hover, .open >
+.nav-pills > li > a.active.dropdown-toggle:focus, .open >
+.nav-pills > li > a.active.dropdown-toggle.focus {
+  color: #fff;
+}
+.nav-pills > li.active > a.disabled, .nav-pills > li.active > a:disabled,
+.nav-pills > li > a.active.disabled,
+.nav-pills > li > a.active:disabled {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.nav-pills > li.active > a.disabled:focus, .nav-pills > li.active > a.disabled.focus, .nav-pills > li.active > a:disabled:focus, .nav-pills > li.active > a:disabled.focus,
+.nav-pills > li > a.active.disabled:focus,
+.nav-pills > li > a.active.disabled.focus,
+.nav-pills > li > a.active:disabled:focus,
+.nav-pills > li > a.active:disabled.focus {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+.nav-pills > li.active > a.disabled:hover, .nav-pills > li.active > a:disabled:hover,
+.nav-pills > li > a.active.disabled:hover,
+.nav-pills > li > a.active:disabled:hover {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
 body {
   font-family: "Gotham Book", sans-serif;
 }
