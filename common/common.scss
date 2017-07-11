@@ -1178,6 +1178,54 @@ input[type="button"].btn-block {
           box-shadow: 0 7px 10px rgba(0, 0, 0, 0.28);
 }
 
+.footer {
+  clear: both;
+}
+
+div.footer-inner ul.footer-menu li {
+  font-weight: normal;
+}
+div.footer-inner .footer-social {
+  margin: 0 0 17px;
+}
+@media screen and (max-width: 720px) {
+  div.footer-inner .footer-social {
+    margin: 17px 0;
+  }
+}
+
+div.footer-inner-top {
+  border-top: 1px solid #ddd;
+  padding-top: 1.5em;
+  background: #fff;
+}
+
+.footer-widget {
+  width: 100% !important;
+  margin: 0;
+}
+.footer-widget a {
+  text-decoration: underline;
+}
+.footer-widget aside.widget {
+  width: 48.5%;
+  float: left;
+  margin-right: 3% !important;
+}
+.footer-widget aside.widget:nth-child(even) {
+  margin-right: 0 !important;
+}
+.footer-widget aside.widget img {
+  float: left;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 5px 30px 10px 0;
+}
+
+div.footer-inner-bottom li.highlighted a {
+  color: #0073cf;
+}
+
 body {
   font-family: "Gotham", sans-serif;
   overflow-x: hidden;
