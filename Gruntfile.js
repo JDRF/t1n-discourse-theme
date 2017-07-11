@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 
     concat: {
       options: {
-        banner: '@font-face { font-family: "Gotham Book"; src: url($gotham-book-webfont) format(\'woff2\') }'
+        banner: '@font-face { font-family: "Gotham"; font-weight: normal; src: url($gotham-book-webfont) format(\'woff2\') }\n' +
+                '@font-face { font-family: "Gotham"; font-weight: 700; src: url($gotham-bold-webfont) format(\'woff2\') }\n'
       },
       common: {
         dest: 'common/common.scss',

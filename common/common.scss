@@ -1,4 +1,6 @@
-@font-face { font-family: "Gotham Book"; src: url($gotham-book-webfont) format('woff2') }/* Variable overwrite naming conventions are based on Bootstrap.
+@font-face { font-family: "Gotham"; font-weight: normal; src: url($gotham-book-webfont) format('woff2') }
+@font-face { font-family: "Gotham"; font-weight: 700; src: url($gotham-bold-webfont) format('woff2') }
+/* Variable overwrite naming conventions are based on Bootstrap.
 *
 * If overwriting an existing Bootstrap var, keep the same name.
 *
@@ -76,7 +78,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
@@ -122,7 +124,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-primary {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
   background-color: #0073cf;
@@ -172,7 +174,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-secondary {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #0073cf;
@@ -222,7 +224,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-info {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
   background-color: #5bc0de;
@@ -272,7 +274,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-success {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
   background-color: #5cb85c;
@@ -322,7 +324,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-warning {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
   background-color: #f0ad4e;
@@ -372,7 +374,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-danger {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
   background-color: #d9534f;
@@ -422,7 +424,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-primary-outline, .nav-pills > li > a {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   color: #006bc0;
   background-image: none;
@@ -476,7 +478,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-secondary-outline {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   color: #006bc0;
   background-image: none;
@@ -516,7 +518,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-info-outline {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   color: #4ebbdb;
   background-image: none;
@@ -556,7 +558,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-success-outline {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   color: #51b351;
   background-image: none;
@@ -596,7 +598,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-warning-outline {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   color: #efa640;
   background-image: none;
@@ -636,7 +638,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-danger-outline {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   text-transform: uppercase;
   color: #d64742;
   background-image: none;
@@ -708,7 +710,7 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-flat {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #0073cf;
@@ -972,7 +974,7 @@ input[type="button"].btn-block {
   }
 }
 #create-topic.btn, .nav-pills > li > a#create-topic {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
   background-color: #a75ccc;
@@ -1022,5 +1024,9 @@ input[type="button"].btn-block {
 }
 
 body {
-  font-family: "Gotham Book", sans-serif;
+  font-family: "Gotham", sans-serif;
+}
+
+.topic-list th {
+  font-weight: 700;
 }
