@@ -1328,6 +1328,15 @@ div.footer-inner-bottom li.highlighted a {
   color: #0073cf;
 }
 
+.footer-social,
+#footer-links ul {
+  float: left;
+}
+
+#footer-credits p {
+  margin: 0;
+}
+
 body {
   font-family: "Gotham", sans-serif;
   overflow-x: hidden;

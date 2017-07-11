@@ -143,3 +143,12 @@ div.footer-inner-top {
 div.footer-inner-bottom li.highlighted a {
 	color: $jdrf-blue;
 }
+
+.footer-social,
+#footer-links ul {
+	float: left;
+}
+
+#footer-credits p {
+	margin: 0;
+}
