@@ -1,4 +1,8 @@
+.nav-pills>li>a {
+	@extend .btn-primary-outline;
+}
+
 .nav-pills>li.active>a,
 .nav-pills>li>a.active {
-	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	@extend .btn-primary-outline.active;
 }
