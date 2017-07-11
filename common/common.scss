@@ -6,3 +6,7 @@
 @import 'mixins/elevations';
 
 @import 'buttons';
+
+body {
+	font-family: $font-family-base;
+}
