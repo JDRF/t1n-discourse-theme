@@ -1178,6 +1178,108 @@ input[type="button"].btn-block {
           box-shadow: 0 7px 10px rgba(0, 0, 0, 0.28);
 }
 
+/*--------------------------------------------------------------
+3.7 - Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.7.1 - General
+--------------------------------------------------------------*/
+footer[role="contentinfo"] {
+  clear: both;
+  font-size: 12px;
+  line-height: 2;
+  width: 100%;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+div.footer-inner-top {
+  background: transparent;
+  padding: 0;
+  clear: left;
+  color: #999;
+}
+
+div.footer-inner-top a {
+  color: #999;
+}
+
+div.footer-inner-bottom {
+  background: #FAFBFC;
+  border-top: 1px solid #D3DADF;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+  padding: 30px 0;
+  font-size: 13px;
+  clear: left;
+  color: #999;
+}
+
+div.footer-inner-bottom a {
+  color: #999;
+}
+
+div.footer-inner {
+  float: none;
+  width: auto;
+  overflow: hidden;
+}
+
+div.footer-inner div#footer-credits {
+  float: left;
+}
+
+div.footer-inner div#footer-links {
+  float: right;
+}
+
+div.footer-inner ul.footer-menu li {
+  display: inline;
+  font-weight: bold;
+  margin: 0 0 0 12px;
+}
+
+/*--------------------------------------------------------------
+3.7.2 - Footer Widgets
+--------------------------------------------------------------*/
+.footer-widget .widget {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+
+.footer-widget .widget h4.widgettitle {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #999;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.footer-widget .widget p, .footer-widget .widget li, .footer-widget .widget .textwidget {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer-widget .widget div.item-options {
+  color: #ccc;
+  margin: 0 auto 5px;
+  text-align: left;
+}
+
+.footer-widget .widget div.item-options a.selected {
+  color: #999;
+}
+
+.footer-widget .widget ul.item-list li {
+  border-top: 1px solid #ddd;
+}
+
 .footer {
   clear: both;
 }
