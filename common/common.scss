@@ -1,12 +1,12 @@
-@import 'variables';
+// @import 'variables';
 
-// Core variables and mixins overwrites
-@import 'mixins/border-radius';
-@import 'mixins/buttons';
-@import 'mixins/elevations';
+// // Core variables and mixins overwrites
+// @import 'mixins/border-radius';
+// @import 'mixins/buttons';
+// @import 'mixins/elevations';
 
-@import 'buttons';
+// @import 'buttons';
 
 body {
-	font-family: sans-serif;
+	background-color: red;
 }
