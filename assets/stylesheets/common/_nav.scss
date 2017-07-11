@@ -9,6 +9,7 @@
 	@extend .btn-primary-outline.active;
 }
 
+.btn-primary.create,
 #topic-footer-buttons .btn-primary.create,
 #create-topic.btn {
 	@include button-variant($btn-primary-color, $jdrf-purple, $jdrf-purple);
