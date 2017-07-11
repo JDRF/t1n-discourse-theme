@@ -9,6 +9,9 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     concat: {
+      options: {
+        banner: '@font-face { font-family: "Gotham Book"; src: url($gotham-book-webfont) format(\'woff2\') }'
+      },
       common: {
         dest: 'common/common.scss',
         src: '<%= sass.common.dest %>'
