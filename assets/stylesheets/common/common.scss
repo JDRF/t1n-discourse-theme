@@ -18,6 +18,16 @@ body {
 	font-weight: 500;
 }
 
+.modal-backdrop,
+.modal-backdrop.fade.in {
+	opacity: .5;
+}
+
+.bootbox.modal.in {
+	border-radius: 2px;
+	border: 0;
+}
+
 .modal-footer {
 	.btn-danger {
 		float: right;
