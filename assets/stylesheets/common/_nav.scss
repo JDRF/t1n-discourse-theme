@@ -7,3 +7,7 @@
 .nav-pills>li>a.active {
 	@extend .btn-primary-outline.active;
 }
+
+#create-topic.btn {
+	@include button-variant($btn-primary-color, $jdrf-purple, $jdrf-purple);
+}

@@ -971,6 +971,56 @@ input[type="button"].btn-block {
     stroke-dashoffset: -124px;
   }
 }
+#create-topic.btn, .nav-pills > li > a#create-topic {
+  font-family: "Gotham Medium", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #a75ccc;
+  border-color: #a75ccc;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  border-radius: 2px;
+}
+#create-topic.btn:hover, .nav-pills > li > a#create-topic:hover {
+  color: #fff;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+#create-topic.btn:focus, .nav-pills > li > a#create-topic:focus, #create-topic.btn.focus, .nav-pills > li > a#create-topic.focus {
+  color: #fff;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+#create-topic.btn:active, .nav-pills > li > a#create-topic:active, #create-topic.btn.active, .nav-pills > li > a#create-topic.active, .open > #create-topic.btn.dropdown-toggle, .nav-pills > li.open > a#create-topic.dropdown-toggle {
+  color: #fff;
+  background-image: none;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+#create-topic.btn:active:hover, .nav-pills > li > a#create-topic:active:hover, #create-topic.btn:active:focus, .nav-pills > li > a#create-topic:active:focus, #create-topic.btn:active.focus, .nav-pills > li > a#create-topic:active.focus, #create-topic.btn.active:hover, .nav-pills > li > a#create-topic.active:hover, #create-topic.btn.active:focus, .nav-pills > li > a#create-topic.active:focus, #create-topic.btn.active.focus, .nav-pills > li > a#create-topic.active.focus, .open > #create-topic.btn.dropdown-toggle:hover, .nav-pills > li.open > a#create-topic.dropdown-toggle:hover, .open > #create-topic.btn.dropdown-toggle:focus, .nav-pills > li.open > a#create-topic.dropdown-toggle:focus, .open > #create-topic.btn.dropdown-toggle.focus, .nav-pills > li.open > a#create-topic.dropdown-toggle.focus {
+  color: #fff;
+}
+#create-topic.btn.disabled, .nav-pills > li > a#create-topic.disabled, #create-topic.btn:disabled, .nav-pills > li > a#create-topic:disabled {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#create-topic.btn.disabled:focus, .nav-pills > li > a#create-topic.disabled:focus, #create-topic.btn.disabled.focus, .nav-pills > li > a#create-topic.disabled.focus, #create-topic.btn:disabled:focus, .nav-pills > li > a#create-topic:disabled:focus, #create-topic.btn:disabled.focus, .nav-pills > li > a#create-topic:disabled.focus {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+#create-topic.btn.disabled:hover, .nav-pills > li > a#create-topic.disabled:hover, #create-topic.btn:disabled:hover, .nav-pills > li > a#create-topic:disabled:hover {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
 body {
   font-family: "Gotham Book", sans-serif;
 }
