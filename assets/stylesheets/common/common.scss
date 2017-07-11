@@ -11,6 +11,11 @@
 
 body {
 	font-family: $font-family-base;
+	overflow-x: hidden;
+}
+
+.d-header {
+	box-shadow: none;
 }
 
 .badge-wrapper,
@@ -87,4 +92,20 @@ body {
 
 .deleted .topic-body {
 	background-color: $grey-3;
+}
+
+#suggested-topics {
+	background: $grey-1;
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		background: $grey-1;
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		left: calc(-50vw + 50%);
+		height: 100%;
+		z-index: -1;
+	}
 }

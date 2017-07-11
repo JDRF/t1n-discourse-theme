@@ -1180,6 +1180,12 @@ input[type="button"].btn-block {
 
 body {
   font-family: "Gotham", sans-serif;
+  overflow-x: hidden;
+}
+
+.d-header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .badge-wrapper,
@@ -1302,4 +1308,20 @@ body {
 
 .deleted .topic-body {
   background-color: #eeeeee;
+}
+
+#suggested-topics {
+  background: #fafafa;
+  position: relative;
+}
+#suggested-topics:before {
+  content: "";
+  display: block;
+  background: #fafafa;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: calc(-50vw + 50%);
+  height: 100%;
+  z-index: -1;
 }
