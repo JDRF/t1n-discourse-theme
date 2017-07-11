@@ -1,0 +1,29 @@
+{
+  "name": "t1n-discourse-theme",
+  "version": "1.0.0",
+  "description": "t1n discourse theme",
+  "devDependencies": {
+    "bootstrap": "4.0.0-alpha.2",
+    "autoprefixer": "^7.1.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-dev-update": "^2.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-scss-lint": "^0.5.0",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDRF/t1n-discourse-theme.git"
+  },
+  "keywords": [
+    "jdrf",
+    "discourse"
+  ],
+  "author": "10up",
+  "bugs": {
+    "url": "https://github.com/JDRF/t1n-discourse-theme/issues"
+  }
+}
