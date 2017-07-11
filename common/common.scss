@@ -1167,6 +1167,53 @@ body {
 
 .modal-footer .btn-danger {
   float: right;
+  font-family: "Gotham", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #e01279;
+  border-color: #e01279;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  border-radius: 2px;
+}
+.modal-footer .btn-danger:hover {
+  color: #fff;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.modal-footer .btn-danger:focus, .modal-footer .btn-danger.focus {
+  color: #fff;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.modal-footer .btn-danger:active, .modal-footer .btn-danger.active, .open > .modal-footer .btn-danger.dropdown-toggle {
+  color: #fff;
+  background-image: none;
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.modal-footer .btn-danger:active:hover, .modal-footer .btn-danger:active:focus, .modal-footer .btn-danger:active.focus, .modal-footer .btn-danger.active:hover, .modal-footer .btn-danger.active:focus, .modal-footer .btn-danger.active.focus, .open > .modal-footer .btn-danger.dropdown-toggle:hover, .open > .modal-footer .btn-danger.dropdown-toggle:focus, .open > .modal-footer .btn-danger.dropdown-toggle.focus {
+  color: #fff;
+}
+.modal-footer .btn-danger.disabled, .modal-footer .btn-danger:disabled {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal-footer .btn-danger.disabled:focus, .modal-footer .btn-danger.disabled.focus, .modal-footer .btn-danger:disabled:focus, .modal-footer .btn-danger:disabled.focus {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+.modal-footer .btn-danger.disabled:hover, .modal-footer .btn-danger:disabled:hover {
+  color: #9e9e9e;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
 }
 .modal-footer .btn.null, .modal-footer #topic-footer-buttons .null.btn, #topic-footer-buttons .modal-footer .null.btn,
 .modal-footer .nav-pills > li > a.null {

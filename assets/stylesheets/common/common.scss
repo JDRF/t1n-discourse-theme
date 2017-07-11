@@ -21,6 +21,7 @@ body {
 .modal-footer {
 	.btn-danger {
 		float: right;
+		@include button-variant($btn-primary-color, $jdrf-magenta, $jdrf-magenta);
 	}
 
 	.btn.null {
