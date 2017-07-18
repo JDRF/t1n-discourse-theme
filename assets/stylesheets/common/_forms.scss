@@ -11,6 +11,7 @@
 }
 .form-field--text label,
 .form-field--text input,
+body .form-field--text input[type="search"],
 .form-field--text textarea {
   display: block;
   font-size: 14px;
@@ -30,6 +31,7 @@
   clip: rect(0 0 0 0);
 }
 .form-field--text input,
+body .form-field--text input[type="search"],
 .form-field--text textarea {
   background-color: #f6f6f6;
   border: none;
