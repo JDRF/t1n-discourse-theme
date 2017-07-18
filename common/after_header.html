@@ -213,7 +213,7 @@ Site.toggleOuterCanvas = {
 	}
 };
 
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function () {
 	var keys = Object.keys(Site), index = -1, component;
 
 	while (component = Site[keys[++index]]) {
@@ -221,6 +221,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			component.onCreate();
 		}
 	}
-});
+};
 
 </script>
