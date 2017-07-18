@@ -50,3 +50,177 @@
 		</li>
 	</ul>
 </nav>
+
+<script type="text/javascript">
+// Polyfills
+
+Element.prototype.matches = Element.prototype.matches || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector || function matches(selector) {
+	var
+	element = this,
+	elements = (element.document || element.ownerDocument).querySelectorAll(selector),
+	index = 0;
+
+	while (elements[index] && elements[index] !== element) {
+		++index;
+	}
+
+	return !!elements[index];
+};
+
+Element.prototype.closest = Element.prototype.closest || function closest(selector) {
+	var node = this;
+
+	while (node) {
+		if (node.matches(selector)) return node;
+
+		node = node.parentElement;
+	}
+
+	return null;
+};
+
+// Site
+
+var Site = {};
+
+Site.dataBlock = {
+	trigger:        'aria-controls',
+	triggerSection: 'data-controls',
+	triggerToggle:  'aria-expanded',
+	section:        'data-section',
+	sectionToggle:  'data-expanded',
+	onClick: function (event) {
+		var trigger = event.target.closest('[' + this.trigger + ']');
+
+		if (trigger) {
+			var isActive = trigger.getAttribute(this.triggerToggle) === 'true';
+			var id = trigger.getAttribute(this.trigger);
+			var sectionId = trigger.getAttribute(this.triggerSection);
+
+			if (sectionId) {
+				var sections = document.querySelectorAll('[' + this.section + '="' + sectionId + '"]');
+				var triggers = document.querySelectorAll('[' + this.triggerSection + '="' + sectionId + '"]');
+
+				if (sections.length) {
+					Array.prototype.forEach.call(sections, function (element) {
+						element.setAttribute(this.sectionToggle, false);
+					}, this);
+				}
+
+				if (triggers.length) {
+					Array.prototype.forEach.call(triggers, function (element) {
+						element.setAttribute(this.triggerToggle, false);
+					}, this);
+				}
+			}
+
+			if (id) {
+				var target = document.getElementById(id);
+
+				if (target) {
+					target.setAttribute(this.sectionToggle, !isActive);
+
+					var triggers = document.querySelectorAll('[' + this.trigger + '="' + id + '"]');
+
+					if (triggers.length) {
+						Array.prototype.forEach.call(triggers, function (element) {
+							element.setAttribute(this.triggerToggle, !isActive);
+						}, this);
+					}
+				}
+			}
+		}
+	},
+	onCreate: function () {
+		document.addEventListener('click', this.onClick = this.onClick.bind(this));
+	},
+	onDestroy: function () {
+		document.removeEventListener(this.onClick);
+	}
+};
+
+Site.updateNavigation = {
+	onCreate: function () {
+		var navigationLinks = document.querySelectorAll('.navigation a');
+
+		Array.prototype.forEach.call(navigationLinks, function (link) {
+			if (link.href === location.href) {
+				link.setAttribute('aria-current', true);
+			}
+		});
+	}
+};
+
+Site.filledInputs = {
+	attribute: 'data-filled',
+	selector: 'button,input,select,textarea',
+	updateInput: function (target) {
+		if (target.id) {
+			var label = target.ownerDocument.querySelector('label[for="' + target.id + '"]');
+
+			if (label) {
+				if (target.value) {
+					label.setAttribute(this.attribute, '');
+				} else {
+					label.removeAttribute(this.attribute);
+				}
+			}
+		}
+	},
+	updateInputs: function (target) {
+		Array.prototype.forEach.call(target.querySelectorAll(this.selector), this.updateInput, this);
+	},
+	onCreate: function () {
+		this.updateInputs(document);
+
+		document.addEventListener('input', this.onInput = function (event) {
+			this.updateInput(event.target);
+		}.bind(this));
+	},
+	onDestroy: function () {
+		document.removeEventListener('input', this.onInput);
+	}
+};
+
+Site.a11yInputs = {
+	selector: 'button,input,select,textarea',
+	updateInput: function (input) {
+		if (input.id) {
+			var label = document.querySelector('label[for="' + input.id + '"]');
+
+			if (label) {
+				label.setAttribute('aria-hidden', true);
+				input.setAttribute('aria-label', this.stripTags(label.innerHTML));
+			}
+		}
+	},
+	updateInputs: function (target) {
+		Array.prototype.forEach.call(target.querySelectorAll(this.selector), this.updateInput, this);
+	},
+	stripTags: function (html) {
+		return html.replace(/<[^\s][^>]*>/g, '');
+	},
+	onCreate: function () {
+		this.updateInputs(document);
+	}
+};
+
+Site.toggleOuterCanvas = {
+	onCreate: function () {
+		document.documentElement.setAttribute('data-canvas', 'push e');
+		document.documentElement.setAttribute('data-expanded', 'false');
+		document.documentElement.setAttribute('id', 'canvas');
+	}
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+	var keys = Object.keys(Site), index = -1, component;
+
+	while (component = Site[keys[++index]]) {
+		if (component.onCreate) {
+			component.onCreate();
+		}
+	}
+});
+
+</script>

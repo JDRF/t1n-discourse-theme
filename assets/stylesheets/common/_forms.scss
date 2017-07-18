@@ -45,6 +45,7 @@ body .form-field--text input[type="search"],
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  box-sizing: border-box;
 }
 .form-field--text button,
 .form-field--text [type="submit"] {

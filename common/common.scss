@@ -1087,6 +1087,8 @@ body .form-field--text input[type="search"],
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .form-field--text button,
