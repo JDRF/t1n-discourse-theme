@@ -1526,8 +1526,8 @@ div.footer-inner-bottom li.highlighted a {
   color: #0073cf;
 }
 
-.navigation li.-more a[aria-expanded=true] .icon::after {
-  content: "\e60f";
+.navigation li.-more a[aria-expanded=true] .icon::before {
+  content: "\f0d8";
 }
 
 .navigation a {
