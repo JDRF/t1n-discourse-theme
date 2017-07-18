@@ -1034,6 +1034,88 @@ input[type="button"].btn-block {
     stroke-dashoffset: -124px;
   }
 }
+.form-field {
+  display: block;
+}
+
+.form-field * {
+  line-height: inherit;
+}
+
+.form-field--text {
+  margin: 0;
+  position: relative;
+}
+
+.form-field--text label,
+.form-field--text input,
+.form-field--text textarea {
+  display: block;
+  font-size: 14px;
+}
+
+.form-field--text label,
+.form-field--text input {
+  line-height: 40px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.form-field--text label {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: text;
+  position: absolute;
+}
+
+.form-field--text label[data-filled] {
+  clip: rect(0 0 0 0);
+}
+
+.form-field--text input,
+.form-field--text textarea {
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  color: #000;
+  margin: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-field--text button,
+.form-field--text [type="submit"] {
+  background-color: transparent;
+  border: 0;
+  color: #444444;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.form-field--text button .icon,
+.form-field--text [type="submit"] .icon {
+  display: block;
+  font-size: 1rem;
+  line-height: 40px;
+  width: 2em;
+}
+
+.form-field--textarea label,
+.form-field--textarea textarea {
+  line-height: 1.25;
+  padding: 10px;
+  min-height: 6em;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
 .btn-primary.create,
 #topic-footer-buttons .btn-primary.create,
 #create-topic.btn,
@@ -1511,6 +1593,10 @@ div.footer-inner-bottom li.highlighted a {
 body {
   font-family: "Gotham", sans-serif;
   overflow-x: hidden;
+}
+
+#main-outlet {
+  padding-top: 63px;
 }
 
 .d-header {

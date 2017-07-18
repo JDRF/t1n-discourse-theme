@@ -7,6 +7,7 @@
 @import 'mixins/elevations';
 
 @import 'buttons';
+@import 'forms';
 @import 'nav';
 @import 'footer';
 @import 'after-header';
@@ -14,6 +15,10 @@
 body {
 	font-family: $font-family-base;
 	overflow-x: hidden;
+}
+
+#main-outlet {
+  padding-top: 63px;
 }
 
 .d-header {
