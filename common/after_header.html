@@ -1,1 +1,52 @@
-test
+<nav class="navigation">
+	<ul class="inset">
+		<li class="only--large">
+			<a href="/dashboard/">Home</a>
+		</li>
+		<li>
+			<a href="/groups/" aria-current="true">Groups</a>
+		</li>
+		<li>
+			<a href="/resources/">Resources</a>
+		</li>
+		<li class="only--large">
+			<a href="/events/">Events</a>
+		</li>
+		<li class="-search only--large">
+			<form action="http://typeonenation.org/">
+				<p class="form-field form-field--text">
+					<input id="" name="s" type="search" placeholder="Search" value="">
+					<button type="submit">
+						<span hidden="" aria-hidden="false">Search</span>
+						<span class="icon icon--search" aria-hidden="true"></span>
+					</button>
+				</p>
+			</form>
+		</li>
+		<li class="-more only--small">
+			<a aria-controls="more">
+				<span>More</span>
+				<span class="icon icon--caret-down"></span>
+			</a>
+			<ul id="more">
+				<li>
+					<form action="http://typeonenation.org/">
+						<p class="form-field form-field--text">
+							<input id="" name="s" type="search" placeholder="Search" value="">
+							<button type="submit">
+								<span hidden="" aria-hidden="false">Search</span>
+								<span class="icon icon--search" aria-hidden="true"></span>
+							</button>
+						</p>
+					</form>
+				</li>
+				<li>
+					<a href="/events/">Events</a>
+				</li>
+				<li>
+					<a href="/about/">About</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>

@@ -1337,6 +1337,177 @@ div.footer-inner-bottom li.highlighted a {
   margin: 0;
 }
 
+.navigation {
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 -1px 0 0 #cccccc;
+          box-shadow: inset 0 -1px 0 0 #cccccc;
+  line-height: 1;
+}
+
+.navigation ul {
+  font-size: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 640px) {
+  .navigation ul {
+    display: table;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.navigation li {
+  display: inline-block;
+  font-size: 1rem;
+  position: relative;
+}
+
+@media screen and (max-width: 715px) {
+  .navigation li {
+    width: 20%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navigation li {
+    width: auto;
+    display: table-cell;
+  }
+}
+.navigation li.-home {
+  display: inline-block;
+}
+
+.navigation li.-dashboard {
+  display: none;
+}
+
+.navigation li.-search {
+  float: right;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 715px) {
+  .navigation li.-search {
+    float: none;
+  }
+}
+.navigation li ul {
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1), 0 3px 6px -3px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1), 0 3px 6px -3px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  width: 100vw;
+  z-index: 4;
+}
+
+@media screen and (max-width: 640px) {
+  .navigation li ul {
+    right: 0;
+  }
+
+  .navigation li ul li {
+    text-align: left;
+  }
+
+  .navigation li ul a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.navigation li ul:not([data-expanded="true"]) {
+  display: none;
+}
+
+.navigation li li {
+  display: block;
+}
+
+.navigation li li:not(:first-child) {
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.navigation li.current-menu-item a,
+.navigation li.-more a[aria-expanded=true] {
+  -webkit-box-shadow: inset 0 -3px 0 0 #0073cf;
+          box-shadow: inset 0 -3px 0 0 #0073cf;
+  color: #0073cf;
+}
+
+.navigation li.-more a[aria-expanded=true] .icon::after {
+  content: "\e60f";
+}
+
+.navigation a {
+  color: rgba(51, 51, 51, 0.8);
+  display: block;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.navigation a:hover, .navigation a:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+.navigation a:active {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+.navigation a[aria-current="true"] {
+  -webkit-box-shadow: inset 0 -3px 0 0 #0073cf;
+          box-shadow: inset 0 -3px 0 0 #0073cf;
+  color: #0073cf;
+}
+
+@media screen and (max-width: 640px) {
+  .navigation a {
+    font-size: 12px;
+    padding: 14px 16px;
+  }
+}
+@media screen and (min-width: 639px) {
+  .navigation a {
+    font-size: 14px;
+    padding: 18px 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navigation form {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .only--large {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 639px) {
+  .only--small {
+    display: none !important;
+  }
+}
+.inset {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+@media screen and (max-width: 1169px) {
+  .inset {
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .inset {
+    max-width: 1150px;
+  }
+}
 body {
   font-family: "Gotham", sans-serif;
   overflow-x: hidden;
