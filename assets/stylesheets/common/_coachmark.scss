@@ -1,0 +1,45 @@
+.composer-popup {
+	background-color: $jdrf-blue;
+	color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow: visible;
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		display: block;
+		border: 14px solid $jdrf-blue;
+		border-left: 0;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		position: absolute;
+		top: 50%;
+		left: -13px;
+		z-index: 9999;
+		margin-top: -7px;
+	}
+	a.close {
+		float: none;
+		position: absolute;
+		bottom: 30px;
+		font-weight: 500;
+		color: #fff;
+		opacity: 1;
+		text-decoration: none;
+		&:after {
+			content: "GOT IT";
+		}
+		i {
+			display: none;
+		}
+	}
+	a {
+		color: #fff;
+		text-decoration: underline;
+		&:hover {
+			color: $jdrf-dark-blue;
+		}
+	}
+}

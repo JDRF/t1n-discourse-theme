@@ -10,8 +10,11 @@
 @import 'forms';
 @import 'nav';
 @import 'footer';
+@import 'coachmark';
+@import 'suggested-topics';
 @import 'after-header';
 @import 'icons-override';
+@import 'modal-override';
 
 body {
 	font-family: $font-family-base;
@@ -31,108 +34,12 @@ body {
 	font-weight: 500;
 }
 
-.modal-backdrop,
-.modal-backdrop.fade.in {
-	opacity: .5;
-}
-
-.bootbox.modal.in {
-	border-radius: 2px;
-	border: 0;
-}
-
-.modal-footer {
-	.btn-danger {
-		float: right;
-		@include button-variant($btn-primary-color, $jdrf-magenta, $jdrf-magenta);
-	}
-
-	.btn.null {
-		float: right;
-		margin-right: 10px;
-		background: transparent;
-		&:active {
-			box-shadow: none;
-		}
-		&:hover {
-			color: $jdrf-blue;
-		}
-	}
-}
-
-
-.composer-popup {
-	background-color: $jdrf-blue;
-	color: #fff;
-	border-radius: 10px;
-	padding: 20px;
-	box-sizing: border-box;
-	overflow: visible;
-	&:before {
-		content: "";
-		width: 0;
-		height: 0;
-		display: block;
-		border: 14px solid $jdrf-blue;
-		border-left: 0;
-		border-top-color: transparent;
-		border-bottom-color: transparent;
-		position: absolute;
-		top: 50%;
-		left: -13px;
-		z-index: 9999;
-		margin-top: -7px;
-	}
-	a.close {
-		float: none;
-		position: absolute;
-		bottom: 30px;
-		font-weight: 500;
-		color: #fff;
-		opacity: 1;
-		text-decoration: none;
-		&:after {
-			content: "GOT IT";
-		}
-		i {
-			display: none;
-		}
-	}
-	a {
-		color: #fff;
-		text-decoration: underline;
-		&:hover {
-			color: $jdrf-dark-blue;
-		}
-	}
-}
-
-.submit-panel .cancel {
-	text-transform: uppercase;
-	vertical-align: middle;
-	color: $grey-7;
-}
-
 
 .deleted .topic-body {
 	background-color: $grey-3;
 }
 
-#suggested-topics {
-	background: $grey-1;
-	position: relative;
-	&:before {
-		content: "";
-		display: block;
-		background: $grey-1;
-		width: 100vw;
-		position: absolute;
-		top: 0;
-		left: calc(-50vw + 50%);
-		height: 100%;
-		z-index: -1;
-	}
-}
+
 
 .admin-interface {
 	.full-width > .nav-pills {
