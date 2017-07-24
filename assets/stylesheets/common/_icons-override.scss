@@ -10,6 +10,7 @@
 	word-wrap: normal;
 	white-space: nowrap;
 	direction: ltr;
+	vertical-align: middle;
 
 	/* Support for all WebKit browsers. */
 	-webkit-font-smoothing: antialiased;
@@ -39,7 +40,7 @@
 	}
 }
 
-.flag .fa.fa-flag {
+.flag-topic .fa.fa-flag {
 	@extend %material-icon;
 	&:before {
 		content: 'flag';

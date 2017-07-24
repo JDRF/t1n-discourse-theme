@@ -1600,7 +1600,7 @@ div.footer-inner-bottom li.highlighted a {
 }
 .share .fa.fa-link,
 .actions button .fa.fa-link, .create .fa.fa-reply,
-.reply .fa.fa-reply, .flag .fa.fa-flag {
+.reply .fa.fa-reply, .flag-topic .fa.fa-flag {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -1613,6 +1613,7 @@ div.footer-inner-bottom li.highlighted a {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  vertical-align: middle;
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
@@ -1634,7 +1635,7 @@ div.footer-inner-bottom li.highlighted a {
   content: 'reply';
 }
 
-.flag .fa.fa-flag:before {
+.flag-topic .fa.fa-flag:before {
   content: 'flag';
 }
 
