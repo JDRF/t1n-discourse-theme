@@ -1816,41 +1816,6 @@ div.footer-inner-bottom li.highlighted a {
   color: #757575;
 }
 
-@media (max-width: 850px) {
-  .topic-list thead {
-    display: none;
-  }
-  .topic-list .topic-list-item {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .topic-list .topic-list-item td.main-link.clearfix {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 100%;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
-    width: 100%;
-  }
-  .topic-list .category {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-}
 body {
   font-family: "Gotham", sans-serif;
   overflow-x: hidden;
