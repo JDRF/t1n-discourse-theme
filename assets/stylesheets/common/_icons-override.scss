@@ -60,3 +60,17 @@
 		content: 'people';
 	}
 }
+
+.admin .fa.fa-wrench {
+	@extend %material-icon;
+	&:before {
+		content: 'build';
+	}
+}
+
+.category-breadcrumb .fa.fa-caret-right {
+	@extend %material-icon;
+	&:before {
+		content: 'keyboard_arrow_down';
+	}
+}
