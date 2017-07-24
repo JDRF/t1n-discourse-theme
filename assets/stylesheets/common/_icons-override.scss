@@ -23,9 +23,25 @@
 	font-feature-settings: 'liga';
 }
 
+.share .fa.fa-link,
 .actions button .fa.fa-link {
 	@extend %material-icon;
 	&:before {
 		content: 'share';
+	}
+}
+
+.create .fa.fa-reply,
+.reply .fa.fa-reply {
+	@extend %material-icon;
+	&:before {
+		content: 'reply';
+	}
+}
+
+.flag .fa.fa-flag {
+	@extend %material-icon;
+	&:before {
+		content: 'flag';
 	}
 }

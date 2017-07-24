@@ -1598,7 +1598,9 @@ div.footer-inner-bottom li.highlighted a {
     max-width: 1150px;
   }
 }
-.actions button .fa.fa-link {
+.share .fa.fa-link,
+.actions button .fa.fa-link, .create .fa.fa-reply,
+.reply .fa.fa-reply, .flag .fa.fa-flag {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -1622,8 +1624,18 @@ div.footer-inner-bottom li.highlighted a {
           font-feature-settings: 'liga';
 }
 
+.share .fa.fa-link:before,
 .actions button .fa.fa-link:before {
   content: 'share';
+}
+
+.create .fa.fa-reply:before,
+.reply .fa.fa-reply:before {
+  content: 'reply';
+}
+
+.flag .fa.fa-flag:before {
+  content: 'flag';
 }
 
 body {
