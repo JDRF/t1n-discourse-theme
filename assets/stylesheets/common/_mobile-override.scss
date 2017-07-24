@@ -1,0 +1,22 @@
+@media (max-width: 850px) {
+	.topic-list {
+		thead {
+			display: none;
+		}
+		.topic-list-item {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-items: center;
+
+			td.main-link.clearfix {
+				flex: 1 0 100%;
+				width: 100%;
+			}
+		}
+
+		.category {
+  		flex: 1;
+		}
+	}
+}
