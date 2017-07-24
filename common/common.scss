@@ -1610,7 +1610,8 @@ div.footer-inner-bottom li.highlighted a {
 }
 .share .fa.fa-link,
 .actions button .fa.fa-link, .create .fa.fa-reply,
-.reply .fa.fa-reply, .flag-topic .fa.fa-flag, .bookmark .fa.fa-bookmark, .invite-topic .fa.fa-users, .admin .fa.fa-wrench, .category-breadcrumb .fa.fa-caret-right,
+.reply .fa.fa-reply, .flag-topic .fa.fa-flag, .bookmark .fa.fa-bookmark, .invite-topic .fa.fa-users, .btn .fa.fa-wrench, #topic-footer-buttons .btn .fa.fa-wrench,
+.nav-pills > li > a .fa.fa-wrench, .category-breadcrumb .fa.fa-caret-right,
 .category-breadcrumb .fa.fa-caret-down {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -1658,7 +1659,8 @@ div.footer-inner-bottom li.highlighted a {
   content: 'people';
 }
 
-.admin .fa.fa-wrench:before {
+.btn .fa.fa-wrench:before, #topic-footer-buttons .btn .fa.fa-wrench:before,
+.nav-pills > li > a .fa.fa-wrench:before {
   content: 'build';
 }
 

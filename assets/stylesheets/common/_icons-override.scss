@@ -61,7 +61,7 @@
 	}
 }
 
-.admin .fa.fa-wrench {
+.btn .fa.fa-wrench {
 	@extend %material-icon;
 	&:before {
 		content: 'build';
