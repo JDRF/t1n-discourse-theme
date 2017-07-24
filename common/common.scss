@@ -1251,7 +1251,7 @@ body .form-field--text input[type="search"],
 
 .list-controls .category-breadcrumb li.bar > .badge-category {
   background: transparent !important;
-  padding: 0.75rem;
+  padding: 0.55rem;
   font-size: 0.875rem;
   line-height: 1;
 }
@@ -1259,6 +1259,7 @@ body .form-field--text input[type="search"],
 .has-drop.bar {
   border: 1px solid #9e9e9e;
   border-radius: 2px;
+  min-width: 137px;
 }
 
 .list-controls .category-dropdown-menu {
@@ -1269,6 +1270,10 @@ body .form-field--text input[type="search"],
   border-color: #9e9e9e;
   -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.28);
           box-shadow: 0 7px 10px rgba(0, 0, 0, 0.28);
+}
+
+.list-controls .category-breadcrumb a.badge-category.category-dropdown-button .fa-caret-right {
+  margin-left: 0;
 }
 
 /*--------------------------------------------------------------

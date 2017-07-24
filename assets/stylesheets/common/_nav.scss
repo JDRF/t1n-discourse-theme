@@ -17,7 +17,7 @@
 
 .list-controls .category-breadcrumb li.bar>.badge-category {
 	background: transparent !important;
-	padding: 0.75rem;
+	padding: 0.55rem;
 	font-size: 0.875rem;
 	line-height: 1;
 }
@@ -25,6 +25,7 @@
 .has-drop.bar {
 	border: 1px solid $grey-6;
 	border-radius: 2px;
+	min-width: 137px;
 }
 
 .list-controls .category-dropdown-menu {
@@ -33,4 +34,8 @@
 	padding: 0 6px;
 	border-color: $grey-6;
 	box-shadow: 0 7px 10px rgba(0, 0, 0, 0.28);
+}
+
+.list-controls .category-breadcrumb a.badge-category.category-dropdown-button .fa-caret-right {
+	margin-left: 0;
 }
