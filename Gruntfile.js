@@ -13,7 +13,8 @@ module.exports = function(grunt) {
         banner: '@font-face { font-family: "Gotham"; font-weight: normal; src: url($gotham-book-webfont) format(\'woff2\') }\n' +
                 '@font-face { font-family: "Gotham"; font-weight: 500; src: url($gotham-medium-webfont) format(\'woff2\') }\n' +
                 '@font-face { font-family: "Gotham"; font-weight: 700; src: url($gotham-bold-webfont) format(\'woff2\') }\n' +
-                '@font-face { font-family: "Gotham"; font-weight: 300; src: url($gotham-light-webfont) format(\'woff2\') }\n'
+                '@font-face { font-family: "Gotham"; font-weight: 300; src: url($gotham-light-webfont) format(\'woff2\') }\n' +
+                '@font-face { font-family: "Material Icons"; font-weight: normal; src: url($material-icon-webfont) format(\'woff2\') }\n'
       },
       common: {
         dest: 'common/common.scss',
