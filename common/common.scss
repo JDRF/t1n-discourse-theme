@@ -1598,6 +1598,34 @@ div.footer-inner-bottom li.highlighted a {
     max-width: 1150px;
   }
 }
+.actions button .fa.fa-link {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+.actions button .fa.fa-link:before {
+  content: 'share';
+}
+
 body {
   font-family: "Gotham", sans-serif;
   overflow-x: hidden;
