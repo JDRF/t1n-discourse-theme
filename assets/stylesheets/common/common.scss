@@ -67,6 +67,22 @@ body {
 	border-radius: 10px;
 	padding: 20px;
 	box-sizing: border-box;
+	overflow: visible;
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		display: block;
+		border: 14px solid $jdrf-blue;
+		border-left: 0;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		position: absolute;
+		top: 50%;
+		left: -13px;
+		z-index: 9999;
+		margin-top: -7px;
+	}
 	a.close {
 		float: none;
 		position: absolute;
