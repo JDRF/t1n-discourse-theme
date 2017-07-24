@@ -46,3 +46,17 @@
 		content: 'flag';
 	}
 }
+
+.bookmark .fa.fa-bookmark {
+	@extend %material-icon;
+	&:before {
+		content: 'bookmark';
+	}
+}
+
+.invite-topic .fa.fa-users {
+	@extend %material-icon;
+	&:before {
+		content: 'people';
+	}
+}

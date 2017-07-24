@@ -1035,6 +1035,11 @@ input[type="button"].btn-block {
     stroke-dashoffset: -124px;
   }
 }
+.btn i.fa, #topic-footer-buttons .btn i.fa,
+.nav-pills > li > a i.fa {
+  opacity: 1;
+}
+
 .form-field {
   display: block;
 }
@@ -1600,7 +1605,7 @@ div.footer-inner-bottom li.highlighted a {
 }
 .share .fa.fa-link,
 .actions button .fa.fa-link, .create .fa.fa-reply,
-.reply .fa.fa-reply, .flag-topic .fa.fa-flag {
+.reply .fa.fa-reply, .flag-topic .fa.fa-flag, .bookmark .fa.fa-bookmark, .invite-topic .fa.fa-users {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -1637,6 +1642,14 @@ div.footer-inner-bottom li.highlighted a {
 
 .flag-topic .fa.fa-flag:before {
   content: 'flag';
+}
+
+.bookmark .fa.fa-bookmark:before {
+  content: 'bookmark';
+}
+
+.invite-topic .fa.fa-users:before {
+  content: 'people';
 }
 
 body {
