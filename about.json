@@ -3,7 +3,12 @@
 	"about_url": "",
 	"license_url": "",
 	"assets": {
-		"font": "assets/fonts/gotham/medium/gotham-medium-webfont.woff2"
+		"font": "assets/fonts/gotham/medium/gotham-medium-webfont.woff2",
+		"gotham-book-webfont": "assets/fonts/gotham/book/gotham-book-webfont.woff2",
+		"gotham-bold-webfont": "assets/fonts/gotham/bold/gotham-bold-webfont.woff2",
+		"gotham-light-webfont": "assets/fonts/gotham/light/gotham-light-webfont.woff2",
+		"gotham-medium-webfont": "assets/fonts/gotham/medium/gotham-medium-webfont.woff2",
+		"material-icon-webfont": "assets/fonts/MaterialIcons-Regular.woff2"
 	},
 	"color_schemes": {
 		"JDRF Colors": {
