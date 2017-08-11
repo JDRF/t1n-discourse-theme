@@ -1263,6 +1263,10 @@ body .form-field--text input[type="search"],
   width: calc(100% - 50px);
 }
 
+.list-controls .category-breadcrumb .dropdown-header.category-dropdown-button {
+  width: 20px !important;
+}
+
 ol.category-breadcrumb {
   min-height: 33px;
   min-width: 250px;
