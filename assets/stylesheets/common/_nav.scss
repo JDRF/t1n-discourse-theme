@@ -5,6 +5,7 @@
 	@extend .btn-primary-outline;
 }
 
+.admin-controls .nav.nav-pills li.active a,
 .nav-pills>li.active>a,
 .nav-pills>li>a.active {
 	@extend .btn-primary-outline.active;
@@ -16,7 +17,7 @@
 	@include button-variant($btn-primary-color, $jdrf-purple, $jdrf-purple);
 }
 
-.btn.edit.ember-view {
+a.btn[href] {
 	color: #fff;
 }
 

@@ -572,7 +572,8 @@ fieldset[disabled] .nav-pills > li > a {
 #topic-footer-buttons .top-title-buttons button.active,
 .top-title-buttons #topic-footer-buttons button.active,
 .nav-pills > li > a.active,
-.top-title-buttons button.active, .nav-pills > li.active > a, .open > .btn-primary-outline.dropdown-toggle, #topic-footer-buttons .open > .dropdown-toggle.btn,
+.top-title-buttons button.active, .admin-controls .nav.nav-pills li.active a,
+.nav-pills > li.active > a, .open > .btn-primary-outline.dropdown-toggle, #topic-footer-buttons .open > .dropdown-toggle.btn,
 #topic-footer-buttons .nav-pills > li.open > a.dropdown-toggle,
 #topic-footer-buttons .top-title-buttons .open > button.dropdown-toggle,
 .top-title-buttons #topic-footer-buttons .open > button.dropdown-toggle,
@@ -661,7 +662,8 @@ fieldset[disabled] .nav-pills > li > a {
 #topic-footer-buttons .top-title-buttons button.active,
 .top-title-buttons #topic-footer-buttons button.active,
 .nav-pills > li > a.active,
-.top-title-buttons button.active, .nav-pills > li.active > a {
+.top-title-buttons button.active, .admin-controls .nav.nav-pills li.active a,
+.nav-pills > li.active > a {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -1431,9 +1433,8 @@ body .form-field--text input[type="search"],
   border-color: #e0e0e0;
 }
 
-.btn.edit.ember-view, #topic-footer-buttons .edit.ember-view.btn,
-.nav-pills > li > a.edit.ember-view,
-.top-title-buttons button.edit.ember-view {
+a.btn[href], #topic-footer-buttons a[href].btn,
+.nav-pills > li > a[href] {
   color: #fff;
 }
 
