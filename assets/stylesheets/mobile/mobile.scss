@@ -24,6 +24,10 @@ ol.category-breadcrumb {
 	right: 8px;
 }
 
+.list-controls .category-breadcrumb.hidden + ul {
+	width: 100%;
+}
+
 ol.category-breadcrumb + ul.nav {
 	width: 49%;
 	margin-right: 0;
