@@ -1,0 +1,44 @@
+ol.category-breadcrumb {
+	width: 49%;
+	min-width: 0;
+	margin-right: 0;
+	li {
+		white-space: nowrap;
+		margin-right: 0;
+		position: relative;
+	}
+}
+
+.list-controls .category-breadcrumb li.bullet>.dropdown-header {
+	width: calc(100% - 20px);
+}
+
+.list-controls .category-breadcrumb li.bullet>.dropdown-header .badge-category-bg {
+	width: 4px;
+}
+
+.list-controls .category-breadcrumb .dropdown-header.category-dropdown-button {
+	width: 10px !important;
+	position: absolute;
+	top: 0;
+	right: 8px;
+}
+
+ol.category-breadcrumb + ul.nav {
+	width: 49%;
+	margin-right: 0;
+	float: right;
+	li {
+		float: none;
+		background: transparent;
+		margin-right: 0;
+	}
+}
+
+#create-topic.btn {
+	width: 100%;
+	clear: both;
+	& + .btn.edit-category {
+		width: 100%;
+	}
+}

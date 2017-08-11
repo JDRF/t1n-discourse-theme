@@ -4,3 +4,47 @@
 @font-face { font-family: "Gotham"; font-weight: 700; src: url('http://jdrf.trydiscourse.com/uploads/jdrf/original/1X/47249cd9b6b59c8e70edfcb5907a5bacc44db08b.woff2') format('woff2') }
 @font-face { font-family: "Gotham"; font-weight: 300; src: url('http://jdrf.trydiscourse.com/uploads/jdrf/original/1X/707781b58b62210fc4008090ffe156ae262849e2.woff2') format('woff2') }
 @font-face { font-family: "Material Icons"; font-weight: normal; src: url('http://jdrf.trydiscourse.com/uploads/jdrf/original/1X/09963592e8c953cc7e14e3fb0a5b05d5042e8435.woff2') format('woff2') }
+ol.category-breadcrumb {
+  width: 49%;
+  min-width: 0;
+  margin-right: 0;
+}
+ol.category-breadcrumb li {
+  white-space: nowrap;
+  margin-right: 0;
+  position: relative;
+}
+
+.list-controls .category-breadcrumb li.bullet > .dropdown-header {
+  width: calc(100% - 20px);
+}
+
+.list-controls .category-breadcrumb li.bullet > .dropdown-header .badge-category-bg {
+  width: 4px;
+}
+
+.list-controls .category-breadcrumb .dropdown-header.category-dropdown-button {
+  width: 10px !important;
+  position: absolute;
+  top: 0;
+  right: 8px;
+}
+
+ol.category-breadcrumb + ul.nav {
+  width: 49%;
+  margin-right: 0;
+  float: right;
+}
+ol.category-breadcrumb + ul.nav li {
+  float: none;
+  background: transparent;
+  margin-right: 0;
+}
+
+#create-topic.btn {
+  width: 100%;
+  clear: both;
+}
+#create-topic.btn + .btn.edit-category {
+  width: 100%;
+}
