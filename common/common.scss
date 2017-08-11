@@ -1479,9 +1479,9 @@ button.btn.standard.dropdown-toggle {
   max-height: 35px;
 }
 .btn-default.btn-icon-text .fa {
-  font-size: 14px;
-  vertical-align: middle;
-  display: inline-block;
+  font-size: 14px !important;
+  vertical-align: middle !important;
+  display: inline-block !important;
 }
 
 /*--------------------------------------------------------------
