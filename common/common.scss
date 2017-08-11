@@ -799,6 +799,8 @@ fieldset[disabled] a.btn {
 .btn-flat:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
+  background-color: transparent;
+  color: #0073cf !important;
 }
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open > .btn-flat.dropdown-toggle {
   -webkit-box-shadow: none;

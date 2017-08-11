@@ -152,6 +152,8 @@ fieldset[disabled] a.btn {
 
 	@include hover {
 		@include no-elevation;
+		background-color: transparent;
+		color: $jdrf-blue !important;
 	}
 
 	&:focus,
