@@ -1741,6 +1741,23 @@ div.footer-inner-bottom li.highlighted a {
   color: #002855;
 }
 
+#reply-control .toggler {
+  background-color: transparent;
+}
+
+#reply-control .d-editor-button-bar button {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-footer .btn.null {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #666;
+}
+
 #suggested-topics {
   background: #fafafa;
   position: relative;

@@ -43,3 +43,18 @@
 		}
 	}
 }
+
+#reply-control .toggler {
+	background-color: transparent;
+}
+
+#reply-control .d-editor-button-bar button {
+	border: 0;
+	box-shadow: none;
+}
+
+.modal-footer .btn.null {
+	border: 0;
+	box-shadow: none;
+	color: #666;
+}
