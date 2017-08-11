@@ -1,9 +1,22 @@
 #topic-footer-buttons .btn,
 .nav-pills>li>a,
 .top-title-buttons button {
-	// @extend .btn;
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-	@extend .btn-primary-outline;
+	@include button-outline-variant($btn-primary-bg);
+	@include no-elevation;
+
+	&:active,
+	&.active {
+		@include no-elevation;
+	}
+
+	@include hover-focus {
+		@include no-elevation;
+	}
+
+	&.focus {
+		@include no-elevation;
+	}
 }
 
 .admin-controls .nav.nav-pills li.active a,
