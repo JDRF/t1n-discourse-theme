@@ -57,7 +57,7 @@ fieldset[disabled] a.btn {
 .btn-primary {
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 	&:hover {
-		background-color: $btn-primary-color;
+		background-color: $btn-primary-bg;
 	}
 }
 .btn-secondary {
