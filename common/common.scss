@@ -803,6 +803,8 @@ fieldset[disabled] a.btn {
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open > .btn-flat.dropdown-toggle {
   -webkit-box-shadow: none;
           box-shadow: none;
+  box-shadow: none !important;
+  color: #0073cf !important;
 }
 .btn-flat.disabled, .btn-flat:disabled {
   -webkit-box-shadow: none;

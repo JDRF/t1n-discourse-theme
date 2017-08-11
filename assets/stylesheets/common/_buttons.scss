@@ -160,6 +160,8 @@ fieldset[disabled] a.btn {
 	&.active,
 	.open > &.dropdown-toggle {
 		@include no-elevation;
+		box-shadow: none !important;
+		color: $jdrf-blue !important;
 	}
 
 	&.disabled,
