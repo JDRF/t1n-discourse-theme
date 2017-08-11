@@ -1526,6 +1526,15 @@ button.widget-button.btn.toggle-admin-menu.no-text.btn-icon:hover {
   color: #0073cf;
 }
 
+.topic-map .buttons button.widget-button.btn.btn.no-text.btn-icon {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.topic-map .link-summary .btn {
+  border: 0;
+}
+
 /*--------------------------------------------------------------
 3.7 - Footer
 --------------------------------------------------------------*/

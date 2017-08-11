@@ -160,3 +160,11 @@ button.widget-button.btn.toggle-admin-menu.no-text.btn-icon {
 		color: $jdrf-blue;
 	}
 }
+
+.topic-map .buttons button.widget-button.btn.btn.no-text.btn-icon {
+	box-shadow: none;
+}
+
+.topic-map .link-summary .btn {
+	border: 0;
+}
