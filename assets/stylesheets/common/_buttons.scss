@@ -1,59 +1,59 @@
 /* Bootstrap overwrites: buttons.scss */
 
-// .btn {
-// 	display: inline-block;
-// 	vertical-align: middle;
-// 	cursor: pointer;
-// 	user-select: none;
-// 	font-family: $btn-font;
-// 	text-transform: $btn-font-transform;
-// 	text-align: center;
-// 	white-space: nowrap;
-// 	background-color: transparent;
-// 	border: $input-btn-border-width solid transparent;
-// 	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-// 	@include transition(all .2s ease-in-out);
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	font-family: $btn-font;
+	text-transform: $btn-font-transform;
+	text-align: center;
+	white-space: nowrap;
+	background-color: transparent;
+	border: $input-btn-border-width solid transparent;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+	@include transition(all .2s ease-in-out);
 
-// 	&:active,
-// 	&.active {
-// 		background-image: none;
-// 		outline: 0;
-// 		@include elevation-3;
+	&:active,
+	&.active {
+		background-image: none;
+		outline: 0;
+		@include elevation-3;
 
-// 		&:focus,
-// 		&.focus {
-// 			@include tab-focus();
-// 			outline: 0;
-// 		}
-// 	}
+		&:focus,
+		&.focus {
+			@include tab-focus();
+			outline: 0;
+		}
+	}
 
-// 	@include hover-focus {
-// 		text-decoration: none;
-// 		outline: 0;
-// 	}
+	@include hover-focus {
+		text-decoration: none;
+		outline: 0;
+	}
 
-// 	&.focus {
-// 		text-decoration: none;
-// 		outline: 0;
-// 	}
+	&.focus {
+		text-decoration: none;
+		outline: 0;
+	}
 
-// 	&.disabled,
-// 	&:disabled {
-// 		cursor: $cursor-disabled;
-// 		@include no-elevation;
-// 	}
+	&.disabled,
+	&:disabled {
+		cursor: $cursor-disabled;
+		@include no-elevation;
+	}
 
-// 	&.material-icons {
-// 		font-family: 'Material Icons';
-// 	}
-// }
+	&.material-icons {
+		font-family: 'Material Icons';
+	}
+}
 
-// a.btn.disabled,
-// fieldset[disabled] a.btn {
-// 	pointer-events: none;
-// }
+a.btn.disabled,
+fieldset[disabled] a.btn {
+	pointer-events: none;
+}
 
-// .btn,
+.btn,
 .btn-primary {
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 	&:hover {
