@@ -1257,6 +1257,23 @@ body .form-field--text input[type="search"],
   line-height: 1;
 }
 
+.list-controls .category-breadcrumb li.bullet > .dropdown-header {
+  background-color: transparent;
+  text-transform: capitalize;
+  width: calc(100% - 50px);
+}
+
+ol.category-breadcrumb {
+  min-height: 33px;
+  min-width: 250px;
+  border: 1px solid #9e9e9e;
+  border-radius: 2px;
+  min-width: 137px;
+}
+ol.category-breadcrumb li {
+  float: none;
+}
+
 .has-drop.bar {
   border: 1px solid #9e9e9e;
   border-radius: 2px;
@@ -1264,17 +1281,44 @@ body .form-field--text input[type="search"],
 }
 
 .list-controls .category-dropdown-menu {
-  width: 137px;
+  width: 250px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 6px;
+  padding: 8px 15px;
   border-color: #9e9e9e;
-  -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.28);
-          box-shadow: 0 7px 10px rgba(0, 0, 0, 0.28);
+  border: 0;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28);
+  margin-top: -33px;
+  margin-left: -1px;
+  width: 252px;
+}
+
+.list-controls .category-dropdown-menu a.badge-category {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #0073cf;
 }
 
 .list-controls .category-breadcrumb a.badge-category.category-dropdown-button .fa-caret-right {
   margin-left: 0;
+}
+
+.badge-wrapper.bullet .badge-category-parent-bg, .badge-wrapper.bullet .badge-category-bg {
+  width: 4px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.list-controls .category-dropdown-menu .badge-wrapper.bullet {
+  padding: 6px 5px;
+}
+
+.badge-wrapper.bullet span.badge-category {
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 /*--------------------------------------------------------------
@@ -1842,4 +1886,13 @@ body {
 
 .admin-interface .full-width > .nav-pills {
   margin-top: 30px;
+}
+
+.topic-list button.bulk-select {
+  background-color: transparent !important;
+}
+
+.btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open > .btn-flat.dropdown-toggle {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }

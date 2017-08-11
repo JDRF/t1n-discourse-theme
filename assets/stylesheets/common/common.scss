@@ -46,3 +46,12 @@ body {
 		margin-top: 30px;
 	}
 }
+
+
+.topic-list button.bulk-select {
+	background-color: transparent !important;
+}
+
+.btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open>.btn-flat.dropdown-toggle {
+	box-shadow: none;
+}
