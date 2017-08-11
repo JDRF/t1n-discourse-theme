@@ -53,6 +53,7 @@ fieldset[disabled] a.btn {
 	pointer-events: none;
 }
 
+.btn,
 .btn-primary {
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
