@@ -1,5 +1,6 @@
 #topic-footer-buttons .btn,
-.nav-pills>li>a {
+.nav-pills>li>a,
+.top-title-buttons button {
 	@extend .btn;
 	@extend .btn-primary-outline;
 }
