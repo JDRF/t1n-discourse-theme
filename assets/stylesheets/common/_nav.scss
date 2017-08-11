@@ -32,6 +32,14 @@
 	@include button-variant($btn-primary-color, $jdrf-purple, $jdrf-purple);
 }
 
+#topic-footer-buttons .btn {
+	padding: .5rem .8rem;
+	font-weight: 500;
+}
+#topic-footer-buttons .btn-primary.create {
+	padding: .5rem .8rem;
+}
+
 a.btn[href] {
 	color: #fff;
 }

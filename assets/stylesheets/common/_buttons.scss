@@ -151,7 +151,7 @@ fieldset[disabled] a.btn {
 	@include no-elevation;
 
 	@include hover {
-		@include elevation-2;
+		@include no-elevation;
 	}
 
 	&:focus,
@@ -159,7 +159,7 @@ fieldset[disabled] a.btn {
 	&:active,
 	&.active,
 	.open > &.dropdown-toggle {
-		@include elevation-2;
+		@include no-elevation;
 	}
 
 	&.disabled,
