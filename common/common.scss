@@ -1398,6 +1398,11 @@ body .form-field--text input[type="search"],
   padding: .5rem .8rem;
 }
 
+nav.post-controls button.d-hover {
+  background: transparent;
+  color: #0073cf;
+}
+
 a.btn[href] {
   color: #fff;
 }

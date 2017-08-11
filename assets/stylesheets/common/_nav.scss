@@ -40,6 +40,11 @@
 	padding: .5rem .8rem;
 }
 
+nav.post-controls button.d-hover {
+	background: transparent;
+	color: $jdrf-blue;
+}
+
 a.btn[href] {
 	color: #fff;
 }
