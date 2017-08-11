@@ -74,9 +74,7 @@
 /* Bootstrap @import "scss/mixins/border-radius.scss */
 /* Bootstrap @import "scss/mixins/buttons.scss */
 /* Bootstrap overwrites: buttons.scss */
-.btn, #topic-footer-buttons .btn,
-.nav-pills > li > a,
-.top-title-buttons button {
+.btn {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
@@ -95,71 +93,41 @@
   line-height: 0.875rem;
   border-radius: 2px;
 }
-.btn:active, #topic-footer-buttons .btn:active,
-.nav-pills > li > a:active,
-.top-title-buttons button:active, .btn.active, #topic-footer-buttons .active.btn,
-.nav-pills > li > a.active,
-.top-title-buttons button.active {
+.btn:active, .btn.active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn:active:focus, #topic-footer-buttons .btn:active:focus,
-.nav-pills > li > a:active:focus,
-.top-title-buttons button:active:focus, .btn:active.focus, #topic-footer-buttons .btn:active.focus,
-.nav-pills > li > a:active.focus,
-.top-title-buttons button:active.focus, .btn.active:focus, #topic-footer-buttons .active.btn:focus,
-.nav-pills > li > a.active:focus,
-.top-title-buttons button.active:focus, .btn.active.focus, #topic-footer-buttons .active.focus.btn,
-.nav-pills > li > a.active.focus,
-.top-title-buttons button.active.focus {
+.btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
   outline: 0;
 }
-.btn:focus, #topic-footer-buttons .btn:focus,
-.nav-pills > li > a:focus,
-.top-title-buttons button:focus, .btn:hover, #topic-footer-buttons .btn:hover,
-.nav-pills > li > a:hover,
-.top-title-buttons button:hover {
+.btn:focus, .btn:hover {
   text-decoration: none;
   outline: 0;
 }
-.btn.focus, #topic-footer-buttons .focus.btn,
-.nav-pills > li > a.focus,
-.top-title-buttons button.focus {
+.btn.focus {
   text-decoration: none;
   outline: 0;
 }
-.btn.disabled, #topic-footer-buttons .disabled.btn,
-.nav-pills > li > a.disabled,
-.top-title-buttons button.disabled, .btn:disabled, #topic-footer-buttons .btn:disabled,
-.nav-pills > li > a:disabled,
-.top-title-buttons button:disabled {
+.btn.disabled, .btn:disabled {
   cursor: not-allowed;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn.material-icons, #topic-footer-buttons .material-icons.btn,
-.nav-pills > li > a.material-icons,
-.top-title-buttons button.material-icons {
+.btn.material-icons {
   font-family: 'Material Icons';
 }
 
-a.btn.disabled, #topic-footer-buttons a.disabled.btn,
-.nav-pills > li > a.disabled,
-fieldset[disabled] a.btn,
-fieldset[disabled] #topic-footer-buttons a.btn,
-#topic-footer-buttons fieldset[disabled] a.btn,
-fieldset[disabled] .nav-pills > li > a {
+a.btn.disabled,
+fieldset[disabled] a.btn {
   pointer-events: none;
 }
 
-.btn, #topic-footer-buttons .btn,
-.nav-pills > li > a,
-.top-title-buttons button,
+.btn,
 .btn-primary {
   font-family: "Gotham", sans-serif;
   color: #fff;
@@ -173,32 +141,20 @@ fieldset[disabled] .nav-pills > li > a {
   line-height: 0.875rem;
   border-radius: 2px;
 }
-.btn:hover, #topic-footer-buttons .btn:hover,
-.nav-pills > li > a:hover,
-.top-title-buttons button:hover,
+.btn:hover,
 .btn-primary:hover {
   color: #fff;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn:focus, #topic-footer-buttons .btn:focus,
-.nav-pills > li > a:focus,
-.top-title-buttons button:focus, .btn.focus, #topic-footer-buttons .focus.btn,
-.nav-pills > li > a.focus,
-.top-title-buttons button.focus,
+.btn:focus, .btn.focus,
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn:active, #topic-footer-buttons .btn:active,
-.nav-pills > li > a:active,
-.top-title-buttons button:active, .btn.active, #topic-footer-buttons .active.btn,
-.nav-pills > li > a.active,
-.top-title-buttons button.active, .open > .btn.dropdown-toggle, #topic-footer-buttons .open > .dropdown-toggle.btn,
-.nav-pills > li.open > a.dropdown-toggle,
-.top-title-buttons .open > button.dropdown-toggle,
+.btn:active, .btn.active, .open > .btn.dropdown-toggle,
 .btn-primary:active,
 .btn-primary.active, .open >
 .btn-primary.dropdown-toggle {
@@ -207,25 +163,7 @@ fieldset[disabled] .nav-pills > li > a {
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.btn:active:hover, #topic-footer-buttons .btn:active:hover,
-.nav-pills > li > a:active:hover,
-.top-title-buttons button:active:hover, .btn:active:focus, #topic-footer-buttons .btn:active:focus,
-.nav-pills > li > a:active:focus,
-.top-title-buttons button:active:focus, .btn:active.focus, #topic-footer-buttons .btn:active.focus,
-.nav-pills > li > a:active.focus,
-.top-title-buttons button:active.focus, .btn.active:hover, #topic-footer-buttons .active.btn:hover,
-.nav-pills > li > a.active:hover,
-.top-title-buttons button.active:hover, .btn.active:focus, #topic-footer-buttons .active.btn:focus,
-.nav-pills > li > a.active:focus,
-.top-title-buttons button.active:focus, .btn.active.focus, #topic-footer-buttons .active.focus.btn,
-.nav-pills > li > a.active.focus,
-.top-title-buttons button.active.focus, .open > .btn.dropdown-toggle:hover, #topic-footer-buttons .open > .dropdown-toggle.btn:hover,
-.nav-pills > li.open > a.dropdown-toggle:hover,
-.top-title-buttons .open > button.dropdown-toggle:hover, .open > .btn.dropdown-toggle:focus, #topic-footer-buttons .open > .dropdown-toggle.btn:focus,
-.nav-pills > li.open > a.dropdown-toggle:focus,
-.top-title-buttons .open > button.dropdown-toggle:focus, .open > .btn.dropdown-toggle.focus, #topic-footer-buttons .open > .dropdown-toggle.focus.btn,
-.nav-pills > li.open > a.dropdown-toggle.focus,
-.top-title-buttons .open > button.dropdown-toggle.focus,
+.btn:active:hover, .btn:active:focus, .btn:active.focus, .btn.active:hover, .btn.active:focus, .btn.active.focus, .open > .btn.dropdown-toggle:hover, .open > .btn.dropdown-toggle:focus, .open > .btn.dropdown-toggle.focus,
 .btn-primary:active:hover,
 .btn-primary:active:focus,
 .btn-primary:active.focus,
@@ -237,11 +175,7 @@ fieldset[disabled] .nav-pills > li > a {
 .btn-primary.dropdown-toggle.focus {
   color: #fff;
 }
-.btn.disabled, #topic-footer-buttons .disabled.btn,
-.nav-pills > li > a.disabled,
-.top-title-buttons button.disabled, .btn:disabled, #topic-footer-buttons .btn:disabled,
-.nav-pills > li > a:disabled,
-.top-title-buttons button:disabled,
+.btn.disabled, .btn:disabled,
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #9e9e9e;
@@ -250,15 +184,7 @@ fieldset[disabled] .nav-pills > li > a {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.btn.disabled:focus, #topic-footer-buttons .disabled.btn:focus,
-.nav-pills > li > a.disabled:focus,
-.top-title-buttons button.disabled:focus, .btn.disabled.focus, #topic-footer-buttons .disabled.focus.btn,
-.nav-pills > li > a.disabled.focus,
-.top-title-buttons button.disabled.focus, .btn:disabled:focus, #topic-footer-buttons .btn:disabled:focus,
-.nav-pills > li > a:disabled:focus,
-.top-title-buttons button:disabled:focus, .btn:disabled.focus, #topic-footer-buttons .btn:disabled.focus,
-.nav-pills > li > a:disabled.focus,
-.top-title-buttons button:disabled.focus,
+.btn.disabled:focus, .btn.disabled.focus, .btn:disabled:focus, .btn:disabled.focus,
 .btn-primary.disabled:focus,
 .btn-primary.disabled.focus,
 .btn-primary:disabled:focus,
@@ -267,20 +193,14 @@ fieldset[disabled] .nav-pills > li > a {
   background-color: #e0e0e0;
   border-color: #e0e0e0;
 }
-.btn.disabled:hover, #topic-footer-buttons .disabled.btn:hover,
-.nav-pills > li > a.disabled:hover,
-.top-title-buttons button.disabled:hover, .btn:disabled:hover, #topic-footer-buttons .btn:disabled:hover,
-.nav-pills > li > a:disabled:hover,
-.top-title-buttons button:disabled:hover,
+.btn.disabled:hover, .btn:disabled:hover,
 .btn-primary.disabled:hover,
 .btn-primary:disabled:hover {
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
 }
-.btn:hover, #topic-footer-buttons .btn:hover,
-.nav-pills > li > a:hover,
-.top-title-buttons button:hover,
+.btn:hover,
 .btn-primary:hover {
   background-color: #0073cf;
 }
@@ -536,9 +456,6 @@ fieldset[disabled] .nav-pills > li > a {
 }
 
 .btn-primary-outline, #topic-footer-buttons .btn,
-#topic-footer-buttons .nav-pills > li > a,
-#topic-footer-buttons .top-title-buttons button,
-.top-title-buttons #topic-footer-buttons button,
 .nav-pills > li > a,
 .top-title-buttons button {
   font-family: "Gotham", sans-serif;
@@ -553,30 +470,15 @@ fieldset[disabled] .nav-pills > li > a {
           box-shadow: none;
 }
 .btn-primary-outline:focus, #topic-footer-buttons .btn:focus,
-#topic-footer-buttons .nav-pills > li > a:focus,
-#topic-footer-buttons .top-title-buttons button:focus,
-.top-title-buttons #topic-footer-buttons button:focus,
 .nav-pills > li > a:focus,
 .top-title-buttons button:focus, .btn-primary-outline.focus, #topic-footer-buttons .focus.btn,
-#topic-footer-buttons .nav-pills > li > a.focus,
-#topic-footer-buttons .top-title-buttons button.focus,
-.top-title-buttons #topic-footer-buttons button.focus,
 .nav-pills > li > a.focus,
 .top-title-buttons button.focus, .btn-primary-outline:active, #topic-footer-buttons .btn:active,
-#topic-footer-buttons .nav-pills > li > a:active,
-#topic-footer-buttons .top-title-buttons button:active,
-.top-title-buttons #topic-footer-buttons button:active,
 .nav-pills > li > a:active,
 .top-title-buttons button:active, .btn-primary-outline.active, #topic-footer-buttons .active.btn,
-#topic-footer-buttons .nav-pills > li > a.active,
-#topic-footer-buttons .top-title-buttons button.active,
-.top-title-buttons #topic-footer-buttons button.active,
 .nav-pills > li > a.active,
 .top-title-buttons button.active, .admin-controls .nav.nav-pills li.active a,
 .nav-pills > li.active > a, .open > .btn-primary-outline.dropdown-toggle, #topic-footer-buttons .open > .dropdown-toggle.btn,
-#topic-footer-buttons .nav-pills > li.open > a.dropdown-toggle,
-#topic-footer-buttons .top-title-buttons .open > button.dropdown-toggle,
-.top-title-buttons #topic-footer-buttons .open > button.dropdown-toggle,
 .nav-pills > li.open > a.dropdown-toggle,
 .top-title-buttons .open > button.dropdown-toggle {
   color: #ffffff;
@@ -585,9 +487,6 @@ fieldset[disabled] .nav-pills > li > a {
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 .btn-primary-outline:hover, #topic-footer-buttons .btn:hover,
-#topic-footer-buttons .nav-pills > li > a:hover,
-#topic-footer-buttons .top-title-buttons button:hover,
-.top-title-buttons #topic-footer-buttons button:hover,
 .nav-pills > li > a:hover,
 .top-title-buttons button:hover {
   color: #ffffff;
@@ -596,14 +495,8 @@ fieldset[disabled] .nav-pills > li > a {
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 .btn-primary-outline.disabled, #topic-footer-buttons .disabled.btn,
-#topic-footer-buttons .nav-pills > li > a.disabled,
-#topic-footer-buttons .top-title-buttons button.disabled,
-.top-title-buttons #topic-footer-buttons button.disabled,
 .nav-pills > li > a.disabled,
 .top-title-buttons button.disabled, .btn-primary-outline:disabled, #topic-footer-buttons .btn:disabled,
-#topic-footer-buttons .nav-pills > li > a:disabled,
-#topic-footer-buttons .top-title-buttons button:disabled,
-.top-title-buttons #topic-footer-buttons button:disabled,
 .nav-pills > li > a:disabled,
 .top-title-buttons button:disabled {
   color: #9e9e9e;
@@ -613,24 +506,12 @@ fieldset[disabled] .nav-pills > li > a {
           box-shadow: none;
 }
 .btn-primary-outline.disabled:focus, #topic-footer-buttons .disabled.btn:focus,
-#topic-footer-buttons .nav-pills > li > a.disabled:focus,
-#topic-footer-buttons .top-title-buttons button.disabled:focus,
-.top-title-buttons #topic-footer-buttons button.disabled:focus,
 .nav-pills > li > a.disabled:focus,
 .top-title-buttons button.disabled:focus, .btn-primary-outline.disabled.focus, #topic-footer-buttons .disabled.focus.btn,
-#topic-footer-buttons .nav-pills > li > a.disabled.focus,
-#topic-footer-buttons .top-title-buttons button.disabled.focus,
-.top-title-buttons #topic-footer-buttons button.disabled.focus,
 .nav-pills > li > a.disabled.focus,
 .top-title-buttons button.disabled.focus, .btn-primary-outline:disabled:focus, #topic-footer-buttons .btn:disabled:focus,
-#topic-footer-buttons .nav-pills > li > a:disabled:focus,
-#topic-footer-buttons .top-title-buttons button:disabled:focus,
-.top-title-buttons #topic-footer-buttons button:disabled:focus,
 .nav-pills > li > a:disabled:focus,
 .top-title-buttons button:disabled:focus, .btn-primary-outline:disabled.focus, #topic-footer-buttons .btn:disabled.focus,
-#topic-footer-buttons .nav-pills > li > a:disabled.focus,
-#topic-footer-buttons .top-title-buttons button:disabled.focus,
-.top-title-buttons #topic-footer-buttons button:disabled.focus,
 .nav-pills > li > a:disabled.focus,
 .top-title-buttons button:disabled.focus {
   color: #9e9e9e;
@@ -638,14 +519,8 @@ fieldset[disabled] .nav-pills > li > a {
   background-color: transparent;
 }
 .btn-primary-outline.disabled:hover, #topic-footer-buttons .disabled.btn:hover,
-#topic-footer-buttons .nav-pills > li > a.disabled:hover,
-#topic-footer-buttons .top-title-buttons button.disabled:hover,
-.top-title-buttons #topic-footer-buttons button.disabled:hover,
 .nav-pills > li > a.disabled:hover,
 .top-title-buttons button.disabled:hover, .btn-primary-outline:disabled:hover, #topic-footer-buttons .btn:disabled:hover,
-#topic-footer-buttons .nav-pills > li > a:disabled:hover,
-#topic-footer-buttons .top-title-buttons button:disabled:hover,
-.top-title-buttons #topic-footer-buttons button:disabled:hover,
 .nav-pills > li > a:disabled:hover,
 .top-title-buttons button:disabled:hover {
   color: #9e9e9e;
@@ -653,14 +528,8 @@ fieldset[disabled] .nav-pills > li > a {
   background-color: transparent;
 }
 .btn-primary-outline:active, #topic-footer-buttons .btn:active,
-#topic-footer-buttons .nav-pills > li > a:active,
-#topic-footer-buttons .top-title-buttons button:active,
-.top-title-buttons #topic-footer-buttons button:active,
 .nav-pills > li > a:active,
 .top-title-buttons button:active, .btn-primary-outline.active, #topic-footer-buttons .active.btn,
-#topic-footer-buttons .nav-pills > li > a.active,
-#topic-footer-buttons .top-title-buttons button.active,
-.top-title-buttons #topic-footer-buttons button.active,
 .nav-pills > li > a.active,
 .top-title-buttons button.active, .admin-controls .nav.nav-pills li.active a,
 .nav-pills > li.active > a {
@@ -668,23 +537,14 @@ fieldset[disabled] .nav-pills > li > a {
           box-shadow: none;
 }
 .btn-primary-outline:focus, #topic-footer-buttons .btn:focus,
-#topic-footer-buttons .nav-pills > li > a:focus,
-#topic-footer-buttons .top-title-buttons button:focus,
-.top-title-buttons #topic-footer-buttons button:focus,
 .nav-pills > li > a:focus,
 .top-title-buttons button:focus, .btn-primary-outline:hover, #topic-footer-buttons .btn:hover,
-#topic-footer-buttons .nav-pills > li > a:hover,
-#topic-footer-buttons .top-title-buttons button:hover,
-.top-title-buttons #topic-footer-buttons button:hover,
 .nav-pills > li > a:hover,
 .top-title-buttons button:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 .btn-primary-outline.focus, #topic-footer-buttons .focus.btn,
-#topic-footer-buttons .nav-pills > li > a.focus,
-#topic-footer-buttons .top-title-buttons button.focus,
-.top-title-buttons #topic-footer-buttons button.focus,
 .nav-pills > li > a.focus,
 .top-title-buttons button.focus {
   -webkit-box-shadow: none;
@@ -995,9 +855,6 @@ fieldset[disabled] .nav-pills > li > a {
   height: 48px;
 }
 .btn-lg.btn-primary-outline, #topic-footer-buttons .btn-lg.btn,
-#topic-footer-buttons .nav-pills > li > a.btn-lg,
-#topic-footer-buttons .top-title-buttons button.btn-lg,
-.top-title-buttons #topic-footer-buttons button.btn-lg,
 .nav-pills > li > a.btn-lg,
 .top-title-buttons button.btn-lg {
   border-width: 2px;
@@ -1049,9 +906,7 @@ input[type="button"].btn-block {
   display: inline-block;
   vertical-align: middle;
 }
-.btn-icon.btn, #topic-footer-buttons .btn-icon.btn,
-.nav-pills > li > a.btn-icon,
-.top-title-buttons button.btn-icon {
+.btn-icon.btn {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
 }
@@ -1194,9 +1049,7 @@ input[type="button"].btn-block {
     stroke-dashoffset: -124px;
   }
 }
-.btn i.fa, #topic-footer-buttons .btn i.fa,
-.nav-pills > li > a i.fa,
-.top-title-buttons button i.fa {
+.btn i.fa {
   opacity: 1;
 }
 
@@ -1289,9 +1142,7 @@ body .form-field--text input[type="search"],
 
 .btn-primary.create,
 #topic-footer-buttons .btn-primary.create,
-#create-topic.btn,
-.nav-pills > li > a#create-topic,
-.top-title-buttons button#create-topic {
+#create-topic.btn {
   font-family: "Gotham", sans-serif;
   color: #fff;
   text-transform: uppercase;
@@ -1306,9 +1157,7 @@ body .form-field--text input[type="search"],
 }
 .btn-primary.create:hover,
 #topic-footer-buttons .btn-primary.create:hover,
-#create-topic.btn:hover,
-.nav-pills > li > a#create-topic:hover,
-.top-title-buttons button#create-topic:hover {
+#create-topic.btn:hover {
   color: #fff;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
@@ -1317,11 +1166,7 @@ body .form-field--text input[type="search"],
 #topic-footer-buttons .btn-primary.create:focus,
 #topic-footer-buttons .btn-primary.create.focus,
 #create-topic.btn:focus,
-.nav-pills > li > a#create-topic:focus,
-.top-title-buttons button#create-topic:focus,
-#create-topic.btn.focus,
-.nav-pills > li > a#create-topic.focus,
-.top-title-buttons button#create-topic.focus {
+#create-topic.btn.focus {
   color: #fff;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
@@ -1331,14 +1176,8 @@ body .form-field--text input[type="search"],
 #topic-footer-buttons .btn-primary.create.active, .open >
 #topic-footer-buttons .btn-primary.create.dropdown-toggle,
 #create-topic.btn:active,
-.nav-pills > li > a#create-topic:active,
-.top-title-buttons button#create-topic:active,
-#create-topic.btn.active,
-.nav-pills > li > a#create-topic.active,
-.top-title-buttons button#create-topic.active, .open >
-#create-topic.btn.dropdown-toggle, #topic-footer-buttons .open > #create-topic.dropdown-toggle.btn,
-.nav-pills > li.open > a#create-topic.dropdown-toggle,
-.top-title-buttons .open > button#create-topic.dropdown-toggle {
+#create-topic.btn.active, .open >
+#create-topic.btn.dropdown-toggle {
   color: #fff;
   background-image: none;
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
@@ -1355,43 +1194,21 @@ body .form-field--text input[type="search"],
 #topic-footer-buttons .btn-primary.create.dropdown-toggle:focus, .open >
 #topic-footer-buttons .btn-primary.create.dropdown-toggle.focus,
 #create-topic.btn:active:hover,
-.nav-pills > li > a#create-topic:active:hover,
-.top-title-buttons button#create-topic:active:hover,
 #create-topic.btn:active:focus,
-.nav-pills > li > a#create-topic:active:focus,
-.top-title-buttons button#create-topic:active:focus,
 #create-topic.btn:active.focus,
-.nav-pills > li > a#create-topic:active.focus,
-.top-title-buttons button#create-topic:active.focus,
 #create-topic.btn.active:hover,
-.nav-pills > li > a#create-topic.active:hover,
-.top-title-buttons button#create-topic.active:hover,
 #create-topic.btn.active:focus,
-.nav-pills > li > a#create-topic.active:focus,
-.top-title-buttons button#create-topic.active:focus,
-#create-topic.btn.active.focus,
-.nav-pills > li > a#create-topic.active.focus,
-.top-title-buttons button#create-topic.active.focus, .open >
-#create-topic.btn.dropdown-toggle:hover, #topic-footer-buttons .open > #create-topic.dropdown-toggle.btn:hover,
-.nav-pills > li.open > a#create-topic.dropdown-toggle:hover,
-.top-title-buttons .open > button#create-topic.dropdown-toggle:hover, .open >
-#create-topic.btn.dropdown-toggle:focus, #topic-footer-buttons .open > #create-topic.dropdown-toggle.btn:focus,
-.nav-pills > li.open > a#create-topic.dropdown-toggle:focus,
-.top-title-buttons .open > button#create-topic.dropdown-toggle:focus, .open >
-#create-topic.btn.dropdown-toggle.focus, #topic-footer-buttons .open > #create-topic.dropdown-toggle.focus.btn,
-.nav-pills > li.open > a#create-topic.dropdown-toggle.focus,
-.top-title-buttons .open > button#create-topic.dropdown-toggle.focus {
+#create-topic.btn.active.focus, .open >
+#create-topic.btn.dropdown-toggle:hover, .open >
+#create-topic.btn.dropdown-toggle:focus, .open >
+#create-topic.btn.dropdown-toggle.focus {
   color: #fff;
 }
 .btn-primary.create.disabled, .btn-primary.create:disabled,
 #topic-footer-buttons .btn-primary.create.disabled,
 #topic-footer-buttons .btn-primary.create:disabled,
 #create-topic.btn.disabled,
-.nav-pills > li > a#create-topic.disabled,
-.top-title-buttons button#create-topic.disabled,
-#create-topic.btn:disabled,
-.nav-pills > li > a#create-topic:disabled,
-.top-title-buttons button#create-topic:disabled {
+#create-topic.btn:disabled {
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
@@ -1404,17 +1221,9 @@ body .form-field--text input[type="search"],
 #topic-footer-buttons .btn-primary.create:disabled:focus,
 #topic-footer-buttons .btn-primary.create:disabled.focus,
 #create-topic.btn.disabled:focus,
-.nav-pills > li > a#create-topic.disabled:focus,
-.top-title-buttons button#create-topic.disabled:focus,
 #create-topic.btn.disabled.focus,
-.nav-pills > li > a#create-topic.disabled.focus,
-.top-title-buttons button#create-topic.disabled.focus,
 #create-topic.btn:disabled:focus,
-.nav-pills > li > a#create-topic:disabled:focus,
-.top-title-buttons button#create-topic:disabled:focus,
-#create-topic.btn:disabled.focus,
-.nav-pills > li > a#create-topic:disabled.focus,
-.top-title-buttons button#create-topic:disabled.focus {
+#create-topic.btn:disabled.focus {
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
@@ -1423,18 +1232,13 @@ body .form-field--text input[type="search"],
 #topic-footer-buttons .btn-primary.create.disabled:hover,
 #topic-footer-buttons .btn-primary.create:disabled:hover,
 #create-topic.btn.disabled:hover,
-.nav-pills > li > a#create-topic.disabled:hover,
-.top-title-buttons button#create-topic.disabled:hover,
-#create-topic.btn:disabled:hover,
-.nav-pills > li > a#create-topic:disabled:hover,
-.top-title-buttons button#create-topic:disabled:hover {
+#create-topic.btn:disabled:hover {
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
 }
 
-a.btn[href], #topic-footer-buttons a[href].btn,
-.nav-pills > li > a[href] {
+a.btn[href] {
   color: #fff;
 }
 
@@ -1910,9 +1714,7 @@ div.footer-inner-bottom li.highlighted a {
 .share .fa.fa-link,
 .actions button .fa.fa-link, .reply-to .fa.fa-mail-forward,
 .create .fa.fa-reply,
-.reply .fa.fa-reply, .flag-topic .fa.fa-flag, .bookmark .fa.fa-bookmark, .invite-topic .fa.fa-users, .btn .fa.fa-wrench, #topic-footer-buttons .btn .fa.fa-wrench,
-.nav-pills > li > a .fa.fa-wrench,
-.top-title-buttons button .fa.fa-wrench, .category-breadcrumb .fa.fa-caret-right,
+.reply .fa.fa-reply, .flag-topic .fa.fa-flag, .bookmark .fa.fa-bookmark, .invite-topic .fa.fa-users, .btn .fa.fa-wrench, .category-breadcrumb .fa.fa-caret-right,
 .category-breadcrumb .fa.fa-caret-down {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -1961,9 +1763,7 @@ div.footer-inner-bottom li.highlighted a {
   content: 'people';
 }
 
-.btn .fa.fa-wrench:before, #topic-footer-buttons .btn .fa.fa-wrench:before,
-.nav-pills > li > a .fa.fa-wrench:before,
-.top-title-buttons button .fa.fa-wrench:before {
+.btn .fa.fa-wrench:before {
   content: 'build';
 }
 
@@ -2032,25 +1832,16 @@ div.footer-inner-bottom li.highlighted a {
   background-color: #e0e0e0;
   border-color: #e0e0e0;
 }
-.modal-footer .btn.null, .modal-footer #topic-footer-buttons .null.btn, #topic-footer-buttons .modal-footer .null.btn,
-.modal-footer .nav-pills > li > a.null,
-.modal-footer .top-title-buttons button.null,
-.top-title-buttons .modal-footer button.null {
+.modal-footer .btn.null {
   float: right;
   margin-right: 10px;
   background: transparent;
 }
-.modal-footer .btn.null:active, .modal-footer #topic-footer-buttons .null.btn:active, #topic-footer-buttons .modal-footer .null.btn:active,
-.modal-footer .nav-pills > li > a.null:active,
-.modal-footer .top-title-buttons button.null:active,
-.top-title-buttons .modal-footer button.null:active {
+.modal-footer .btn.null:active {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.modal-footer .btn.null:hover, .modal-footer #topic-footer-buttons .null.btn:hover, #topic-footer-buttons .modal-footer .null.btn:hover,
-.modal-footer .nav-pills > li > a.null:hover,
-.modal-footer .top-title-buttons button.null:hover,
-.top-title-buttons .modal-footer button.null:hover {
+.modal-footer .btn.null:hover {
   color: #0073cf;
 }
 
