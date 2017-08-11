@@ -1403,6 +1403,11 @@ nav.post-controls button.d-hover {
   color: #0073cf;
 }
 
+nav.post-controls button.create {
+  font-size: 13px;
+  font-weight: 500;
+}
+
 a.btn[href] {
   color: #fff;
 }
@@ -1500,6 +1505,25 @@ button.btn.standard.dropdown-toggle {
   font-size: 14px !important;
   vertical-align: middle !important;
   display: inline-block !important;
+}
+
+button.widget-button.btn.btn.toggle-notifications-options.notifications-dropdown.no-text.btn-icon {
+  min-height: 30px;
+}
+
+button.widget-button.btn.btn.toggle-notifications-options.notifications-dropdown.no-text.btn-icon,
+button.widget-button.btn.create.no-text.btn-icon,
+button.widget-button.btn.toggle-admin-menu.no-text.btn-icon {
+  background: #EEEEEE;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #6D6D6D;
+}
+button.widget-button.btn.btn.toggle-notifications-options.notifications-dropdown.no-text.btn-icon:hover,
+button.widget-button.btn.create.no-text.btn-icon:hover,
+button.widget-button.btn.toggle-admin-menu.no-text.btn-icon:hover {
+  color: #0073cf;
 }
 
 /*--------------------------------------------------------------
