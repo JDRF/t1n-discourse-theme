@@ -16,6 +16,10 @@
 	@include button-variant($btn-primary-color, $jdrf-purple, $jdrf-purple);
 }
 
+.btn.edit.ember-view {
+	color: #fff;
+}
+
 .list-controls .category-breadcrumb li.bar>.badge-category {
 	background: transparent !important;
 	padding: 0.55rem;

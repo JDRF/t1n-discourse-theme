@@ -1198,12 +1198,6 @@ input[type="button"].btn-block {
   opacity: 1;
 }
 
-.btn[href], #topic-footer-buttons [href].btn,
-.nav-pills > li > a[href],
-.top-title-buttons button[href] {
-  color: #fff;
-}
-
 .form-field {
   display: block;
 }
@@ -1435,6 +1429,12 @@ body .form-field--text input[type="search"],
   color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
+}
+
+.btn.edit.ember-view, #topic-footer-buttons .edit.ember-view.btn,
+.nav-pills > li > a.edit.ember-view,
+.top-title-buttons button.edit.ember-view {
+  color: #fff;
 }
 
 .list-controls .category-breadcrumb li.bar > .badge-category {
