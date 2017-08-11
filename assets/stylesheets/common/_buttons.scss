@@ -56,6 +56,9 @@ fieldset[disabled] a.btn {
 .btn,
 .btn-primary {
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	&:hover {
+		background-color: $btn-primary-color;
+	}
 }
 .btn-secondary {
 	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
@@ -303,4 +306,8 @@ input[type="button"] {
 
 .btn i.fa {
   opacity: 1;
+}
+
+.btn[href] {
+	color: #fff;
 }

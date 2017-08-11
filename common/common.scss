@@ -278,6 +278,12 @@ fieldset[disabled] .nav-pills > li > a {
   background-color: #e0e0e0;
   border-color: #e0e0e0;
 }
+.btn:hover, #topic-footer-buttons .btn:hover,
+.nav-pills > li > a:hover,
+.top-title-buttons button:hover,
+.btn-primary:hover {
+  background-color: #fff;
+}
 
 .btn-secondary {
   font-family: "Gotham", sans-serif;
@@ -1190,6 +1196,12 @@ input[type="button"].btn-block {
 .nav-pills > li > a i.fa,
 .top-title-buttons button i.fa {
   opacity: 1;
+}
+
+.btn[href], #topic-footer-buttons [href].btn,
+.nav-pills > li > a[href],
+.top-title-buttons button[href] {
+  color: #fff;
 }
 
 .form-field {
