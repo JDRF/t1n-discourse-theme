@@ -1,6 +1,7 @@
 #topic-footer-buttons .btn,
 .nav-pills>li>a,
 .top-title-buttons button {
+	border: 1px solid;
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 	@include button-outline-variant($btn-primary-bg);
 	@include no-elevation;
