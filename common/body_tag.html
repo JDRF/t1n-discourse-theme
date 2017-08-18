@@ -106,4 +106,25 @@ jdrfMixPanel = {
 }
 
 jdrfMixPanel.init();
+
+
+Discourse.PageTracker.current().on('change', function(url, title) {
+    var dir = _.without(url.split("?")[0].split("/"), "")
+    switch (dir[0]) {
+        case undefined:
+            console.log(title);
+            break
+        case "categories":
+        case "latest":
+        case "top":
+            console.log(dir);
+            break
+        case "c":
+            console.log(title, dir);
+            break
+        case "t":
+            MPtrackers.topic(title, dir);
+            break
+    }
+});
 </script>
