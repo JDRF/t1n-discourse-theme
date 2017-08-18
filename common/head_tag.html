@@ -181,6 +181,22 @@ mixpanel_events = [];
 
 <script type="text/discourse-plugin" version="0.8.9">
   api.onPageChange((url, title) => {
-      console.log('the page changed to: ' + url + ' and title ' + title);
+      var dir = _.without(url.split("?")[0].split("/"), "")
+	    switch (dir[0]) {
+	        case undefined:
+	            console.log(title);
+	            break
+	        case "categories":
+	        case "latest":
+	        case "top":
+	            console.log(dir);
+	            break
+	        case "c":
+	            console.log(title, dir);
+	            break
+	        case "t":
+	            console.log(title, dir);
+	            break
+	    }
   });
 </script>
