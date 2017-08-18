@@ -107,24 +107,9 @@ jdrfMixPanel = {
 
 jdrfMixPanel.init();
 
+</script>
 
-Discourse.PageTracker.current().on('change', function(url, title) {
-    var dir = _.without(url.split("?")[0].split("/"), "")
-    switch (dir[0]) {
-        case undefined:
-            console.log(title);
-            break
-        case "categories":
-        case "latest":
-        case "top":
-            console.log(dir);
-            break
-        case "c":
-            console.log(title, dir);
-            break
-        case "t":
-            console.log(title, dir);
-            break
-    }
-});
+<script type="text/discourse-plugin" version="0.8.9">
+  // you can use the `api` object here!
+  api.decorateCooked($elem => $elem.css({ backgroundColor: 'yellow' }));
 </script>
