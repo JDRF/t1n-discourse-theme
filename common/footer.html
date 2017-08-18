@@ -47,3 +47,112 @@
 
 
 </footer>
+
+<script type="text/javascript">
+    // Custom MixPanel tracking for TypeOneNation
+jdrfMixPanel = {
+
+    peopleProperty: null,
+
+    init: function() {
+
+        var cookies = this.readCookie( 'jdrf_mixpanel' );
+        var cookie_object = {};
+
+        // Multiple strings of events may create multiple cookies. Process each one
+        if( cookies ) {
+            for( var current_cookie = 0; current_cookie < cookies.length; current_cookie++ ) {
+                cookie_object = ( JSON.parse( decodeURIComponent( cookies[ current_cookie ] ) ) );
+
+                if( cookie_object ) {
+                    this.trackMixPanel( cookie_object );
+                }
+            }
+
+            // Clean up the cookies to prevent being tracked on other pages. The original expiration date
+            // should handle this, but just making sure.
+            this.deleteCookie( 'jdrf_mixpanel' );
+        }
+
+        if( mixpanelEvents ) {
+            for( var x = 0; x < mixpanelEvents.length; x++ ) {
+                var event_object = ( JSON.parse( decodeURIComponent( mixpanelEvents[ x ] ) ) );
+
+                if( event_object ) {
+                    this.trackMixPanel( event_object );
+                }
+            }
+        }
+    },
+
+    trackMixPanel: function( mixPanelObject) {
+
+        var mixPanelProperties,
+            plusGlobal = /\+/gi;
+
+        for( var i = 0; i < mixPanelObject.length; i++ ) {
+            mixPanelProperties = {};
+
+            // Identify the user
+            if( mixPanelObject[i].people ) {
+                this.identifyLoggedInUser( mixPanelObject[i].people );
+            }
+
+            // Set the arguments to an object
+            if( mixPanelObject[i].args ) {
+                for( var x in mixPanelObject[i].args ) {
+                    mixPanelProperties[ x.toString().replace( plusGlobal, ' ' ) ] = mixPanelObject[i].args[x].toString().replace( plusGlobal, ' ' );
+                }
+            }
+
+            // Track the event
+            mixpanel.track(
+                mixPanelObject[i].event.replace( plusGlobal, ' ' ),
+                mixPanelProperties
+            );
+
+        }
+    },
+
+    // Retrieve a cookie value by name
+    readCookie: function( name ) {
+        var nameEQ = name + '=';
+        var ca = document.cookie.split(';');
+        var cookies = [];
+
+        for( var i=0; i < ca.length; i++) {
+            var c = ca[i];
+            while ( c.charAt(0)==' ' ) {
+                c = c.substring( 1, c.length );
+            }
+            if ( c.indexOf( nameEQ ) == 0 ) {
+                cookies.push( c.substring( nameEQ.length, c.length ) );
+            }
+        }
+
+        if( cookies.length ) {
+            return cookies;
+        }
+
+        return null;
+    },
+
+    identifyLoggedInUser: function( peopleProperties ) {
+        if( peopleProperties && peopleProperties.id && ! this.peopleProperty ) {
+            var consId = peopleProperties.id.trim();
+
+            if( consId && consId !== '' ) {
+                mixpanel.identify( consId );
+                mixpanel.people.set( peopleProperties );
+                this.peopleProperty = peopleProperties;
+            }
+        }
+    },
+    // Clears the cookie to make sure the cookie isn't tracked again.
+    deleteCookie: function( name ) {
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+}
+
+jdrfMixPanel.init();
+</script>
