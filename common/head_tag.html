@@ -218,4 +218,15 @@ mixpanel_events = [];
 	            break
 	    }
   });
+
+  api.modifyClass('controller:composer', {
+    actions: {
+       save: function() {
+              // Do what you want here, for example:
+              console.log("Creating New Topic?", this.get('model.creatingTopic');
+              // Call super to save the topic
+              this._super();
+          }
+      }
+  });
 </script>
