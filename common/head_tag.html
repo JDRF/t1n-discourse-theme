@@ -182,11 +182,11 @@ mixpanel_events = [];
 <script type="text/discourse-plugin" version="0.8.9">
   var userObj = api.getCurrentUser();
   mixpanelPeople = {
-			'id': userObj.username,
-			'$email': '',
-			'$first_name': userObj.name,
-			'$last_name': userObj.name
-		};
+		'id': userObj.username,
+		'$email': '',
+		'$first_name': userObj.name,
+		'$last_name': userObj.name
+	};
   api.onPageChange((url, title) => {
       var dir = _.without(url.split("?")[0].split("/"), "")
 	    switch (dir[0]) {
@@ -199,10 +199,10 @@ mixpanel_events = [];
 	            console.log(dir);
 	            break
 	        case "c":
-	            console.log(title, dir);
+	            console.log(title, dir, 'category');
 	            break
 	        case "t":
-	            console.log(title, dir);
+	            console.log(title, dir, 'topic');
 	            break
 	    }
   });
