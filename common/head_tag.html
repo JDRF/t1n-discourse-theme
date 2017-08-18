@@ -178,3 +178,9 @@ mixpanel.init( '0fdad06ede50aab97430c75a16c1d086' );
 mixpanel_events = [];
 //end mixpanel
 </script>
+
+<script type="text/discourse-plugin" version="0.8.9">
+  api.onPageChange((url, title) => {
+      console.log('the page changed to: ' + url + ' and title ' + title);
+  });
+</script>
