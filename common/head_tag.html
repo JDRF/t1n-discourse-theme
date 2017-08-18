@@ -199,10 +199,22 @@ mixpanel_events = [];
 	            console.log(dir);
 	            break
 	        case "c":
-	            console.log(title, dir, 'category');
+	        	jdrfMixPanel.trackMixPanel( [{
+			        'args': {
+			        	'Group Name': title + ' (dsc)'
+			        },
+			        'event': 'Group: Viewed',
+			        'people': mixpanelPeopleGroup
+			    }] );
 	            break
 	        case "t":
-	            console.log(title, dir, 'topic');
+	            jdrfMixPanel.trackMixPanel( [{
+			        'args': {
+			        	'Discussion Name': title + ' (dsc)'
+			        },
+			        'event': 'Discussion: Viewed',
+			        'people': mixpanelPeopleGroup
+			    }] );
 	            break
 	    }
   });
