@@ -180,7 +180,13 @@ mixpanel_events = [];
 </script>
 
 <script type="text/discourse-plugin" version="0.8.9">
-  mixpanelPeople = api.getCurrentUser();
+  var userObj = api.getCurrentUser();
+  mixpanelPeople = {
+			'id': userObj.userame,
+			'$email': '',
+			'$first_name': userObj.name,
+			'$last_name': userObj.name
+		};
   api.onPageChange((url, title) => {
       var dir = _.without(url.split("?")[0].split("/"), "")
 	    switch (dir[0]) {
