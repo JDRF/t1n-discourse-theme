@@ -1,63 +1,82 @@
 <script type="text/javascript">
 // Polyfills
 
-Element.prototype.matches = Element.prototype.matches || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector || function matches(selector) {
-	var
-	element = this,
-	elements = (element.document || element.ownerDocument).querySelectorAll(selector),
-	index = 0;
+Element.prototype.matches =
+	Element.prototype.matches ||
+	Element.prototype.mozMatchesSelector ||
+	Element.prototype.msMatchesSelector ||
+	Element.prototype.webkitMatchesSelector ||
+	function matches(selector) {
+		var element = this,
+			elements = (element.document || element.ownerDocument)
+				.querySelectorAll(selector),
+			index = 0;
 
-	while (elements[index] && elements[index] !== element) {
-		++index;
-	}
+		while (elements[index] && elements[index] !== element) {
+			++index;
+		}
 
-	return !!elements[index];
-};
+		return !!elements[index];
+	};
 
-Element.prototype.closest = Element.prototype.closest || function closest(selector) {
-	var node = this;
+Element.prototype.closest =
+	Element.prototype.closest ||
+	function closest(selector) {
+		var node = this;
 
-	while (node) {
-		if (node.matches(selector)) return node;
+		while (node) {
+			if (node.matches(selector)) return node;
 
-		node = node.parentElement;
-	}
+			node = node.parentElement;
+		}
 
-	return null;
-};
+		return null;
+	};
 
 // Site
 
 var Site = {};
 
 Site.dataBlock = {
-	trigger:        'aria-controls',
-	triggerSection: 'data-controls',
-	triggerToggle:  'aria-expanded',
-	section:        'data-section',
-	sectionToggle:  'data-expanded',
-	onClick: function (event) {
-		var trigger = event.target.closest('[' + this.trigger + ']');
+	trigger: "aria-controls",
+	triggerSection: "data-controls",
+	triggerToggle: "aria-expanded",
+	section: "data-section",
+	sectionToggle: "data-expanded",
+	onClick: function(event) {
+		var trigger = event.target.closest("[" + this.trigger + "]");
 
 		if (trigger) {
-			var isActive = trigger.getAttribute(this.triggerToggle) === 'true';
+			var isActive = trigger.getAttribute(this.triggerToggle) === "true";
 			var id = trigger.getAttribute(this.trigger);
 			var sectionId = trigger.getAttribute(this.triggerSection);
 
 			if (sectionId) {
-				var sections = document.querySelectorAll('[' + this.section + '="' + sectionId + '"]');
-				var triggers = document.querySelectorAll('[' + this.triggerSection + '="' + sectionId + '"]');
+				var sections = document.querySelectorAll(
+					"[" + this.section + '="' + sectionId + '"]'
+				);
+				var triggers = document.querySelectorAll(
+					"[" + this.triggerSection + '="' + sectionId + '"]'
+				);
 
 				if (sections.length) {
-					Array.prototype.forEach.call(sections, function (element) {
-						element.setAttribute(this.sectionToggle, false);
-					}, this);
+					Array.prototype.forEach.call(
+						sections,
+						function(element) {
+							element.setAttribute(this.sectionToggle, false);
+						},
+						this
+					);
 				}
 
 				if (triggers.length) {
-					Array.prototype.forEach.call(triggers, function (element) {
-						element.setAttribute(this.triggerToggle, false);
-					}, this);
+					Array.prototype.forEach.call(
+						triggers,
+						function(element) {
+							element.setAttribute(this.triggerToggle, false);
+						},
+						this
+					);
 				}
 			}
 
@@ -67,175 +86,302 @@ Site.dataBlock = {
 				if (target) {
 					target.setAttribute(this.sectionToggle, !isActive);
 
-					var triggers = document.querySelectorAll('[' + this.trigger + '="' + id + '"]');
+					var triggers = document.querySelectorAll(
+						"[" + this.trigger + '="' + id + '"]'
+					);
 
 					if (triggers.length) {
-						Array.prototype.forEach.call(triggers, function (element) {
-							element.setAttribute(this.triggerToggle, !isActive);
-						}, this);
+						Array.prototype.forEach.call(
+							triggers,
+							function(element) {
+								element.setAttribute(
+									this.triggerToggle,
+									!isActive
+								);
+							},
+							this
+						);
 					}
 				}
 			}
 		}
 	},
-	onCreate: function () {
-		document.addEventListener('click', this.onClick = this.onClick.bind(this));
+	onCreate: function() {
+		document.addEventListener(
+			"click",
+			(this.onClick = this.onClick.bind(this))
+		);
 	},
-	onDestroy: function () {
+	onDestroy: function() {
 		document.removeEventListener(this.onClick);
 	}
 };
 
 Site.updateNavigation = {
-	onCreate: function () {
-		var navigationLinks = document.querySelectorAll('.navigation a');
+	onCreate: function() {
+		var navigationLinks = document.querySelectorAll(".navigation a");
 
-		Array.prototype.forEach.call(navigationLinks, function (link) {
+		Array.prototype.forEach.call(navigationLinks, function(link) {
 			if (link.href === location.href) {
-				link.setAttribute('aria-current', true);
+				link.setAttribute("aria-current", true);
 			}
 		});
 	}
 };
 
 Site.filledInputs = {
-	attribute: 'data-filled',
-	selector: 'button,input,select,textarea',
-	updateInput: function (target) {
+	attribute: "data-filled",
+	selector: "button,input,select,textarea",
+	updateInput: function(target) {
 		if (target.id) {
-			var label = target.ownerDocument.querySelector('label[for="' + target.id + '"]');
+			var label = target.ownerDocument.querySelector(
+				'label[for="' + target.id + '"]'
+			);
 
 			if (label) {
 				if (target.value) {
-					label.setAttribute(this.attribute, '');
+					label.setAttribute(this.attribute, "");
 				} else {
 					label.removeAttribute(this.attribute);
 				}
 			}
 		}
 	},
-	updateInputs: function (target) {
-		Array.prototype.forEach.call(target.querySelectorAll(this.selector), this.updateInput, this);
+	updateInputs: function(target) {
+		Array.prototype.forEach.call(
+			target.querySelectorAll(this.selector),
+			this.updateInput,
+			this
+		);
 	},
-	onCreate: function () {
+	onCreate: function() {
 		this.updateInputs(document);
 
-		document.addEventListener('input', this.onInput = function (event) {
-			this.updateInput(event.target);
-		}.bind(this));
+		document.addEventListener(
+			"input",
+			(this.onInput = function(event) {
+				this.updateInput(event.target);
+			}.bind(this))
+		);
 	},
-	onDestroy: function () {
-		document.removeEventListener('input', this.onInput);
+	onDestroy: function() {
+		document.removeEventListener("input", this.onInput);
 	}
 };
 
 Site.a11yInputs = {
-	selector: 'button,input,select,textarea',
-	updateInput: function (input) {
+	selector: "button,input,select,textarea",
+	updateInput: function(input) {
 		if (input.id) {
 			var label = document.querySelector('label[for="' + input.id + '"]');
 
 			if (label) {
-				label.setAttribute('aria-hidden', true);
-				input.setAttribute('aria-label', this.stripTags(label.innerHTML));
+				label.setAttribute("aria-hidden", true);
+				input.setAttribute(
+					"aria-label",
+					this.stripTags(label.innerHTML)
+				);
 			}
 		}
 	},
-	updateInputs: function (target) {
-		Array.prototype.forEach.call(target.querySelectorAll(this.selector), this.updateInput, this);
+	updateInputs: function(target) {
+		Array.prototype.forEach.call(
+			target.querySelectorAll(this.selector),
+			this.updateInput,
+			this
+		);
 	},
-	stripTags: function (html) {
-		return html.replace(/<[^\s][^>]*>/g, '');
+	stripTags: function(html) {
+		return html.replace(/<[^\s][^>]*>/g, "");
 	},
-	onCreate: function () {
+	onCreate: function() {
 		this.updateInputs(document);
 	}
 };
 
 Site.toggleOuterCanvas = {
-	onCreate: function () {
-		document.documentElement.setAttribute('data-canvas', 'push e');
-		document.documentElement.setAttribute('data-expanded', 'false');
-		document.documentElement.setAttribute('id', 'canvas');
+	onCreate: function() {
+		document.documentElement.setAttribute("data-canvas", "push e");
+		document.documentElement.setAttribute("data-expanded", "false");
+		document.documentElement.setAttribute("id", "canvas");
 	}
 };
 
-window.onload = function () {
-	var keys = Object.keys(Site), index = -1, component;
+window.onload = function() {
+	var keys = Object.keys(Site),
+		index = -1,
+		component;
 
-	while (component = Site[keys[++index]]) {
+	while ((component = Site[keys[++index]])) {
 		if (component.onCreate) {
 			component.onCreate();
 		}
 	}
 };
 
-//mixpanel 
-(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-        0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-        for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+//mixpanel
+(function(e, a) {
+	if (!a.__SV) {
+		var b = window;
+		try {
+			var c,
+				l,
+				i,
+				j = b.location,
+				g = j.hash;
+			c = function(a, b) {
+				return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null;
+			};
+			g &&
+				c(g, "state") &&
+				(
+					(i = JSON.parse(decodeURIComponent(c(g, "state")))),
+					"mpeditor" === i.action &&
+						(
+							b.sessionStorage.setItem("_mpcehash", g),
+							history.replaceState(
+								i.desiredHash || "",
+								e.title,
+								j.pathname + j.search
+							)
+						)
+				);
+		} catch (m) {}
+		var k, h;
+		window.mixpanel = a;
+		a._i = [];
+		a.init = function(b, c, f) {
+			function e(b, a) {
+				var c = a.split(".");
+				2 == c.length && ((b = b[c[0]]), (a = c[1]));
+				b[a] = function() {
+					b.push(
+						[a].concat(Array.prototype.slice.call(arguments, 0))
+					);
+				};
+			}
+			var d = a;
+			"undefined" !== typeof f ? (d = a[f] = []) : (f = "mixpanel");
+			d.people = d.people || [];
+			d.toString = function(b) {
+				var a = "mixpanel";
+				"mixpanel" !== f && (a += "." + f);
+				b || (a += " (stub)");
+				return a;
+			};
+			d.people.toString = function() {
+				return d.toString(1) + ".people (stub)";
+			};
+			k = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(
+				" "
+			);
+			for (h = 0; h < k.length; h++) e(d, k[h]);
+			a._i.push([b, c, f]);
+		};
+		a.__SV = 1.2;
+		b = e.createElement("script");
+		b.type = "text/javascript";
+		b.async = !0;
+		b.src =
+			"undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+				? MIXPANEL_CUSTOM_LIB_URL
+				: "file:" === e.location.protocol &&
+					"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
+					? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+					: "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+		c = e.getElementsByTagName("script")[0];
+		c.parentNode.insertBefore(b, c);
+	}
+})(document, window.mixpanel || []);
 
 //Prod Key
 //mixpanel.init( '0fdad06ede50aab97430c75a16c1d086' );
 //Dev Key
-mixpanel.init( '526f2357b11f01c94c7b2dc1edb7c4cc' );
+mixpanel.init("526f2357b11f01c94c7b2dc1edb7c4cc");
 mixpanel_events = [];
 //end mixpanel
 </script>
 
 <script type="text/discourse-plugin" version="0.8.9">
-  var userObj = api.getCurrentUser();
-  mixpanelPeople = {
-		'id': userObj.username,
-		'$email': '',
-		'$first_name': userObj.name,
-		'$last_name': userObj.name
-	};
-  api.onPageChange((url, title) => {
-      var dir = _.without(url.split("?")[0].split("/"), "")
-	    switch (dir[0]) {
-	        case undefined:
-	            console.log(title);
-	            break
-	        case "categories":
-	        case "latest":
-	        case "top":
-	            console.log(dir);
-	            break
-	        case "c":
-	        	jdrfMixPanel.trackMixPanel( [{
-			        'args': {
-			        	'Group Name': title + ' (dsc)'
-			        },
-			        'event': 'Group: Viewed',
-			        'people': mixpanelPeople
-			    }] );
-	            break
-	        case "t":
-	            jdrfMixPanel.trackMixPanel( [{
-			        'args': {
-			        	'Discussion Name': title + ' (dsc)'
-			        },
-			        'event': 'Discussion: Viewed',
-			        'people': mixpanelPeople
-			    }] );
-	            break
-	    }
-  });
+var userObj = api.getCurrentUser();
+mixpanelPeople = {
+	id: userObj.username,
+	$email: "",
+	$first_name: userObj.name,
+	$last_name: userObj.name
+};
+api.onPageChange((url, title) => {
+	var dir = _.without(url.split("?")[0].split("/"), "");
+	switch (dir[0]) {
+		case undefined:
+			console.log(title);
+			break;
+		case "categories":
+		case "latest":
+		case "top":
+			console.log(dir);
+			break;
+		case "c":
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"Group Name": title + " (dsc)"
+					},
+					event: "Group: Viewed",
+					people: mixpanelPeople
+				}
+			]);
+			break;
+		case "t":
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"Discussion Name": title + " (dsc)"
+					},
+					event: "Discussion: Viewed",
+					people: mixpanelPeople
+				}
+			]);
+			break;
+	}
+});
 
-  api.modifyClass('controller:composer', {
-    actions: {
-       save: function() {
-              // Do what you want here, for example:
-              if ( this.get('model.creatingTopic') ) {
-				//console.log( model, 'track creating topic');
-              } else if ( this.get('model.creatingPost') ) {
-				//console.log( model, 'track creating reply');
-              }
-              
-              // Call super to save the topic
-              this._super();
-          }
-      }
-  });
+api.modifyClass("controller:composer", {
+	actions: {
+		save: function() {
+			if (this.get("model.creatingTopic")) {
+				this.mixpanelDiscussion = this.get("model.title");
+				this.mixpanelGroup = this.get("model.category.name");
+				this.mixpanelEvent = "Discussion: New Topic";
+				this.mixpanelType = "new";
+			} else if (this.get("model.replyingToTopic")) {
+				this.mixpanelDiscussion = this.get("model.topic.fancy_title");
+				this.mixpanelGroup = this.get("model.category.name");
+				this.mixpanelEvent = "Discussion: New Reply";
+				this.mixpanelType = "reply";
+			}
+			// Call super to save the topic
+			this._super();
+		}
+	},
+	triggerMixpanel: function() {
+		if (this.mixpanelType === "reply" || this.mixpanelType === "new") {
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"Discussion Name": this.mixpanelDiscussion,
+						"Group Name": this.mixpanelGroup
+					},
+					event: this.mixpanelEvent,
+					people: mixpanelPeople
+				}
+			]);
+			this.mixpanelType = undefined;
+		}
+	},
+	destroyDraft: function() {
+		this.triggerMixpanel();
+		this._super();
+	}
+});
 </script>
