@@ -359,6 +359,10 @@ api.modifyClass("controller:composer", {
 				this.mixpanelGroup = this.get("model.category.name");
 				this.mixpanelEvent = "Discussion: New Reply";
 				this.mixpanelType = "reply";
+			} else if ( this.get("model.privateMessage")) {
+				this.mixpanelEvent = "Message: Sent";
+				this.mixpanelTargetusernames = this.get("model.targetUsernames");
+				this.mixpanelType = "message";
 			}
 			// Call super to save the topic
 			this._super();
@@ -371,6 +375,17 @@ api.modifyClass("controller:composer", {
 					args: {
 						"Discussion Name": this.mixpanelDiscussion,
 						"Group Name": this.mixpanelGroup
+					},
+					event: this.mixpanelEvent,
+					people: mixpanelPeople
+				}
+			]);
+			this.mixpanelType = undefined;
+		} else if ( this.mixpanelType === 'message' ) {
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"People": this.mixpanelTargetusernames
 					},
 					event: this.mixpanelEvent,
 					people: mixpanelPeople
