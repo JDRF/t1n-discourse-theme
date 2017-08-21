@@ -310,6 +310,14 @@ mixpanelPeople = {
 	$first_name: userObj.name,
 	$last_name: userObj.name
 };
+function getParams() {
+  // gets url parameters and builds an object
+  return _.chain(location.search.slice(1).split('&'))
+         .map(function (item) { if (item) { return item.split('='); } })
+         .compact()
+         .object()
+         .value();
+}
 api.onPageChange((url, title) => {
 	var dir = _.without(url.split("?")[0].split("/"), "");
 	switch (dir[0]) {
@@ -320,6 +328,17 @@ api.onPageChange((url, title) => {
 		case "latest":
 		case "top":
 			console.log(dir);
+			break;
+		case "search":
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"Term": decodeURIComponent(JSON.stringify(getParams()))
+					},
+					event: "Search",
+					people: mixpanelPeople
+				}
+			]);
 			break;
 		case "c":
 			jdrfMixPanel.trackMixPanel([
