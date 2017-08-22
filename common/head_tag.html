@@ -388,7 +388,7 @@ api.onPageChange((url, title) => {
         $(this).find('li a').unbind('click').on('click', function( el ) {
            trackFollowing( $(this).parent().data('id'), title ); 
         });
-    })
+    });
     
     $(".toggle-notification-options").on("click", function( el ){
         var $clicked = $(this);
@@ -397,8 +397,19 @@ api.onPageChange((url, title) => {
                trackFollowing( $(el.currentTarget).find('.title').text(), title ); 
             });
         }, 200);
-    })
-	
+    });
+
+    if( 'profile' === _.last(dir) ) {
+        $('.save-user').on("click", function(){
+           jdrfMixPanel.trackMixPanel([
+				{
+					args: {},
+					event: "Updated Profile",
+					people: mixpanelPeople
+				}
+			]);
+        });
+    }
 });
 
 api.modifyClass("controller:composer", {
