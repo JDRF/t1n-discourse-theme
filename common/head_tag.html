@@ -332,7 +332,7 @@ var trackFollowing = function( setting, title ) {
 			args: {
 				"Group Name": title
 			},
-			event: type[setting],
+			event: type[setting] ? type[setting]: "Subscribe: " + setting,
 			people: mixpanelPeople
 		}
 	]);
@@ -388,6 +388,15 @@ api.onPageChange((url, title) => {
         $(this).find('li a').unbind('click').on('click', function( el ) {
            trackFollowing( $(this).parent().data('id'), title ); 
         });
+    })
+    
+    $(".toggle-notification-options").on("click", function( el ){
+        var $clicked = $(this);
+        setTimeout(()=>{
+            $clicked.parent().find('li a').unbind('click').on('click', function( el ) {
+               trackFollowing( $(el.currentTarget).find('.title').text(), title ); 
+            });
+        }, 200);
     })
 	
 });
