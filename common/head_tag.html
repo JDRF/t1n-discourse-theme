@@ -310,7 +310,7 @@ mixpanelPeople = {
 	$first_name: userObj.name,
 	$last_name: userObj.name
 };
-function getParams() {
+var getParams = function() {
   // gets url parameters and builds an object
   return _.chain(location.search.slice(1).split('&'))
          .map(function (item) { if (item) { return item.split('='); } })
@@ -318,6 +318,26 @@ function getParams() {
          .object()
          .value();
 }
+
+var trackFollowing = function( setting, title ) {
+    var type = {
+        0: "Subscribe: Muted",
+        1: "Subscribe: Normal",
+        2: "Subscribe: Tracking",
+        3: "Subscribe: Watching", 
+        4: "Subscribe: First Post"
+    };
+    jdrfMixPanel.trackMixPanel([
+		{
+			args: {
+				"Group Name": title
+			},
+			event: type[setting],
+			people: mixpanelPeople
+		}
+	]);
+}
+
 api.onPageChange((url, title) => {
 	var dir = _.without(url.split("?")[0].split("/"), "");
 	switch (dir[0]) {
@@ -363,6 +383,13 @@ api.onPageChange((url, title) => {
 			]);
 			break;
 	}
+	
+	$(".notification-options").on("click", function( el ){
+        $(this).find('li a').unbind('click').on('click', function( el ) {
+           trackFollowing( $(this).parent().data('id'), title ); 
+        });
+    })
+	
 });
 
 api.modifyClass("controller:composer", {
