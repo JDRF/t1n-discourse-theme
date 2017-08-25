@@ -304,12 +304,21 @@ mixpanel_events = [];
 
 <script type="text/discourse-plugin" version="0.8.9">
 var userObj = api.getCurrentUser();
-mixpanelPeople = {
-	id: userObj.username,
-	$email: "",
-	$first_name: userObj.name,
-	$last_name: userObj.name
-};
+if ( userObj ) {
+	mixpanelPeople = {
+		id: userObj.username,
+		$email: "",
+		$first_name: userObj.name,
+		$last_name: userObj.name
+	};
+} else {
+	mixpanelPeople = {
+		id: '',
+		$email: "",
+		$first_name: '',
+		$last_name: ''
+	};
+}
 var getParams = function() {
   // gets url parameters and builds an object
   return _.chain(location.search.slice(1).split('&'))
