@@ -56,3 +56,24 @@ body {
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open>.btn-flat.dropdown-toggle {
 	box-shadow: none;
 }
+
+// Hide search and hamburger
+a#toggle-hamburger-menu,
+a#search-button {
+	display: none;
+}
+
+.staff a#toggle-hamburger-menu {
+	display: block;
+}
+
+// About me editor
+.d-editor-button-bar button {
+	color: #999;
+	border-color: #999;
+	box-shadow: none;
+}
+
+.d-editor-button-bar {
+	height: 27px;
+}
