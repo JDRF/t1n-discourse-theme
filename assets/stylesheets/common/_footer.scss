@@ -104,7 +104,9 @@ div.footer-inner{
 	.footer-social {
 		margin: 0 0 17px;
 		@media screen and (max-width: 720px) {
-			margin: 17px 0;
+			margin: 17px auto;
+			text-align: center;
+			float: none;
 		}
 	}
 }
@@ -127,6 +129,12 @@ div.footer-inner-top {
 		width: 48.5%;
 		float: left;
 		margin-right: 3% !important;
+
+		@media only screen and (max-width: 720px) {
+			float: none;
+			width: 100%;
+			margin-right: 0 !important;
+		}
 
 		&:nth-child(even) {
 			margin-right: 0 !important;
@@ -151,4 +159,12 @@ div.footer-inner-bottom li.highlighted a {
 
 #footer-credits p {
 	margin: 0;
+}
+
+#footer-links ul {
+	@media only screen and (max-width: 720px) {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
 }

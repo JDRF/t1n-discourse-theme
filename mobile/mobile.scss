@@ -52,3 +52,22 @@ ol.category-breadcrumb + ul.nav li {
 #create-topic.btn + .btn.edit-category {
   width: 100%;
 }
+
+#reply-control .toggle-toolbar {
+  background: transparent;
+  top: 0;
+}
+
+#reply-control .toggler {
+  top: 0;
+}
+
+#topic-footer-buttons .btn-primary.create {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.topic-footer-main-buttons .select-box {
+  min-width: 100%;
+}

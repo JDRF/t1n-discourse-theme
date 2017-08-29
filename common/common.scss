@@ -1720,7 +1720,9 @@ div.footer-inner .footer-social {
 }
 @media screen and (max-width: 720px) {
   div.footer-inner .footer-social {
-    margin: 17px 0;
+    margin: 17px auto;
+    text-align: center;
+    float: none;
   }
 }
 
@@ -1741,6 +1743,13 @@ div.footer-inner-top {
   width: 48.5%;
   float: left;
   margin-right: 3% !important;
+}
+@media only screen and (max-width: 720px) {
+  .footer-widget aside.widget {
+    float: none;
+    width: 100%;
+    margin-right: 0 !important;
+  }
 }
 .footer-widget aside.widget:nth-child(even) {
   margin-right: 0 !important;
@@ -1763,6 +1772,14 @@ div.footer-inner-bottom li.highlighted a {
 
 #footer-credits p {
   margin: 0;
+}
+
+@media only screen and (max-width: 720px) {
+  #footer-links ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .composer-popup {
