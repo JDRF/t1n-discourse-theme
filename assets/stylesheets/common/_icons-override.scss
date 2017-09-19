@@ -76,3 +76,11 @@
 		content: 'keyboard_arrow_down';
 	}
 }
+
+i.fa.fa-plus.d-icon.d-icon-plus {
+	@extend %material-icon;
+	margin-top: -2px;
+	&:before {
+    content: "add";
+	}
+}

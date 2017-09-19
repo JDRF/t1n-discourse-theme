@@ -8,6 +8,7 @@
 .navigation ul {
   font-size: 0;
   list-style: none;
+  margin-bottom: 24px;
 }
 @media screen and (max-width: 640px) {
   .navigation ul {
@@ -93,6 +94,7 @@
   display: block;
   text-transform: uppercase;
   white-space: nowrap;
+  font-weight: 500;
 }
 .navigation a:hover, .navigation a:focus {
   color: #333333;
@@ -114,7 +116,7 @@
 @media screen and (min-width: 639px) {
   .navigation a {
     font-size: 14px;
-    padding: 18px 30px;
+    padding: 17px 30px;
   }
 }
 @media screen and (max-width: 640px) {

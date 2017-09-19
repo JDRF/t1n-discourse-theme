@@ -23,11 +23,15 @@ body {
 }
 
 #main-outlet {
-  padding-top: 63px;
+  padding-top: 72px;
 }
 
 .d-header {
 	box-shadow: none;
+	height: 69px;
+}
+.d-header .contents {
+	margin: 13px 0;
 }
 
 .badge-wrapper,
