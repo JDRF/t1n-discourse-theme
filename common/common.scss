@@ -1128,7 +1128,7 @@ body input[type="color"] {
           background-size: 16px 18px;
   background-position: 98% 50%;
   cursor: auto;
-  height: 48px;
+  height: 34px;
   padding: 13px 12px;
   font-size: 1rem;
   -webkit-box-sizing: border-box;
@@ -2280,6 +2280,14 @@ body {
 
 .topic-list button.bulk-select {
   background-color: transparent !important;
+}
+
+.topic-list th {
+  color: #9E9E9E;
+}
+
+.topic-list th, .topic-list td {
+  padding: 15px 5px;
 }
 
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open > .btn-flat.dropdown-toggle {

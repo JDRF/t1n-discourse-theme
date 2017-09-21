@@ -58,6 +58,14 @@ body {
 	background-color: transparent !important;
 }
 
+.topic-list th {
+	color: #9E9E9E;
+}
+
+.topic-list th, .topic-list td {
+	padding: 15px 5px;
+}
+
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open>.btn-flat.dropdown-toggle {
 	box-shadow: none;
 }
