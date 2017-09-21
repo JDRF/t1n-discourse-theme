@@ -29,6 +29,7 @@ body {
 .d-header {
 	box-shadow: none;
 	height: 69px;
+	@include elevation-1;
 }
 .d-header .contents {
 	margin: 13px 0;
