@@ -2154,6 +2154,10 @@ i.fa.fa-plus.d-icon.d-icon-plus:before {
   border: 0;
 }
 
+.modal-footer {
+  border-top: 0;
+  padding: 32px 32px 16px 32px;
+}
 .modal-footer .btn-danger {
   float: right;
   font-family: "Gotham", sans-serif;
@@ -2206,7 +2210,7 @@ i.fa.fa-plus.d-icon.d-icon-plus:before {
 }
 .modal-footer .btn.null {
   float: right;
-  margin-right: 10px;
+  margin-right: 16px;
   background: transparent;
 }
 .modal-footer .btn.null:active {
@@ -2215,6 +2219,12 @@ i.fa.fa-plus.d-icon.d-icon-plus:before {
 }
 .modal-footer .btn.null:hover {
   color: #0073cf;
+}
+
+.modal-body {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 32px 32px 0 32px;
 }
 
 .submit-panel .cancel {
