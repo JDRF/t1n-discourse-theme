@@ -131,7 +131,7 @@ ol.category-breadcrumb {
 }
 
 .list-controls .category-dropdown-menu .badge-wrapper.bullet {
-	padding: 6px 5px;
+	padding: 8px;
 }
 
 .badge-wrapper.bullet span.badge-category {
@@ -140,6 +140,7 @@ ol.category-breadcrumb {
 	font-size: 13px;
 	font-weight: 500;
 	max-width: 190px !important;
+	text-transform: capitalize;
 }
 
 button.btn.standard.dropdown-toggle {
