@@ -1,3 +1,5 @@
+// Category dropdown
+
 ol.category-breadcrumb {
 	width: 49%;
 	min-width: 0;
@@ -64,4 +66,10 @@ ol.category-breadcrumb + ul.nav {
 
 .topic-footer-main-buttons .select-box {
   min-width: 100%;
+}
+
+// Topic category
+.badge-wrapper.bullet span.badge-category {
+	font-weight: 400;
+	font-size: 12px;
 }
