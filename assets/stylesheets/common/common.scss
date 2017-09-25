@@ -16,6 +16,7 @@
 @import 'icons-override';
 @import 'modal-override';
 @import 'badges';
+@import 'topic';
 
 body {
 	font-family: $font-family-base;
@@ -39,13 +40,6 @@ body {
 .topic-list th {
 	font-weight: 500;
 }
-
-
-.deleted .topic-body {
-	background-color: $grey-3;
-}
-
-
 
 .admin-interface {
 	.full-width > .nav-pills {

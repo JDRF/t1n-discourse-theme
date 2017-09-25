@@ -1,0 +1,18 @@
+.deleted .topic-body {
+	background-color: $grey-3;
+}
+
+.topic-meta-data {
+	margin-top: 17px;
+}
+
+.topic-notifications-options .select-box-header button.btn.no-text.btn-icon {
+	background: transparent;
+	border: 1px solid #9e9e9e;
+	box-shadow: none;
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: $jdrf-blue;
+	}
+}
