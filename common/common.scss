@@ -2127,7 +2127,7 @@ span.d-button-label {
 .actions button .fa.fa-link, .reply-to .fa.fa-mail-forward,
 .create .fa.fa-reply,
 .reply .fa.fa-reply, .flag-topic .fa.fa-flag, .bookmark .fa.fa-bookmark, .invite-topic .fa.fa-users, .btn .fa.fa-wrench, .category-breadcrumb .fa.fa-caret-right,
-.category-breadcrumb .fa.fa-caret-down, i.fa.fa-plus.d-icon.d-icon-plus {
+.category-breadcrumb .fa.fa-caret-down, i.fa.fa-plus.d-icon.d-icon-plus, i.fa.fa-folder.d-icon.d-icon-folder {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -2189,6 +2189,10 @@ i.fa.fa-plus.d-icon.d-icon-plus {
 }
 i.fa.fa-plus.d-icon.d-icon-plus:before {
   content: "add";
+}
+
+i.fa.fa-folder.d-icon.d-icon-folder:before {
+  content: "folder";
 }
 
 .modal-backdrop,

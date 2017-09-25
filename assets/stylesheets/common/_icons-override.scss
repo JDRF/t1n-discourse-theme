@@ -92,3 +92,10 @@ i.fa.fa-plus.d-icon.d-icon-plus {
     content: "add";
 	}
 }
+
+i.fa.fa-folder.d-icon.d-icon-folder {
+	@extend %material-icon;
+	&:before {
+    content: "folder";
+	}
+}
