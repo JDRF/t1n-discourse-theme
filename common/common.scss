@@ -1890,6 +1890,25 @@ div.footer-inner-bottom li.highlighted a {
   color: #666;
 }
 
+#reply-control .reply-area .ac-wrap {
+  border: 1px solid #9e9e9e;
+  border-radius: 2px;
+  width: 384px !important;
+  max-height: 20px;
+  margin-bottom: 7px;
+}
+#reply-control .reply-area .ac-wrap div.item {
+  margin-bottom: 0;
+}
+#reply-control .reply-area .ac-wrap div.item span {
+  height: 18px;
+  line-height: 18px;
+}
+#reply-control .reply-area .ac-wrap input[type="text"] {
+  margin-bottom: 0;
+  height: 18px;
+}
+
 #suggested-topics {
   background: #fafafa;
   position: relative;
