@@ -64,6 +64,8 @@ body {
 
 .topic-list th, .topic-list td {
 	padding: 15px 5px;
+	height: 56px;
+	box-sizing: border-box;
 }
 
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open>.btn-flat.dropdown-toggle {

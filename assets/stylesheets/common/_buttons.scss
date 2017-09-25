@@ -311,3 +311,19 @@ input[type="button"] {
 .btn i.fa {
   opacity: 1;
 }
+
+.small-action button {
+	background: inherit;
+	color: inherit;
+	box-shadow: none;
+	border: 1px solid;
+	margin-right: 8px;
+	&:focus,
+	&:active,
+	&:hover {
+		background: $jdrf-blue;
+		border-color: $jdrf-blue;
+		box-shadow: none;
+		color: white;
+	}
+}

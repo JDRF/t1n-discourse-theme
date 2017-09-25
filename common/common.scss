@@ -1018,6 +1018,22 @@ input[type="button"].btn-block {
   opacity: 1;
 }
 
+.small-action button {
+  background: inherit;
+  color: inherit;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid;
+  margin-right: 8px;
+}
+.small-action button:focus, .small-action button:active, .small-action button:hover {
+  background: #0073cf;
+  border-color: #0073cf;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: white;
+}
+
 .form-field {
   display: block;
 }
@@ -1877,6 +1893,10 @@ div.footer-inner-bottom li.highlighted a {
 #suggested-topics {
   background: #fafafa;
   position: relative;
+  padding: 64px 0;
+}
+#suggested-topics h3 {
+  font-weight: 500;
 }
 #suggested-topics:before {
   content: "";
@@ -2298,6 +2318,9 @@ body {
 
 .topic-list th, .topic-list td {
   padding: 15px 5px;
+  height: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open > .btn-flat.dropdown-toggle {
