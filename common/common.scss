@@ -1516,8 +1516,9 @@ a.btn[href] {
   text-transform: capitalize;
   width: calc(100% - 52px);
   font-size: 14px;
-  line-height: 20px;
+  line-height: 25px;
   padding: 2px 8px 2px 12px;
+  color: #212121;
 }
 
 .list-controls .category-breadcrumb .dropdown-header.category-dropdown-button {
@@ -1528,7 +1529,7 @@ a.btn[href] {
 }
 
 ol.category-breadcrumb {
-  min-height: 33px;
+  min-height: 32px;
   min-width: 250px;
   border: 1px solid #BDBDBD;
   border-radius: 2px;
