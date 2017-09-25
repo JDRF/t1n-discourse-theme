@@ -5,7 +5,7 @@
 	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 	@include button-outline-variant($btn-primary-bg);
 	@include no-elevation;
-	padding: 0.65rem 1rem;
+	padding: 0.65rem 8px;
 	font-weight: 500;
 
 	&:active,
