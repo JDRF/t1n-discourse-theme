@@ -1,9 +1,22 @@
+// Forum sort
+.nav-pills>li>a {
+	border-color: #BDBDBD;
+	color: #212121;
+	&:hover,
+	&:active,
+	&:focus {
+		color: #0073cf;
+		background: none;
+	}
+}
+
 // Category dropdown
 
 ol.category-breadcrumb {
 	width: 49%;
 	min-width: 0;
 	margin-right: 0;
+	border-color: #BDBDBD;
 	li {
 		white-space: nowrap;
 		margin-right: 0;
@@ -15,6 +28,11 @@ ol.category-breadcrumb {
 	width: calc(100% - 20px);
 }
 
+.list-controls .category-breadcrumb a.badge-category.category-dropdown-button .d-icon-caret-right,
+.list-controls .category-breadcrumb .dropdown-header.category-dropdown-button .d-icon-caret-right {
+	margin-left: -4px;
+}
+
 .list-controls .category-breadcrumb li.bullet>.dropdown-header .badge-category-bg {
 	width: 4px;
 }
@@ -24,6 +42,7 @@ ol.category-breadcrumb {
 	position: absolute;
 	top: 0;
 	right: 8px;
+	padding: 2px 0 2px 0 !important;
 }
 
 .list-controls .category-breadcrumb.hidden + ul {
@@ -39,6 +58,14 @@ ol.category-breadcrumb + ul.nav {
 		background: transparent;
 		margin-right: 0;
 	}
+}
+
+.list-controls .nav-pills .drop {
+	width: 100%;
+	box-sizing: border-box;
+}
+.list-controls .nav-pills .drop li a {
+	color: #212121;
 }
 
 #create-topic.btn {

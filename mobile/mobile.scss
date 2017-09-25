@@ -4,10 +4,20 @@
 @font-face { font-family: "Gotham"; font-weight: 700; src: url('http://jdrfimport.trydiscourse.com/uploads/jdrf/original/1X/47249cd9b6b59c8e70edfcb5907a5bacc44db08b.woff2') format('woff2') }
 @font-face { font-family: "Gotham"; font-weight: 300; src: url('http://jdrfimport.trydiscourse.com/uploads/jdrf/original/1X/707781b58b62210fc4008090ffe156ae262849e2.woff2') format('woff2') }
 @font-face { font-family: "Material Icons"; font-weight: normal; src: url('http://jdrfimport.trydiscourse.com/uploads/jdrf/original/1X/09963592e8c953cc7e14e3fb0a5b05d5042e8435.woff2') format('woff2') }
+.nav-pills > li > a {
+  border-color: #BDBDBD;
+  color: #212121;
+}
+.nav-pills > li > a:hover, .nav-pills > li > a:active, .nav-pills > li > a:focus {
+  color: #0073cf;
+  background: none;
+}
+
 ol.category-breadcrumb {
   width: 49%;
   min-width: 0;
   margin-right: 0;
+  border-color: #BDBDBD;
 }
 ol.category-breadcrumb li {
   white-space: nowrap;
@@ -19,6 +29,11 @@ ol.category-breadcrumb li {
   width: calc(100% - 20px);
 }
 
+.list-controls .category-breadcrumb a.badge-category.category-dropdown-button .d-icon-caret-right,
+.list-controls .category-breadcrumb .dropdown-header.category-dropdown-button .d-icon-caret-right {
+  margin-left: -4px;
+}
+
 .list-controls .category-breadcrumb li.bullet > .dropdown-header .badge-category-bg {
   width: 4px;
 }
@@ -28,6 +43,7 @@ ol.category-breadcrumb li {
   position: absolute;
   top: 0;
   right: 8px;
+  padding: 2px 0 2px 0 !important;
 }
 
 .list-controls .category-breadcrumb.hidden + ul {
@@ -43,6 +59,16 @@ ol.category-breadcrumb + ul.nav li {
   float: none;
   background: transparent;
   margin-right: 0;
+}
+
+.list-controls .nav-pills .drop {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.list-controls .nav-pills .drop li a {
+  color: #212121;
 }
 
 #create-topic.btn {
