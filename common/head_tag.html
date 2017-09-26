@@ -416,20 +416,16 @@ api.onPageChange((url, title) => {
 			break;
 	}
 	
-	$(".notification-options").on("click", function( el ){
-        $(this).find('li a').unbind('click').on('click', function( el ) {
-           trackFollowing( $(this).parent().data('id'), title ); 
-        });
-    });
-    
-    $(".toggle-notification-options").on("click", function( el ){
-        var $clicked = $(this);
-        setTimeout(()=>{
-            $clicked.parent().find('li a').unbind('click').on('click', function( el ) {
-               trackFollowing( $(el.currentTarget).find('.title').text(), title ); 
-            });
-        }, 200);
-    });
+	setTimeout(()=>{
+	    $(".topic-notifications-button").on("click", function( el ){
+	        var $clicked = $(this);
+	        setTimeout(()=>{
+	            $clicked.parent().find('.select-box-collection').find('li').unbind('click').on('click', function( el ) {
+	               trackFollowing( $(el.currentTarget).find('.title').text(), title ); 
+	            });
+	        }, 200);
+	    });
+   }, 200);
 
     if( 'profile' === _.last(dir) ) {
         $('.save-user').on("click", function(){
