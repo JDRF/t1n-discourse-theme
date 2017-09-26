@@ -351,6 +351,15 @@ api.onPageChange((url, title) => {
 	var dir = _.without(url.split("?")[0].split("/"), "");
 	switch (dir[0]) {
 		case undefined:
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"All Categories Viewed (dsc)"
+					},
+					event: "All Categories: Viewed",
+					people: mixpanelPeople
+				}
+			]);
 			break;
 		case "categories":
 		case "latest":
