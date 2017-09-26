@@ -414,6 +414,17 @@ api.onPageChange((url, title) => {
     			]);
 		    }, 400);
 			break;
+		case "u":
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"Profile Name": title + " (dsc)"
+					},
+					event: "Profile: Viewed",
+					people: mixpanelPeople
+				}
+			]);
+			break;
 	}
 	
 	setTimeout(()=>{
