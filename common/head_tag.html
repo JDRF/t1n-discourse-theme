@@ -339,7 +339,7 @@ var trackFollowing = function( setting, title ) {
     jdrfMixPanel.trackMixPanel([
 		{
 			args: {
-				"Group Name": title
+				"Category Name": title
 			},
 			event: type[setting] ? type[setting]: "Subscribe: " + setting,
 			people: mixpanelPeople
@@ -373,9 +373,9 @@ api.onPageChange((url, title) => {
 			jdrfMixPanel.trackMixPanel([
 				{
 					args: {
-						"Group Name": title + " (dsc)"
+						"Category Name": title + " (dsc)"
 					},
-					event: "Group: Viewed",
+					event: "Category: Viewed",
 					people: mixpanelPeople
 				}
 			]);
@@ -384,9 +384,9 @@ api.onPageChange((url, title) => {
 			jdrfMixPanel.trackMixPanel([
 				{
 					args: {
-						"Discussion Name": title + " (dsc)"
+						"Topic Name": title + " (dsc)"
 					},
-					event: "Discussion: Viewed",
+					event: "Topic: Viewed",
 					people: mixpanelPeople
 				}
 			]);
@@ -425,14 +425,14 @@ api.modifyClass("controller:composer", {
 	actions: {
 		save: function() {
 			if (this.get("model.creatingTopic")) {
-				this.mixpanelDiscussion = this.get("model.title");
-				this.mixpanelGroup = this.get("model.category.name");
-				this.mixpanelEvent = "Discussion: New Topic";
+				this.mixpanelTopic = this.get("model.title");
+				this.mixpanelCategory = this.get("model.category.name");
+				this.mixpanelEvent = "Topic: New Topic";
 				this.mixpanelType = "new";
 			} else if (this.get("model.replyingToTopic")) {
-				this.mixpanelDiscussion = this.get("model.topic.fancy_title");
-				this.mixpanelGroup = this.get("model.category.name");
-				this.mixpanelEvent = "Discussion: New Reply";
+				this.mixpanelTopic = this.get("model.topic.fancy_title");
+				this.mixpanelCategory = this.get("model.category.name");
+				this.mixpanelEvent = "Topic: New Reply";
 				this.mixpanelType = "reply";
 			} else if ( this.get("model.privateMessage")) {
 				this.mixpanelEvent = "Message: Sent";
@@ -448,8 +448,8 @@ api.modifyClass("controller:composer", {
 			jdrfMixPanel.trackMixPanel([
 				{
 					args: {
-						"Discussion Name": this.mixpanelDiscussion,
-						"Group Name": this.mixpanelGroup
+						"Topic Name": this.mixpanelTopic,
+						"Category Name": this.mixpanelCategory
 					},
 					event: this.mixpanelEvent,
 					people: mixpanelPeople
