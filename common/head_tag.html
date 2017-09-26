@@ -381,15 +381,22 @@ api.onPageChange((url, title) => {
 			]);
 			break;
 		case "t":
-			jdrfMixPanel.trackMixPanel([
-				{
-					args: {
-						"Topic Name": title + " (dsc)"
-					},
-					event: "Topic: Viewed",
-					people: mixpanelPeople
-				}
-			]);
+			setTimeout(()=>{
+    		    var pageTitle = $('title').text();
+    		    if ( pageTitle !== title ) {
+    		        title = pageTitle;
+    		    }
+    		    
+    			jdrfMixPanel.trackMixPanel([
+    				{
+    					args: {
+    						"Topic Name": title + " (dsc)"
+    					},
+    					event: "Topic: Viewed",
+    					people: mixpanelPeople
+    				}
+    			]);
+		    }, 200);
 			break;
 	}
 	
