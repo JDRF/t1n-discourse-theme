@@ -351,12 +351,19 @@ api.onPageChange((url, title) => {
 	var dir = _.without(url.split("?")[0].split("/"), "");
 	switch (dir[0]) {
 		case undefined:
-			console.log(title);
 			break;
 		case "categories":
 		case "latest":
 		case "top":
-			console.log(dir);
+			jdrfMixPanel.trackMixPanel([
+				{
+					args: {
+						"All Categories Sorted": dir[0] + " (dsc)"
+					},
+					event: "All Categories: Sorted",
+					people: mixpanelPeople
+				}
+			]);
 			break;
 		case "search":
 			jdrfMixPanel.trackMixPanel([
