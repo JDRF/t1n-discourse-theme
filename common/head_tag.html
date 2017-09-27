@@ -504,4 +504,32 @@ api.modifyClass("controller:composer", {
 		this._super();
 	}
 });
+
+$('body').on('click', 'button', ( evt ) => {
+    let $target = $(evt.currentTarget)
+    let interact = false;
+    if ( $target.hasClass('bookmark') ) {
+        interact = 'Bookmark';
+    }
+    if ( $target.hasClass('share') ) {
+        interact = 'Share';
+    }
+    if ( $target.hasClass('like') ) {
+       interact = 'Like';
+    }
+    if ( interact ) {
+        let article = $target.closest('article');
+        let tracked = {};
+        if ( article ) {
+            tracked.target = '#' + article.attr('id');
+        }
+        jdrfMixPanel.trackMixPanel([
+    		{
+    			args: tracked,
+    			event: "Interaction: " + interact,
+    			people: mixpanelPeople
+    		}
+    	]);
+    }
+});
 </script>
