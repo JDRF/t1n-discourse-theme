@@ -449,6 +449,16 @@ api.onPageChange((url, title) => {
 			]);
         });
     }
+
+    $(".topic-footer-main-buttons button:contains('Bookmark')").on("click", () => {
+       jdrfMixPanel.trackMixPanel([
+    		{
+    			args: {},
+    			event: "Interaction: Bottom Bookmark",
+    			people: mixpanelPeople
+    		}
+    	]);
+    });
 });
 
 api.modifyClass("controller:composer", {
