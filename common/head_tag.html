@@ -466,17 +466,17 @@ api.modifyClass("controller:composer", {
 		save: function() {
 			if (this.get("model.creatingTopic")) {
 				this.mixpanelTopic = this.get("model.title");
-				this.mixpanelCategory = this.get("model.category.name");
+				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Not set";
 				this.mixpanelEvent = "Topic: New Topic";
 				this.mixpanelType = "new";
 			} else if (this.get("model.replyingToTopic")) {
 				this.mixpanelTopic = this.get("model.topic.fancy_title");
-				this.mixpanelCategory = this.get("model.category.name");
+				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Not set" ;
 				this.mixpanelEvent = "Topic: New Reply";
 				this.mixpanelType = "reply";
 			} else if ( this.get("model.privateMessage")) {
 				this.mixpanelEvent = "Message: Sent";
-				this.mixpanelTargetusernames = this.get("model.targetUsernames");
+				this.mixpanelTargetusernames = ( this.get("model.targetUsernames") ) ? this.get("model.targetUsernames") : "Not set" ;
 				this.mixpanelType = "message";
 			}
 			// Call super to save the topic
