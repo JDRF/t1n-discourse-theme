@@ -85,14 +85,6 @@ span.d-button-label {
 	}
 }
 
-i.fa.fa-plus.d-icon.d-icon-plus {
-	@extend %material-icon;
-	margin-top: -2px;
-	&:before {
-    content: "add";
-	}
-}
-
 i.fa.fa-folder.d-icon.d-icon-folder {
 	@extend %material-icon;
 	&:before {
