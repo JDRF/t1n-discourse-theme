@@ -508,6 +508,16 @@ api.modifyClass("controller:composer", {
 			]);
 			this.mixpanelType = undefined;
 		}
+	},
+	destroyDraft: function() {
+		try {
+			this.triggerMixpanel();
+		} catch(err) {
+			console.error( err );
+			console.log( this );
+		}
+		
+		this._super();
 	}
 });
 
