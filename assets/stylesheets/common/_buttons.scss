@@ -172,6 +172,20 @@ fieldset[disabled] a.btn {
 	}
 }
 
+.d-header-icons {
+	.btn-flat {
+		&:focus,
+		&.focus,
+		&:active,
+		&.active,
+		.open > &.dropdown-toggle {
+			@include no-elevation;
+			box-shadow: none !important;
+			color: white !important;
+		}
+	}
+}
+
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-md, $line-height-md, $btn-border-radius-lg);
   height: 48px;
