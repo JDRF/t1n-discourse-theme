@@ -22,6 +22,7 @@
 body {
 	font-family: $font-family-base;
 	overflow-x: hidden;
+	font-smoothing: antialiased;
 }
 
 #main-outlet {
