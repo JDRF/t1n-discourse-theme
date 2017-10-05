@@ -172,34 +172,6 @@ fieldset[disabled] a.btn {
 	}
 }
 
-.d-header-icons {
-	.btn-flat {
-		@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
-		@include no-elevation;
-
-		@include hover {
-			@include no-elevation;
-			background-color: transparent;
-			color: $jdrf-blue !important;
-		}
-
-		&:focus,
-		&.focus,
-		&:active,
-		&.active,
-		.open > &.dropdown-toggle {
-			@include no-elevation;
-			box-shadow: none !important;
-			color: white !important;
-		}
-
-		&.disabled,
-		&:disabled {
-			@include no-elevation;
-		}
-	}
-}
-
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-md, $line-height-md, $btn-border-radius-lg);
   height: 48px;
