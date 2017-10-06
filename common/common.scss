@@ -306,7 +306,13 @@ fieldset[disabled] a.btn {
   border-color: #e0e0e0;
 }
 
-.staff .user-main .about.collapsed-info .controls ul a:second-child {
+.user-main .about.collapsed-info .controls ul a:first-child {
+  color: #212121;
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.staff .user-main .about.collapsed-info .controls ul a:nth-child(2) {
   color: #212121;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
