@@ -59,6 +59,7 @@
 .similar-topics {
 	a[href], .search-link .blurb {
 		color: #fff;
+		text-decoration: none;
 		&:hover {
 			color: $jdrf-dark-blue;
 		}
