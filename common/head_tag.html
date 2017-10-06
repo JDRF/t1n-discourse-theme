@@ -347,6 +347,24 @@ var trackFollowing = function( setting, title ) {
 	]);
 }
 
+var disableReplyBtn = function() {
+    var $replyBtn = $('.topic-footer-main-buttons button.create');
+    if ( $replyBtn.length ) {
+        $replyBtn.attr('disabled', 'disabled');
+    }
+}
+
+var enableReplyBtn = function() {
+    var $replyBtn = $('.topic-footer-main-buttons button.create');
+    if ( $replyBtn.length ) {
+        $replyBtn.removeAttr('disabled');
+    }
+}
+
+let appEvents = api.container.lookup('app-events:main');
+appEvents.on('composer:opened', () => { disableReplyBtn(); });
+appEvents.on('composer:closed', () => { enableReplyBtn(); });
+
 api.onPageChange((url, title) => {
 	var dir = _.without(url.split("?")[0].split("/"), "");
 	switch (dir[0]) {
