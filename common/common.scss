@@ -323,7 +323,7 @@ fieldset[disabled] a.btn {
   border-color: #e0e0e0;
 }
 
-.user-preferences-page .controls a.btn, .user-preferences-page .controls button.btn {
+.user-preferences-page .controls a.btn, .user-preferences-page .controls button.btn:not(.btn-primary) {
   color: #212121;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
