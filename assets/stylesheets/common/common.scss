@@ -92,4 +92,11 @@ a#toggle-hamburger-menu {
 ol.category-breadcrumb {
   max-width: 260px;
   width: 100%;
+  li {
+  	a:first-child {
+  		white-space: nowrap;
+  		overflow: hidden;
+  		text-overflow: ellipsis;
+  	}
+  }
 }
