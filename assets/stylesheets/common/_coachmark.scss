@@ -54,6 +54,11 @@
 			color: $jdrf-dark-blue;
 		}
 	}
+	.similar-topics {
+		a[href] {
+			color: #fff;
+		}
+	}
 }
 
 #reply-control .toggler {
