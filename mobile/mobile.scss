@@ -24,6 +24,11 @@ ol.category-breadcrumb li {
   margin-right: 0;
   position: relative;
 }
+ol.category-breadcrumb li a:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .list-controls .category-breadcrumb li.bullet > .dropdown-header {
   width: calc(100% - 20px);

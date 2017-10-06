@@ -21,6 +21,11 @@ ol.category-breadcrumb {
 		white-space: nowrap;
 		margin-right: 0;
 		position: relative;
+	  	a:first-child {
+	  		white-space: nowrap;
+	  		overflow: hidden;
+	  		text-overflow: ellipsis;
+	  	}
 	}
 }
 
