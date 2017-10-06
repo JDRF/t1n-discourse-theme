@@ -1881,7 +1881,7 @@ div.footer-inner-bottom li.highlighted a {
 .composer-popup a:hover {
   color: #002855;
 }
-.composer-popup .similar-topics a[href] {
+.composer-popup .similar-topics a[href], .composer-popup .similar-topics .search-link .blurb {
   color: #fff;
 }
 
