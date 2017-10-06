@@ -312,7 +312,7 @@ fieldset[disabled] a.btn {
   border-color: #e0e0e0;
 }
 
-.staff .user-main .about.collapsed-info .controls ul a:first-child {
+.staff .user-main .about.collapsed-info .controls ul a[href^="/admin"] {
   color: #ffffff;
   background-color: #0073cf;
   border-color: #0073cf;
@@ -323,7 +323,7 @@ fieldset[disabled] a.btn {
   border-color: #e0e0e0;
 }
 
-.user-preferences-page .controls a.btn {
+.user-preferences-page .controls a.btn, .user-preferences-page .controls button.btn {
   color: #212121;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
