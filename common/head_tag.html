@@ -480,16 +480,20 @@ api.onPageChange((url, title) => {
 });
 
 api.modifyClass("controller:composer", {
+	mixpanelTopic: 'Topic not set';
+	mixpanelCategory: 'Category not set';
+	mixpanelTargetUsernames: 'Target usernames not set';
 	actions: {
 		save: function() {
 			if (this.get("model.creatingTopic")) {
-				this.mixpanelTopic = this.get("model.title");
-				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Not set";
+			 console.log( this.mixpanelTopic );
+				this.mixpanelTopic = ( this.get("model.title") ) ? this.get("model.title") : this.mixpanelTopic;
+				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : this.mixpanelCategory;
 				this.mixpanelEvent = "Topic: New Topic";
 				this.mixpanelType = "new";
 			} else if (this.get("model.replyingToTopic")) {
 				this.mixpanelTopic = this.get("model.topic.fancy_title");
-				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Not set" ;
+				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : this.mixpanelCategory;
 				this.mixpanelEvent = "Topic: New Reply";
 				this.mixpanelType = "reply";
 			} else if ( this.get("model.privateMessage")) {
