@@ -480,20 +480,17 @@ api.onPageChange((url, title) => {
 });
 
 api.modifyClass("controller:composer", {
-	mixpanelTopic: 'Topic not set';
-	mixpanelCategory: 'Category not set';
-	mixpanelTargetUsernames: 'Target usernames not set';
 	actions: {
 		save: function() {
+			this.mixpanelEvent = false;
 			if (this.get("model.creatingTopic")) {
-			 console.log( this.mixpanelTopic );
-				this.mixpanelTopic = ( this.get("model.title") ) ? this.get("model.title") : this.mixpanelTopic;
-				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : this.mixpanelCategory;
+				this.mixpanelTopic = ( this.get("model.title") ) ? this.get("model.title") : "Title not set";
+				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set";
 				this.mixpanelEvent = "Topic: New Topic";
 				this.mixpanelType = "new";
 			} else if (this.get("model.replyingToTopic")) {
-				this.mixpanelTopic = this.get("model.topic.fancy_title");
-				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : this.mixpanelCategory;
+				this.mixpanelTopic = ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set";
+				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set" ;
 				this.mixpanelEvent = "Topic: New Reply";
 				this.mixpanelType = "reply";
 			} else if ( this.get("model.privateMessage")) {
@@ -507,27 +504,31 @@ api.modifyClass("controller:composer", {
 	},
 	triggerMixpanel: function() {
 		if (this.mixpanelType === "reply" || this.mixpanelType === "new") {
-			jdrfMixPanel.trackMixPanel([
-				{
-					args: {
-						"Topic Name": this.mixpanelTopic,
-						"Category Name": this.mixpanelCategory
-					},
-					event: this.mixpanelEvent,
-					people: mixpanelPeople
-				}
-			]);
+			if ( this.mixpanelEvent ) {
+				jdrfMixPanel.trackMixPanel([
+					{
+						args: {
+							"Topic Name": this.mixpanelTopic,
+							"Category Name": this.mixpanelCategory
+						},
+						event: this.mixpanelEvent,
+						people: mixpanelPeople
+					}
+				]);
+			}
 			this.mixpanelType = undefined;
 		} else if ( this.mixpanelType === 'message' ) {
-			jdrfMixPanel.trackMixPanel([
-				{
-					args: {
-						"People": this.mixpanelTargetusernames
-					},
-					event: this.mixpanelEvent,
-					people: mixpanelPeople
-				}
-			]);
+			if ( this.mixpanelEvent ) {
+				jdrfMixPanel.trackMixPanel([
+					{
+						args: {
+							"People": this.mixpanelTargetusernames
+						},
+						event: this.mixpanelEvent,
+						people: mixpanelPeople
+					}
+				]);
+			}
 			this.mixpanelType = undefined;
 		}
 	},
