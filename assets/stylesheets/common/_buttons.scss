@@ -60,9 +60,14 @@ fieldset[disabled] a.btn {
 		background-color: $btn-primary-bg;
 	}
 }
-.btn-secondary, .bulk-select {
+.btn-secondary {
 	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
+
+.bulk-select {
+	@include button-variant($jdrf-black, $grey-4, $grey-4);
+}
+
 .btn-info {
 	@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
