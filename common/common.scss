@@ -306,52 +306,8 @@ fieldset[disabled] a.btn {
   border-color: #e0e0e0;
 }
 
-.user-main .about.collapsed-info .controls ul a:first-child {
-  font-family: "Gotham", sans-serif;
+.staff .user-main .about.collapsed-info .controls ul a:second-child {
   color: #212121;
-  text-transform: uppercase;
-  background-color: #e0e0e0;
-  border-color: #e0e0e0;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  line-height: 0.875rem;
-  border-radius: 2px;
-}
-.user-main .about.collapsed-info .controls ul a:first-child:hover {
-  color: #212121;
-  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-}
-.user-main .about.collapsed-info .controls ul a:first-child:focus, .user-main .about.collapsed-info .controls ul a:first-child.focus {
-  color: #212121;
-  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-}
-.user-main .about.collapsed-info .controls ul a:first-child:active, .user-main .about.collapsed-info .controls ul a:first-child.active, .open > .user-main .about.collapsed-info .controls ul a:first-child.dropdown-toggle {
-  color: #212121;
-  background-image: none;
-  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-}
-.user-main .about.collapsed-info .controls ul a:first-child:active:hover, .user-main .about.collapsed-info .controls ul a:first-child:active:focus, .user-main .about.collapsed-info .controls ul a:first-child:active.focus, .user-main .about.collapsed-info .controls ul a:first-child.active:hover, .user-main .about.collapsed-info .controls ul a:first-child.active:focus, .user-main .about.collapsed-info .controls ul a:first-child.active.focus, .open > .user-main .about.collapsed-info .controls ul a:first-child.dropdown-toggle:hover, .open > .user-main .about.collapsed-info .controls ul a:first-child.dropdown-toggle:focus, .open > .user-main .about.collapsed-info .controls ul a:first-child.dropdown-toggle.focus {
-  color: #212121;
-}
-.user-main .about.collapsed-info .controls ul a:first-child.disabled, .user-main .about.collapsed-info .controls ul a:first-child:disabled {
-  color: #9e9e9e;
-  background-color: #e0e0e0;
-  border-color: #e0e0e0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.user-main .about.collapsed-info .controls ul a:first-child.disabled:focus, .user-main .about.collapsed-info .controls ul a:first-child.disabled.focus, .user-main .about.collapsed-info .controls ul a:first-child:disabled:focus, .user-main .about.collapsed-info .controls ul a:first-child:disabled.focus {
-  color: #9e9e9e;
-  background-color: #e0e0e0;
-  border-color: #e0e0e0;
-}
-.user-main .about.collapsed-info .controls ul a:first-child.disabled:hover, .user-main .about.collapsed-info .controls ul a:first-child:disabled:hover {
-  color: #9e9e9e;
   background-color: #e0e0e0;
   border-color: #e0e0e0;
 }
