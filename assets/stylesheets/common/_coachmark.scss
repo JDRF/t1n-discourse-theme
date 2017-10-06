@@ -54,9 +54,14 @@
 			color: $jdrf-dark-blue;
 		}
 	}
-	.similar-topics {
-		a[href], .search-link .blurb {
-			color: #fff;
+}
+
+.similar-topics {
+	a[href], .search-link .blurb {
+		color: #fff;
+		text-decoration: underline;
+		&:hover {
+			color: $jdrf-dark-blue;
 		}
 	}
 }
