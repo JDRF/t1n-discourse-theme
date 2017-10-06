@@ -84,6 +84,11 @@ fieldset[disabled] a.btn {
 	.user-main {
 		.about.collapsed-info {
 			.controls ul {
+				a:first-child {
+					color: $jdrf-white;
+					background-color: $jdrf-blue;
+					border-color: $jdrf-blue;
+				}
 				a:nth-child(2) {
 					color: $jdrf-black;
 					background-color: $grey-4;
@@ -91,6 +96,16 @@ fieldset[disabled] a.btn {
 				}
 			}
 		} 
+	}
+}
+
+.user-preferences-page {
+	.controls {
+		a.btn {
+			color: $jdrf-black;
+			background-color: $grey-4;
+			border-color: $grey-4;
+		}
 	}
 }
 
