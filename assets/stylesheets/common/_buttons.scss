@@ -387,3 +387,9 @@ input[type="button"] {
 		color: white;
 	}
 }
+
+.header-dropdown-toggle #search-button {
+	&.btn-flat {
+		opacity: 1;
+	}
+}
