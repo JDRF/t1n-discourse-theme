@@ -31,6 +31,8 @@ ol.category-breadcrumb {
 
 .list-controls .category-breadcrumb li.bullet>.dropdown-header {
 	width: calc(100% - 20px);
+	line-height: 18px;
+	margin-top: 3px;
 }
 
 .list-controls .category-breadcrumb a.badge-category.category-dropdown-button .d-icon-caret-right,
