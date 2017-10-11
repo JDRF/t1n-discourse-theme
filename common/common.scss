@@ -1141,6 +1141,8 @@ input[type="button"].btn-block {
   font-size: 13px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin-top: 3px;
 }
 #register-button.btn--primary:focus, #register-button.btn--primary:hover {
   -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
