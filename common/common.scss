@@ -1132,6 +1132,21 @@ input[type="button"].btn-block {
           box-shadow: none;
 }
 
+#register-btn.btn.btn--primary {
+  background-color: #fff;
+  border-color: #fff;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+#register-btn.btn.btn--primary:focus, #register-btn.btn.btn--primary:hover {
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
 .form-field {
   display: block;
 }
