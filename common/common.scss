@@ -2419,7 +2419,7 @@ i.fa.fa-folder.d-icon.d-icon-folder:before {
 .category-notifications-button .dropdown-header .btn.no-text.btn-icon .d-icon + .d-icon {
   color: #7a7a7a;
 }
-.category-notifications-button .dropdown-header .btn.no-text.btn-icon i.fa-circle-o::after {
+.category-notifications-button .dropdown-header .btn.no-text.btn-icon button i.fa-circle-o::after {
   content: "Normal";
   font-family: "Gotham", sans-serif;
   text-transform: capitalize;
@@ -2429,7 +2429,7 @@ i.fa.fa-folder.d-icon.d-icon-folder:before {
   margin-left: 10px;
   margin-right: 10px;
 }
-.category-notifications-button .dropdown-header .btn.no-text.btn-icon i.fa-exclamation-circle::after {
+.category-notifications-button .dropdown-header .btn.no-text.btn-icon button i.fa-exclamation-circle::after {
   content: "Watching";
   font-family: "Gotham", sans-serif;
   text-transform: capitalize;
@@ -2439,7 +2439,7 @@ i.fa.fa-folder.d-icon.d-icon-folder:before {
   margin-left: 10px;
   margin-right: 10px;
 }
-.category-notifications-button .dropdown-header .btn.no-text.btn-icon i.fa-circle.tracking::after {
+.category-notifications-button .dropdown-header .btn.no-text.btn-icon button i.fa-circle.tracking::after {
   content: "Tracking";
   font-family: "Gotham", sans-serif;
   text-transform: capitalize;
@@ -2449,7 +2449,7 @@ i.fa.fa-folder.d-icon.d-icon-folder:before {
   margin-left: 10px;
   margin-right: 10px;
 }
-.category-notifications-button .dropdown-header .btn.no-text.btn-icon i.fa-dot-circle-o::after {
+.category-notifications-button .dropdown-header .btn.no-text.btn-icon button i.fa-dot-circle-o::after {
   content: "Watching First Post";
   font-family: "Gotham", sans-serif;
   text-transform: capitalize;
@@ -2459,7 +2459,7 @@ i.fa.fa-folder.d-icon.d-icon-folder:before {
   margin-left: 10px;
   margin-right: 10px;
 }
-.category-notifications-button .dropdown-header .btn.no-text.btn-icon i.fa-times-circle::after {
+.category-notifications-button .dropdown-header .btn.no-text.btn-icon button i.fa-times-circle::after {
   content: "Muted";
   font-family: "Gotham", sans-serif;
   text-transform: capitalize;
