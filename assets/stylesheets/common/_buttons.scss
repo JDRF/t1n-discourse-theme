@@ -395,3 +395,18 @@ input[type="button"] {
 		}
 	}
 }
+
+.widget-button {
+    &.btn.login-button {
+        box-shadow:none;
+        font-size: 13px;
+        font-weight: 500;
+        i {
+            display:none;
+        }
+        &::hover {
+            box-shadow:none;
+        }
+    }
+}
+
