@@ -99,3 +99,9 @@ ol.category-breadcrumb {
   max-width: 260px;
   width: 100%;
 }
+
+.title {
+    i.fa.fa-home.d-icon.d-icon-home::before {
+        content: '';
+    }
+}
