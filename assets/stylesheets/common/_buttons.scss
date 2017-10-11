@@ -387,3 +387,59 @@ input[type="button"] {
 		color: white;
 	}
 }
+
+.category-notifications-button {
+    i.fa-circle-o::after {
+      content:"Normal";
+      font-family: "Gotham", sans-serif;
+      text-transform: capitalize;
+      color: #212121;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  i.fa-exclamation-circle::after {
+      content:"Watching";
+      font-family: "Gotham", sans-serif;
+      text-transform: capitalize;
+      color: #212121;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  i.fa-circle.tracking::after {
+      content:"Tracking";
+      font-family: "Gotham", sans-serif;
+      text-transform: capitalize;
+      color: #212121;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  i.fa-dot-circle-o::after {
+      content:"Watching First Post";
+      font-family: "Gotham", sans-serif;
+      text-transform: capitalize;
+      color: #212121;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  i.fa-times-circle::after {
+      content:"Muted";
+      font-family: "Gotham", sans-serif;
+      text-transform: capitalize;
+      color: #212121;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  .btn.no-text.btn-icon {
+    border-color: #BDBDBD !important;
+  }
+}

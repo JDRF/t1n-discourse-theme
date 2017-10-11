@@ -63,6 +63,9 @@ body {
 	padding: 15px 5px;
 	height: 56px;
 	box-sizing: border-box;
+	.posters {
+		padding: 15px 2px;
+	}
 }
 
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open>.btn-flat.dropdown-toggle {
