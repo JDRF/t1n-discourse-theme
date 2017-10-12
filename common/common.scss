@@ -1118,6 +1118,10 @@ input[type="button"].btn-block {
   opacity: 1;
 }
 
+.d-header-icons .icon:hover {
+  border-radius: 2px;
+}
+
 .widget-button.btn.login-button {
   -webkit-box-shadow: none;
           box-shadow: none;

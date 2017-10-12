@@ -396,6 +396,10 @@ input[type="button"] {
 	}
 }
 
+.d-header-icons .icon:hover {
+	border-radius: 2px;
+}
+
 .widget-button {
     &.btn.login-button {
         box-shadow:none;
