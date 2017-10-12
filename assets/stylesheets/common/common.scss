@@ -101,7 +101,11 @@ ol.category-breadcrumb {
 }
 
 .title {
-    i.fa.fa-home.d-icon.d-icon-home::before {
-        content: '';
-    }
+	i.fa.fa-home.d-icon.d-icon-home {
+		margin-right: 8px;
+		&::before {
+        	content: '';
+        	font-size: 1.1714em;
+    	}
+	}
 }

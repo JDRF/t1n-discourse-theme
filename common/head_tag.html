@@ -479,14 +479,16 @@ api.onPageChange((url, title) => {
     });
 });
 
-api.decorateWidget('header-icons:before', helper => {
-    return helper.h('li', [
-        helper.h('a#register-button.btn.btn--primary', {
-            href:'https://typeonenation.org/join/',
-            text: 'Sign Up'
-        }),
-    ]);
-});
+if ( ! userObj ) {
+	api.decorateWidget('header-icons:before', helper => {
+	    return helper.h('li', [
+	        helper.h('a#register-button.btn.btn--primary', {
+	            href:'https://typeonenation.org/join/',
+	            text: 'Sign Up'
+	        }),
+	    ]);
+	});
+}
 
 api.modifyClass("controller:composer", {
 	actions: {
