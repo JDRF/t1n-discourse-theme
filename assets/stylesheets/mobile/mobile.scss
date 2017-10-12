@@ -114,8 +114,14 @@ ol.category-breadcrumb + ul.nav {
 	font-size: 12px;
 }
 
-.title {
-	i.fa.fa-home.d-icon.d-icon-home {
-		margin-right: 4px;
+.widget-button {
+    &.btn.login-button {
+        margin-right: 0px;
+    }
+}
+
+#register-button {
+	&.btn--primary {
+		margin-right: 0px;
 	}
 }
