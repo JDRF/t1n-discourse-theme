@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
     concat: {
       options: {
-        banner: '/* COMMON SCSS COMMENT TO BREAK CACHE */\n' +
+        banner: '/* COMMON SCSS COMMENT */\n' +
                 '@font-face { font-family: "Gotham"; font-weight: normal; src: url(\'//forum.typeonenation.org/uploads/jdrf/original/1X/7b08c78fe3030a3d62e72dc04806d38d1c6e8002.woff2\') format(\'woff2\') }\n' +
                 '@font-face { font-family: "Gotham"; font-weight: 500; src: url(\'//forum.typeonenation.org/uploads/jdrf/original/1X/7b08c78fe3030a3d62e72dc04806d38d1c6e8002.woff2\') format(\'woff2\') }\n' +
                 '@font-face { font-family: "Gotham"; font-weight: 700; src: url(\'//forum.typeonenation.org/uploads/jdrf/original/1X/47249cd9b6b59c8e70edfcb5907a5bacc44db08b.woff2\') format(\'woff2\') }\n' +
