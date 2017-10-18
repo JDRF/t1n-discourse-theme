@@ -2564,6 +2564,8 @@ body {
 
 .topic-list .posters {
   padding: 15px 2px;
+  width: 155px;
+  min-width: 155px;
 }
 
 .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active, .open > .btn-flat.dropdown-toggle {
