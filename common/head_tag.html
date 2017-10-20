@@ -501,12 +501,12 @@ api.modifyClass("controller:composer", {
 			if (this.get("model.creatingTopic")) {
 				this.mixpanelTopic = ( this.get("model.title") ) ? this.get("model.title") : "Title not set";
 				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set";
-				this.mixpanelEvent = "Topic: New Topic";
+				this.mixpanelEvent = "Discussion: New Topic";
 				this.mixpanelType = "new";
 			} else if (this.get("model.replyingToTopic")) {
 				this.mixpanelTopic = ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set";
 				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set" ;
-				this.mixpanelEvent = "Topic: New Reply";
+				this.mixpanelEvent = "Discussion: New Reply";
 				this.mixpanelType = "reply";
 			} else if ( this.get("model.privateMessage")) {
 				this.mixpanelEvent = "Message: Sent";
