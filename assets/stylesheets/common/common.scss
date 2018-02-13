@@ -108,6 +108,11 @@ ol.category-breadcrumb {
 	margin-right: 0;
 }
 
+.select-kit.combo-box.category-drop .category-drop-header {
+	// override background color
+	background: #FFFFFF;
+}
+
 .title {
 	i.fa.fa-home.d-icon.d-icon-home {
 		margin-right: 8px;
