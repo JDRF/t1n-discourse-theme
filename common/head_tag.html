@@ -303,6 +303,9 @@ mixpanel.init( '0fdad06ede50aab97430c75a16c1d086' );
 //Dev Key
 //mixpanel.init("252cf8cd447e61b67d17502b5ca63270");
 mixpanel_events = [];
+mixpanel.register_once({
+	"JDRF Program": "Forum"
+});
 //end mixpanel
 </script>
 
@@ -343,7 +346,7 @@ var trackFollowing = function( setting, title ) {
     jdrfMixPanel.trackMixPanel([
 		{
 			args: {
-				"Category Name": title
+				"Topic Name": title
 			},
 			event: type[setting] ? type[setting]: "Subscribe: " + setting,
 			people: mixpanelPeople
@@ -421,31 +424,49 @@ api.onPageChange((url, title) => {
 		case "t":
 			setTimeout(()=>{
     		    var pageTitle = $('title').text();
+    		    var catName = $('.title-wrapper .category-name').text();
+
     		    if ( pageTitle !== title ) {
     		        title = pageTitle;
     		    }
-    		    
+    		    if ( ! catName ) {
+    		    	catName = 'Uncategorized';
+				}
+
     			jdrfMixPanel.trackMixPanel([
     				{
     					args: {
-    						"Topic Name": title + " (dsc)"
+    						"Topic Name": title + " (dsc)",
+    						"Category Name": catName
     					},
-    					event: "Topic: Viewed",
+    					event: "Topic Viewed",
     					people: mixpanelPeople
     				}
     			]);
 		    }, 400);
 			break;
 		case "u":
-			jdrfMixPanel.trackMixPanel([
-				{
-					args: {
-						"Profile Name": title + " (dsc)"
-					},
-					event: "Profile: Viewed",
-					people: mixpanelPeople
-				}
-			]);
+			if ( dir[1] && dir[1] === 'account-created' ) {
+				jdrfMixPanel.trackMixPanel([
+					{
+						args: {
+							"Page Name": title + " (dsc)"
+						},
+						event: "Confirmation Page Viewed",
+						people: mixpanelPeople
+					}
+				]);
+			} else {
+				jdrfMixPanel.trackMixPanel([
+					{
+						args: {
+							"Profile Name": title + " (dsc)"
+						},
+						event: "Profile Viewed",
+						people: mixpanelPeople
+					}
+				]);
+			}
 			break;
 	}
 	
@@ -453,8 +474,8 @@ api.onPageChange((url, title) => {
 	    $(".topic-notifications-button").on("click", function( el ){
 	        var $clicked = $(this);
 	        setTimeout(()=>{
-	            $clicked.parent().find('.select-box-collection').find('li').unbind('click').on('click', function( el ) {
-	               trackFollowing( $(el.currentTarget).find('.title').text(), title ); 
+	            $clicked.parent().find('.select-kit-collection').find('li').unbind('click').on('click', function( el ) {
+	               trackFollowing( $(el.currentTarget).find('.name').text(), title );
 	            });
 	        }, 200);
 	    });
@@ -501,12 +522,12 @@ api.modifyClass("controller:composer", {
 			if (this.get("model.creatingTopic")) {
 				this.mixpanelTopic = ( this.get("model.title") ) ? this.get("model.title") : "Title not set";
 				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set";
-				this.mixpanelEvent = "Discussion: New Topic";
+				this.mixpanelEvent = "Topic Created";
 				this.mixpanelType = "new";
 			} else if (this.get("model.replyingToTopic")) {
 				this.mixpanelTopic = ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set";
 				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set" ;
-				this.mixpanelEvent = "Discussion: New Reply";
+				this.mixpanelEvent = "Post Created";
 				this.mixpanelType = "reply";
 			} else if ( this.get("model.privateMessage")) {
 				this.mixpanelEvent = "Message: Sent";
@@ -562,27 +583,124 @@ $('body').on('click', 'button', ( evt ) => {
     let $target = $(evt.currentTarget)
     let interact = false;
     if ( $target.hasClass('bookmark') ) {
-        interact = 'Bookmark';
+        interact = 'Post Bookmarked';
+    }
+    if ( $target.hasClass('bookmarked') ) {
+        interact = 'Post Unbookmarked';
     }
     if ( $target.hasClass('share') ) {
-        interact = 'Share';
+        interact = 'Post Shared';
     }
     if ( $target.hasClass('like') ) {
-       interact = 'Like';
+       interact = 'Post Liked';
     }
+    if ( $target.hasClass('has-like') ) {
+       interact = 'Post Unliked';
+    }
+    if ( $target.hasClass('create-flag') ) {
+       interact = 'Post Flagged';
+    }
+    if ( $target.hasClass('delete') ) {
+       interact = 'Post Deleted';
+       if ( 'Delete Topic' === $target.attr('title') ) {
+          interact = 'Topic Deleted';
+       }
+    }
+
     if ( interact ) {
+		var pageTitle = $('title').text();
+		var catName = $('.title-wrapper .category-name:first').text();
+
+		if ( ! catName ) {
+			catName = 'Uncategorized';
+		}
+		let tracked = {
+        	"Topic Name": pageTitle,
+			"Category Name": catName
+        };
+
         let article = $target.closest('article');
-        let tracked = {};
         if ( article ) {
             tracked.target = '#' + article.attr('id');
         }
+
         jdrfMixPanel.trackMixPanel([
     		{
     			args: tracked,
-    			event: "Interaction: " + interact,
+    			event: interact,
     			people: mixpanelPeople
     		}
     	]);
     }
+});
+
+$('body').on('click', '.post-actions .undo', ( evt ) => {
+	let $target = $(evt.currentTarget);
+	var pageTitle = $('title').text();
+	var catName = $('.title-wrapper .category-name:first').text();
+
+	if ( ! catName ) {
+		catName = 'Uncategorized';
+	}
+	let tracked = {
+		"Topic Name": pageTitle,
+		"Category Name": catName
+	};
+
+	let article = $target.closest('article');
+	if ( article ) {
+		tracked.target = '#' + article.attr('id');
+	}
+
+	jdrfMixPanel.trackMixPanel([
+		{
+			args: tracked,
+			event: "Post Unflagged",
+			people: mixpanelPeople
+		}
+	]);
+});
+
+$('body').on('click', '#share-link a', ( evt ) => {
+	let $target = $(evt.currentTarget)
+    let interact = false;
+    let label = $target.attr('aria-label');
+
+	if ( label.indexOf( "Twitter" ) >= 0 ) {
+		interact = 'Twitter';
+	}
+	if ( label.indexOf( "Facebook" ) >= 0 ) {
+		interact = 'Facebook';
+	}
+	if ( label.indexOf( "email" ) >= 0 ) {
+		interact = 'Email';
+	}
+
+	if ( interact ) {
+		var pageTitle = $('title').text();
+		var catName = $('.title-wrapper .category-name:first').text();
+
+		if ( ! catName ) {
+			catName = 'Uncategorized';
+		}
+		let tracked = {
+			"Topic Name": pageTitle,
+			"Category Name": catName,
+			"Shared Method": interact,
+		};
+
+		let article = $target.closest('article');
+		if ( article ) {
+			tracked.target = '#' + article.attr('id');
+		}
+
+		jdrfMixPanel.trackMixPanel([
+			{
+				args: tracked,
+				event: "Post Shared",
+				people: mixpanelPeople
+			}
+		]);
+	}
 });
 </script>
