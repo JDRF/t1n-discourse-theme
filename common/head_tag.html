@@ -505,10 +505,14 @@ api.onPageChange((url, title) => {
 });
 
 if ( ! userObj ) {
+	var t1nJoinLinkHref =
+		Discourse && Discourse.baseUrl && 'http://jdrfdiscourse-stage.10uplabs.com' === Discourse.baseUrl
+		? 'http://type1nation.staging.wpengine.com/join/'
+		: 'https://typeonenation.jdrf.org/join/';
 	api.decorateWidget('header-icons:before', helper => {
 	    return helper.h('li', [
 	        helper.h('a#register-button.btn.btn--primary', {
-	            href:'https://typeonenation.jdrf.org/join/',
+	            href: t1nJoinLinkHref,
 	            text: 'Sign Up'
 	        }),
 	    ]);
