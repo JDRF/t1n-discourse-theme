@@ -324,6 +324,17 @@ if ( userObj ) {
 		$first_name: userObj.name,
 		$last_name: ''
 	};
+	if ( window.analytics ) {
+		var trackData = {
+			id: userObj.username,
+			$email: "",
+			$first_name: userObj.name,
+			$last_name: ''
+		};
+		window.console.log( 'DEBUG SEGMENT DATA: track id', "ForumUserDataLoaded" );
+		window.console.log( 'DEBUG SEGMENT DATA: track data', trackData );
+		window.analytics.track( "ForumUserDataLoaded", trackData );
+	}
 } else {
 	mixpanelPeople = {
 		id: '',
@@ -534,11 +545,33 @@ api.modifyClass("controller:composer", {
 				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set";
 				this.mixpanelEvent = "Topic Created";
 				this.mixpanelType = "new";
+				if ( window.analytics ) {
+					var trackData = {
+						topic: ( this.get("model.title") ) ? this.get("model.title") : "Title not set",
+						category: ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set",
+						event: "Topic Created",
+						type: 'new'
+					};
+					window.console.log( 'DEBUG SEGMENT DATA: track id', "creatingTopic" );
+					window.console.log( 'DEBUG SEGMENT DATA: track data', trackData );
+					window.analytics.track( "creatingTopic", trackData );
+				}
 			} else if (this.get("model.replyingToTopic")) {
 				this.mixpanelTopic = ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set";
-				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set" ;
+				this.mixpanelCategory = ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set";
 				this.mixpanelEvent = "Post Created";
 				this.mixpanelType = "reply";
+				if ( window.analytics ) {
+					var trackData = {
+						topic: ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set",
+						category: ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set",
+						event: "Post Created",
+						type: 'reply'
+					};
+					window.console.log( 'DEBUG SEGMENT DATA: track id', "replyingToTopic" );
+					window.console.log( 'DEBUG SEGMENT DATA: track data', trackData );
+					window.analytics.track( "replyingToTopic", trackData );
+				}
 			} else if ( this.get("model.privateMessage")) {
 				this.mixpanelEvent = "Message: Sent";
 				this.mixpanelTargetusernames = ( this.get("model.targetUsernames") ) ? this.get("model.targetUsernames") : "Not set" ;
