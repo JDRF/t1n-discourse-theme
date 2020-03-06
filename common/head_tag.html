@@ -4,7 +4,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="https://discourse-cdn-sjc1.com/business3/uploads/jdrfimport/original/1X/241f7b525ca4592c2150a04bcd11b0db385a3cc2.png">
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("uHDNxkkUEzadd81n3utNflg52NPx2fzq");
+  analytics.load("m92PaqXk9XI61aPqMf4sD41HE0RS3Nfb");
   analytics.page();
   }}();
 </script>
@@ -326,14 +326,11 @@ if ( userObj ) {
 	};
 	if ( window.analytics ) {
 		var trackData = {
-			id: userObj.username,
-			$email: "",
-			$first_name: userObj.name,
-			$last_name: ''
+			'Product Name': 'forum',
+			'Forum Username': userObj.username,
+			'Full Name': userObj.name,
 		};
-		window.console.log( 'DEBUG SEGMENT DATA: track id', "ForumUserDataLoaded" );
-		window.console.log( 'DEBUG SEGMENT DATA: track data', trackData );
-		window.analytics.track( "ForumUserDataLoaded", trackData );
+		window.analytics.track( "Login", trackData );
 	}
 } else {
 	mixpanelPeople = {
@@ -440,26 +437,34 @@ api.onPageChange((url, title) => {
 			break;
 		case "t":
 			setTimeout(()=>{
-    		    var pageTitle = $('title').text();
-    		    var catName = $('.title-wrapper .category-name').text();
+				var pageTitle = $('title').text();
+				var catName = $('.title-wrapper .category-name').text();
 
-    		    if ( pageTitle !== title ) {
-    		        title = pageTitle;
-    		    }
-    		    if ( ! catName ) {
-    		    	catName = 'Uncategorized';
+				if ( pageTitle !== title ) {
+					title = pageTitle;
+				}
+				if ( ! catName ) {
+					catName = 'Uncategorized';
 				}
 
-    			jdrfMixPanel.trackMixPanel([
-    				{
-    					args: {
-    						"Topic Name": title + " (dsc)",
-    						"Category Name": catName
-    					},
-    					event: "Topic Viewed",
-    					people: mixpanelPeople
-    				}
-    			]);
+				jdrfMixPanel.trackMixPanel([
+					{
+						args: {
+							"Topic Name": title + " (dsc)",
+							"Category Name": catName
+						},
+						event: "Topic Viewed",
+						people: mixpanelPeople
+					}
+				]);
+				if ( window.analytics ) {
+					var trackData = {
+						'Topic Name': pageTitle,
+						'Topic Category': catName,
+					};
+					window.console.log( 'DEBUG SEGMENT DATA: Forum Topic Viewed', trackData );
+					window.analytics.track( "Forum Topic Viewed", trackData );
+				}
 		    }, 400);
 			break;
 		case "u":
@@ -547,14 +552,11 @@ api.modifyClass("controller:composer", {
 				this.mixpanelType = "new";
 				if ( window.analytics ) {
 					var trackData = {
-						topic: ( this.get("model.title") ) ? this.get("model.title") : "Title not set",
-						category: ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set",
-						event: "Topic Created",
-						type: 'new'
+						'Topic Name': ( this.get("model.title") ) ? this.get("model.title") : "Title not set",
+						'Topic Category': ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set",
 					};
-					window.console.log( 'DEBUG SEGMENT DATA: track id', "creatingTopic" );
-					window.console.log( 'DEBUG SEGMENT DATA: track data', trackData );
-					window.analytics.track( "creatingTopic", trackData );
+					window.console.log( 'DEBUG SEGMENT DATA: Forum Topic Created', trackData );
+					window.analytics.track( "Forum Topic Created", trackData );
 				}
 			} else if (this.get("model.replyingToTopic")) {
 				this.mixpanelTopic = ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set";
@@ -563,14 +565,11 @@ api.modifyClass("controller:composer", {
 				this.mixpanelType = "reply";
 				if ( window.analytics ) {
 					var trackData = {
-						topic: ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set",
-						category: ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set",
-						event: "Post Created",
-						type: 'reply'
+						'Topic Name': ( this.get("model.topic.fancy_title") ) ? this.get("model.topic.fancy_title") : "Title not set",
+						'Topic Category': ( this.get("model.category.name") ) ? this.get("model.category.name") : "Category not set",
 					};
-					window.console.log( 'DEBUG SEGMENT DATA: track id', "replyingToTopic" );
-					window.console.log( 'DEBUG SEGMENT DATA: track data', trackData );
-					window.analytics.track( "replyingToTopic", trackData );
+					window.console.log( 'DEBUG SEGMENT DATA: Forum Post Created', trackData );
+					window.analytics.track( "Forum Post Created", trackData );
 				}
 			} else if ( this.get("model.privateMessage")) {
 				this.mixpanelEvent = "Message: Sent";
@@ -658,23 +657,23 @@ $('body').on('click', 'button', ( evt ) => {
 			catName = 'Uncategorized';
 		}
 		let tracked = {
-        	"Topic Name": pageTitle,
+			"Topic Name": pageTitle,
 			"Category Name": catName
-        };
+		};
 
-        let article = $target.closest('article');
-        if ( article ) {
-            tracked.target = '#' + article.attr('id');
-        }
+		let article = $target.closest('article');
+		if ( article ) {
+			tracked.target = '#' + article.attr('id');
+		}
 
-        jdrfMixPanel.trackMixPanel([
-    		{
-    			args: tracked,
-    			event: interact,
-    			people: mixpanelPeople
-    		}
-    	]);
-    }
+		jdrfMixPanel.trackMixPanel([
+			{
+				args: tracked,
+				event: interact,
+				people: mixpanelPeople
+			}
+		]);
+	}
 });
 
 $('body').on('click', '.post-actions .undo', ( evt ) => {
