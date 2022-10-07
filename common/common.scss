@@ -2742,3 +2742,7 @@ ol.category-breadcrumb {
 .title i.fa.fa-home.d-icon.d-icon-home::before {
   content: "";
 }
+
+#main-outlet-wrapper .sidebar-wrapper {
+  display: none;
+}
