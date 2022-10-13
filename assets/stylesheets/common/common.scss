@@ -30,6 +30,11 @@ body {
   display: none;
 }
 
+.alert.alert-info {
+    background-color: #d9e5ff;
+    color: #00081a;
+}
+
 #main-outlet {
   padding-top: 72px;
 }
