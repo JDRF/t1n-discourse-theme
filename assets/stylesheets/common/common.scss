@@ -26,6 +26,10 @@ body {
 	font-smoothing: antialiased;
 }
 
+#main-outlet-wrapper .sidebar-wrapper {
+  display: none;
+}
+
 #main-outlet {
   padding-top: 72px;
 }
