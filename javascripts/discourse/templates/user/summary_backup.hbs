@@ -52,7 +52,7 @@
       </div>
     {{/if}}
 
-    <div class="top-section summary-section">
+    <div class="top-section">
       <UserSummarySection @title="top_replies" @class="replies-section pull-left">
         <UserSummaryTopicsList @type="replies" @items={{this.model.replies}} @user={{this.user}} as |reply|>
           <UserSummaryTopic @createdAt={{reply.createdAt}} @topic={{reply.topic}} @likes={{reply.like_count}} @url={{reply.url}} />
@@ -64,8 +64,10 @@
           <UserSummaryTopic @createdAt={{topic.created_at}} @topic={{topic}} @likes={{topic.like_count}} @url={{topic.url}} />
         </UserSummaryTopicsList>
       </UserSummarySection>
+    </div>
 
-        <UserSummarySection @title="top_links" @class="links-section pull-left">
+    <div class="top-section">
+      <UserSummarySection @title="top_links" @class="links-section pull-left">
         {{#if this.model.links.length}}
           <ul>
             {{!-- template-lint-disable --}}
@@ -88,6 +90,12 @@
           <p>{{i18n "user.summary.no_links"}}</p>
         {{/if}}
       </UserSummarySection>
+
+      <UserSummarySection @title="most_replied_to_users" @class="summary-user-list replied-section pull-right">
+        <UserSummaryUsersList @none="no_replies" @users={{this.model.most_replied_to_users}} as |user|>
+          <UserSummaryUser @user={{user}} @icon="reply" @countClass="replies" />
+        </UserSummaryUsersList>
+      </UserSummarySection>
     </div>
 
     <div class="top-section most-liked-section">
@@ -102,20 +110,6 @@
           <UserSummaryUser @user={{user}} @icon="heart" @countClass="likes" />
         </UserSummaryUsersList>
       </UserSummarySection>
-
-      <UserSummarySection @title="most_replied_to_users" @class="summary-user-list replied-section pull-right">
-        <UserSummaryUsersList @none="no_replies" @users={{this.model.most_replied_to_users}} as |user|>
-          <UserSummaryUser @user={{user}} @icon="reply" @countClass="replies" />
-        </UserSummaryUsersList>
-      </UserSummarySection>
-
-
-      
-    </div>
-
-    <div class="top-section most-liked-section">
-    
-
     </div>
 
     {{#if this.model.top_categories.length}}
