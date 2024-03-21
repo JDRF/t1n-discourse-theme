@@ -64,7 +64,7 @@ module.exports = function(grunt) {
     sass: {
       options: {
         precision: 3,
-        sourcemap: 'none',
+        sourcemap: false,
         style: 'expanded'
       },
       common: {
