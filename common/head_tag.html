@@ -340,7 +340,7 @@ var trackFollowing = function( setting, title ) {
         0: "Subscribe: Muted",
         1: "Subscribe: Normal",
         2: "Subscribe: Tracking",
-        3: "Subscribe: Watching", 
+        3: "Subscribe: Watching",
         4: "Subscribe: First Post"
     };
     jdrfMixPanel.trackMixPanel([
@@ -469,7 +469,7 @@ api.onPageChange((url, title) => {
 			}
 			break;
 	}
-	
+
 	setTimeout(()=>{
 	    $(".topic-notifications-button").on("click", function( el ){
 	        var $clicked = $(this);
@@ -578,7 +578,7 @@ api.modifyClass("controller:composer", {
 		} catch(err) {
 			console.error( err );
 		}
-		
+
 		this._super();
 	}
 });
