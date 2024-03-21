@@ -25,8 +25,7 @@
 .admin-controls .nav.nav-pills li.active a,
 .nav-pills>li.active>a,
 .nav-pills>li>a.active {
-	@extend .btn-primary-outline;
-	@extend .active;
+	@extend .btn-primary-outline.active;
 }
 
 .btn-primary.create,
